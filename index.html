@@ -31,24 +31,6 @@
                <div class="content getting-started">
                    <div class="content-data">
 
-<h1 id="quiz-platform">Quiz Platform</h1>
-<p>An online quiz platform users can create and answer quizzes. Users can share results of their quizzes with their friends, and can create groups for competitions.
-Quizzes are tagged by category and can be rated by users.</p>
-<h2 id="details">Details</h2>
-<p>This project was generated with <a href="https://github.com/angular/angular-cli">Angular CLI</a> version 15.2.2.</p>
-<h2 id="development-server">Development server</h2>
-<p>Run <code>ng serve</code> for a dev server. Navigate to <code>http://localhost:4200/</code>. The application will automatically reload if you change any of the source files.</p>
-<h2 id="code-scaffolding">Code scaffolding</h2>
-<p>Run <code>ng generate component component-name</code> to generate a new component. You can also use <code>ng generate directive|pipe|service|class|guard|interface|enum|module</code>.</p>
-<h2 id="build">Build</h2>
-<p>Run <code>ng build</code> to build the project. The build artifacts will be stored in the <code>dist/</code> directory.</p>
-<h2 id="running-unit-tests">Running unit tests</h2>
-<p>Run <code>ng test</code> to execute the unit tests via <a href="https://karma-runner.github.io">Karma</a>.</p>
-<h2 id="running-end-to-end-tests">Running end-to-end tests</h2>
-<p>Run <code>ng e2e</code> to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.</p>
-<h2 id="further-help">Further help</h2>
-<p>To get more help on the Angular CLI use <code>ng help</code> or go check out the <a href="https://angular.io/cli">Angular CLI Overview and Command Reference</a> page.</p>
-<h2 id="statuses">Statuses</h2>
 <table class="table table-bordered compodoc-table">
 <thead>
 <tr>
@@ -67,10 +49,31 @@ Quizzes are tagged by category and can be rated by users.</p>
 </tr>
 <tr>
 <td>Documentation</td>
-<td>Coming Soon</td>
+<td><a href="https://aksharnana.github.io/QuizPlatform-Docs/">https://aksharnana.github.io/QuizPlatform-Docs/</a></td>
 </tr>
 </tbody>
 </table>
+<h1 id="quiz-platform">Quiz Platform</h1>
+<p>This project involves creating and executing a quiz platform similar to Sporcle or Jetpunk, where users can both create and take quizzes. Additionally, users can share their quiz results with friends, and even create groups for competitions. Various types of questions should be available, such as simple question-answer, image-based, and matching questions. Quizzes should also be categorized and rated by users.</p>
+<h2 id="installation">Installation</h2>
+<p>Install node_modules with npm:</p>
+<div><pre class="line-numbers"><code class="language-bash">  cd Quiz_Platform
+  npm install</code></pre></div><h2 id="run-locally">Run Locally</h2>
+<p>Go to the project directory</p>
+<div><pre class="line-numbers"><code class="language-bash">  cd Quiz_Platform</code></pre></div><p>Start the server</p>
+<div><pre class="line-numbers"><code class="language-bash">  ng serve --open</code></pre></div><h2 id="running-tests">Running Tests</h2>
+<p>To run tests, run the following command</p>
+<div><pre class="line-numbers"><code class="language-bash">  npm run test</code></pre></div><h2 id="auto-documentation">Auto Documentation</h2>
+<p>To generate local documentation, run the following command</p>
+<div><pre class="line-numbers"><code class="language-bash">  npm run compodoc</code></pre></div><p>To serve the genereated documentation, run the command</p>
+<div><pre class="line-numbers"><code class="language-bash">  npm run compodoc-serve</code></pre></div><h2 id="continuous-integration--continuous-deployment">Continuous Integration / Continuous Deployment</h2>
+<p>Quiz Platform is using Circle CI for running tests, building and pushing to firebase hosting as well as updating the codecov page on every commit.</p>
+<h2 id="deployment">Deployment</h2>
+<p>The live project link is:
+<a href="https://quiz-platform-28fcb.web.app/">https://quiz-platform-28fcb.web.app/</a></p>
+<h2 id="tech-stack">Tech Stack</h2>
+<p><strong>Client:</strong> Angular, BulmaIO</p>
+<p><strong>Server:</strong> Node, Express, MongoDB</p>
 
 
 
