@@ -75,7 +75,9 @@
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { NgModule } from &#x27;@angular/core&#x27;;
 import { RouterModule, Routes } from &#x27;@angular/router&#x27;;
 import { EditProfileComponent } from &#x27;./edit-profile/edit-profile.component&#x27;;
+import { EditProfileGuard } from &#x27;./guards/edit-profile.guard&#x27;;
 import { LoginComponent } from &#x27;./login/login.component&#x27;;
+import { QuizAnswerComponent } from &#x27;./quiz-answer/quiz-answer.component&#x27;;
 import { RegistrationComponent } from &#x27;./registration/registration.component&#x27;;
 
 
@@ -84,8 +86,9 @@ import { RegistrationComponent } from &#x27;./registration/registration.componen
  */
 const routes: Routes &#x3D; [
   {path: &quot;register&quot;, component: RegistrationComponent},
-  {path: &quot;edit-profile&quot;, component: EditProfileComponent},
-  {path: &quot;login&quot;, component: LoginComponent}
+  {path: &quot;edit-profile&quot;, component: EditProfileComponent, canActivate: [EditProfileGuard]},
+  {path: &quot;login&quot;, component: LoginComponent},
+  {path: &quot;answerQuiz&quot;, component: QuizAnswerComponent}
 ];
 
 
