@@ -28,100 +28,109 @@
                    <compodoc-menu mode="normal"></compodoc-menu>
                </div>
                <!-- START CONTENT -->
-               <div class="content module">
+               <div class="content miscellaneous-functions">
                    <div class="content-data">
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <ol class="breadcrumb">
-    <li>Modules</li>
-    <li >AppRoutingModule</li>
+  <li>Miscellaneous</li>
+  <li>Functions</li>
 </ol>
 
+<section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <ul class="index-list">
+                        <li>
+                            <a href="#handleError" title="src/app/utilities/errorhandler.ts" ><b>handleError</b>&nbsp;&nbsp;&nbsp;(src/.../errorhandler.ts)</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
 
-<ul class="nav nav-tabs" role="tablist">
-    <li  class="active" >
-        <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
-    </li>
-    <li >
-        <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
-    </li>
-</ul>
-
-<div class="tab-content">
-    <div class="tab-pane fade active in" id="c-info">
-
-        <p class="comment">
-            <h3>File</h3>
-        </p>
-        <p class="comment">
-            <code>src/app/app-routing.module.ts</code>
-        </p>
-
-
-
-
-
-        <div class="container-fluid module">
-            <div class="row">
-            </div>
-        </div>
-
-
-    </div>
-
-
-    <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { NgModule } from &#x27;@angular/core&#x27;;
-import { RouterModule, Routes } from &#x27;@angular/router&#x27;;
-import { EditProfileComponent } from &#x27;./edit-profile/edit-profile.component&#x27;;
-import { EditProfileGuard } from &#x27;./guards/edit-profile.guard&#x27;;
-import { HomeComponent } from &#x27;./home/home.component&#x27;;
-import { LoginComponent } from &#x27;./login/login.component&#x27;;
-import { QuizAnswerComponent } from &#x27;./quiz-answer/quiz-answer.component&#x27;;
-import { QuizInfoComponent } from &#x27;./quiz-info/quiz-info.component&#x27;;
-import { RegistrationComponent } from &#x27;./registration/registration.component&#x27;;
+    <h3>src/app/utilities/errorhandler.ts</h3>
+    <section>
+    <h3></h3>    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="handleError"></a>
+                    <span class="name">
+                        <span ><b>handleError</b></span>
+                        <a href="#handleError"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>handleError(error: <a href="https://angular.io/api/common/http/HttpErrorResponse" target="_blank">HttpErrorResponse</a>)</code>
+                </td>
+            </tr>
 
 
-/**
- * Add component and the path at which they will load in the router
- */
-const routes: Routes &#x3D; [
-  {path: &quot;register&quot;, component: RegistrationComponent},
-  {path: &quot;edit-profile&quot;, component: EditProfileComponent, canActivate: [EditProfileGuard]},
-  {path: &quot;login&quot;, component: LoginComponent},
-  {path: &quot;answerQuiz&quot;, component: QuizAnswerComponent},
-  {path: &quot;home&quot;, component: HomeComponent},
-  {path: &quot;quiz-info&quot;, component:QuizInfoComponent}
-];
 
 
-/**
- * Angular generated code to export the Routes defined within this module.
- */
-@NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
-})
-export class AppRoutingModule { }
-</code></pre>
-    </div>
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>handleError function called when an HttpError occurs in API call</p>
 </div>
 
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>error</td>
+                                    <td>
+                                                <code><a href="https://angular.io/api/common/http/HttpErrorResponse" target="_blank" >HttpErrorResponse</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
 
 
                    </div><div class="search-results">
@@ -149,8 +158,8 @@ export class AppRoutingModule { }
 
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
-            var COMPODOC_CURRENT_PAGE_CONTEXT = 'module';
-            var COMPODOC_CURRENT_PAGE_URL = 'AppRoutingModule.html';
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'miscellaneous-functions';
+            var COMPODOC_CURRENT_PAGE_URL = 'functions.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
 

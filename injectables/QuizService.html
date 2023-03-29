@@ -40,7 +40,7 @@
 
 <ol class="breadcrumb">
   <li>Injectables</li>
-  <li >UserService</li>
+  <li >QuizService</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -58,7 +58,7 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>src/app/services/user.service.ts</code>
+            <code>src/app/services/quiz.service.ts</code>
         </p>
 
 
@@ -100,10 +100,19 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <a href="#create_user" >create_user</a>
+                                <a href="#create_quiz" >create_quiz</a>
                             </li>
                             <li>
-                                <a href="#edit_user" >edit_user</a>
+                                <a href="#delete_quiz" >delete_quiz</a>
+                            </li>
+                            <li>
+                                <a href="#get_quiz_categories" >get_quiz_categories</a>
+                            </li>
+                            <li>
+                                <a href="#getAllQuiz" >getAllQuiz</a>
+                            </li>
+                            <li>
+                                <a href="#update_quiz" >update_quiz</a>
                             </li>
                         </ul>
                     </td>
@@ -128,7 +137,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/services/user.service.ts:14</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/services/quiz.service.ts:14</a></div>
                             </td>
                         </tr>
 
@@ -177,16 +186,16 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="create_user"></a>
+                    <a name="create_quiz"></a>
                     <span class="name">
-                        <span ><b>create_user</b></span>
-                        <a href="#create_user"><span class="icon ion-ios-link"></span></a>
+                        <span ><b>create_quiz</b></span>
+                        <a href="#create_quiz"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>create_user(user: <a href="../classes/CreateUser.html" target="_self">CreateUser</a>)</code>
+<code>create_quiz(newQuiz: <a href="../classes/CreateQuiz.html" target="_self">CreateQuiz</a>)</code>
                 </td>
             </tr>
 
@@ -194,14 +203,14 @@
             <tr>
                 <td class="col-md-4">
                     <div class="io-line">Defined in <a href="" data-line="32"
-                            class="link-to-prism">src/app/services/user.service.ts:32</a></div>
+                            class="link-to-prism">src/app/services/quiz.service.ts:32</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-description"><p>Take user input and create new user</p>
+                    <div class="io-description"><p>Creates a new quiz</p>
 </div>
 
                     <div class="io-description">
@@ -217,9 +226,9 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>user</td>
+                                    <td>newQuiz</td>
                                     <td>
-                                                <code><a href="../classes/CreateUser.html" target="_self" >CreateUser</a></code>
+                                                <code><a href="../classes/CreateQuiz.html" target="_self" >CreateQuiz</a></code>
                                     </td>
 
                                     <td>
@@ -238,7 +247,8 @@
 
                     </div>
                     <div class="io-description">
-                        
+                        <p>Quiz</p>
+
                     </div>
                 </td>
             </tr>
@@ -248,31 +258,31 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="edit_user"></a>
+                    <a name="delete_quiz"></a>
                     <span class="name">
-                        <span ><b>edit_user</b></span>
-                        <a href="#edit_user"><span class="icon ion-ios-link"></span></a>
+                        <span ><b>delete_quiz</b></span>
+                        <a href="#delete_quiz"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>edit_user(user: <a href="../classes/EditUser.html" target="_self">EditUser</a>, userID: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+<code>delete_quiz(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String" target="_blank">String</a>)</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="48"
-                            class="link-to-prism">src/app/services/user.service.ts:48</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="76"
+                            class="link-to-prism">src/app/services/quiz.service.ts:76</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-description"><p>Take new info and update current user.</p>
+                    <div class="io-description"><p>Remove a quiz from the database</p>
 </div>
 
                     <div class="io-description">
@@ -288,21 +298,9 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>user</td>
+                                    <td>id</td>
                                     <td>
-                                                <code><a href="../classes/EditUser.html" target="_self" >EditUser</a></code>
-                                    </td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-
-                                </tr>
-                                <tr>
-                                    <td>userID</td>
-                                    <td>
-                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String" target="_blank" >String</a></code>
                                     </td>
 
                                     <td>
@@ -321,7 +319,182 @@
 
                     </div>
                     <div class="io-description">
+                        <p>any</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="get_quiz_categories"></a>
+                    <span class="name">
+                        <span ><b>get_quiz_categories</b></span>
+                        <a href="#get_quiz_categories"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>get_quiz_categories()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="86"
+                            class="link-to-prism">src/app/services/quiz.service.ts:86</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Returns all Quiz Categories available</p>
+</div>
+
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;any[]&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>Category[]</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getAllQuiz"></a>
+                    <span class="name">
+                        <span ><b>getAllQuiz</b></span>
+                        <a href="#getAllQuiz"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getAllQuiz()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="48"
+                            class="link-to-prism">src/app/services/quiz.service.ts:48</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Get all Quizzes from Quiz database</p>
+</div>
+
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;any[]&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>Quiz[]</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="update_quiz"></a>
+                    <span class="name">
+                        <span ><b>update_quiz</b></span>
+                        <a href="#update_quiz"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>update_quiz(update: <a href="../classes/Quiz.html" target="_self">Quiz</a>, id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String" target="_blank">String</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="60"
+                            class="link-to-prism">src/app/services/quiz.service.ts:60</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Update the values of a particular quiz</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
                         
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>update</td>
+                                    <td>
+                                                <code><a href="../classes/Quiz.html" target="_self" >Quiz</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>id</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String" target="_blank" >String</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;any&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>Quiz</p>
+
                     </div>
                 </td>
             </tr>
@@ -352,18 +525,18 @@
                 </tr>
                 <tr>
                     <td class="col-md-4">
-                        <i>Default value : </i><code>&quot;https://clumsy-apron-ray.cyclic.app/api/user&quot;</code>
+                        <i>Default value : </i><code>&quot;https://clumsy-apron-ray.cyclic.app/api/quiz&quot;</code>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/services/user.service.ts:25</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/services/quiz.service.ts:25</a></div>
                         </td>
                     </tr>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-description"><p>All user related requests use this base url</p>
+                    <div class="io-description"><p>Base url for quiz calls</p>
 </div>
                 </td>
             </tr>
@@ -378,9 +551,9 @@
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { HttpClient, HttpErrorResponse, HttpHeaders } from &#x27;@angular/common/http&#x27;;
 import { Injectable } from &#x27;@angular/core&#x27;;
-import { catchError, Observable } from &#x27;rxjs&#x27;;
-
-import { CreateUser, EditUser, User } from &#x27;../models/user&#x27;;
+import { catchError, Observable, throwError } from &#x27;rxjs&#x27;;
+import { Category } from &#x27;../models/categories&#x27;;
+import { CreateQuiz, Quiz } from &#x27;../models/quiz&#x27;;
 import { handleError } from &#x27;../utilities/errorhandler&#x27;;
 
 /**
@@ -389,7 +562,7 @@ import { handleError } from &#x27;../utilities/errorhandler&#x27;;
 @Injectable({
   providedIn: &#x27;root&#x27;
 })
-export class UserService {
+export class QuizService {
 
   /**
    * Constructor to inject http Client
@@ -398,41 +571,76 @@ export class UserService {
   constructor(private http: HttpClient) { }
 
   /**
-   * All user related requests use this base url
-   */
-  base_url &#x3D; &quot;https://clumsy-apron-ray.cyclic.app/api/user&quot;;
+ * Base url for quiz calls
+ */
+  base_url &#x3D; &quot;https://clumsy-apron-ray.cyclic.app/api/quiz&quot;;
 
   /**
-   * Take user input and create new user
-   * @param user 
-   * @returns 
+   * Creates a new quiz
+   * @param newQuiz 
+   * @returns Quiz
    */
-  create_user(user: CreateUser) : Observable&lt;any&gt;{
-    let userNew &#x3D; JSON.stringify(user);
-    return this.http.post&lt;CreateUser&gt;(this.base_url+&quot;/createUser&quot;,userNew,
-    {headers: new HttpHeaders({
-      &#x27;Content-Type&#x27;: &#x27;application/json&#x27;
-    })}).pipe(
-      catchError(handleError)
-    );
+  create_quiz(newQuiz: CreateQuiz): Observable&lt;any&gt; {
+    let nQuiz &#x3D; JSON.stringify(newQuiz);
+    return this.http.post&lt;Quiz&gt;(this.base_url + &quot;/createQuiz&quot;, nQuiz,
+      {
+        headers: new HttpHeaders({
+          &#x27;Content-Type&#x27;: &#x27;application/json&#x27;
+        })
+      }).pipe(
+        catchError(handleError)
+      );
   }
-  
+
   /**
-   * Take new info and update current user.
-   * @param user 
-   * @param userID 
-   * @returns 
+   * Get all Quizzes from Quiz database
+   * @returns Quiz[]
    */
-  edit_user(user: EditUser, userID: string) : Observable&lt;any&gt;{
-    let userUpdated &#x3D; JSON.stringify(user);
-    return this.http.patch&lt;EditUser&gt;(this.base_url+&quot;/updateUser/&quot;+userID,userUpdated,
-    {headers: new HttpHeaders({
-      &#x27;Content-Type&#x27;: &#x27;application/json&#x27;
-    })}).pipe(
+  getAllQuiz(): Observable&lt;any[]&gt; {
+    return this.http.get&lt;Quiz[]&gt;(this.base_url + &quot;/getAllQuizzes&quot;).pipe(
       catchError(handleError)
     );
   }
-}</code></pre>
+
+  /**
+   * Update the values of a particular quiz
+   * @param update 
+   * @param id 
+   * @returns Quiz
+   */
+  update_quiz(update : Quiz, id: String) : Observable&lt;any&gt;{
+    let nupdate &#x3D; JSON.stringify(update);
+    return this.http.patch&lt;Quiz&gt;(this.base_url+&quot;/updateQuiz/&quot;+ id,nupdate, {
+      headers: new HttpHeaders({
+        &#x27;Content-Type&#x27;: &#x27;application/json&#x27;
+      })
+    }).pipe(
+      catchError(handleError)
+    );
+  }  
+
+  /**
+   * Remove a quiz from the database
+   * @param id 
+   * @returns any
+   */
+  delete_quiz(id: String): Observable&lt;any&gt; {
+    return this.http.delete(this.base_url + &quot;/deleteQuiz/&quot;+id).pipe(
+      catchError(handleError)
+    );
+  }
+
+  /**
+   * Returns all Quiz Categories available
+   * @returns Category[]
+   */
+  get_quiz_categories(): Observable&lt;any[]&gt;{
+    return this.http.get&lt;Category[]&gt;(&quot;https://clumsy-apron-ray.cyclic.app/api/category/getAllCategories&quot;).pipe(
+      catchError(handleError)
+    );
+  }
+}
+</code></pre>
     </div>
 
 </div>
@@ -475,7 +683,7 @@ export class UserService {
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
-            var COMPODOC_CURRENT_PAGE_URL = 'UserService.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'QuizService.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
 

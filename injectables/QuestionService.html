@@ -40,7 +40,7 @@
 
 <ol class="breadcrumb">
   <li>Injectables</li>
-  <li >UserService</li>
+  <li >QuestionService</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -58,7 +58,7 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>src/app/services/user.service.ts</code>
+            <code>src/app/services/question.service.ts</code>
         </p>
 
 
@@ -66,7 +66,7 @@
                 <h3>Description</h3>
             </p>
             <p class="comment">
-                <p>Angular Directive</p>
+                <p>Default angular directive</p>
 
             </p>
 
@@ -100,10 +100,19 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <a href="#create_user" >create_user</a>
+                                <a href="#create_question" >create_question</a>
                             </li>
                             <li>
-                                <a href="#edit_user" >edit_user</a>
+                                <a href="#delete_question" >delete_question</a>
+                            </li>
+                            <li>
+                                <a href="#get_quiz_questions" >get_quiz_questions</a>
+                            </li>
+                            <li>
+                                <a href="#getAllQuestions" >getAllQuestions</a>
+                            </li>
+                            <li>
+                                <a href="#update_question" >update_question</a>
                             </li>
                         </ul>
                     </td>
@@ -128,13 +137,13 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/services/user.service.ts:14</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/services/question.service.ts:14</a></div>
                             </td>
                         </tr>
 
                 <tr>
                     <td class="col-md-4">
-                            <div class="io-description"><p>Constructor to inject http Client</p>
+                            <div class="io-description"><p>Constructor to inject http client</p>
 </div>
                             <div>
                                     <b>Parameters :</b>
@@ -177,16 +186,16 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="create_user"></a>
+                    <a name="create_question"></a>
                     <span class="name">
-                        <span ><b>create_user</b></span>
-                        <a href="#create_user"><span class="icon ion-ios-link"></span></a>
+                        <span ><b>create_question</b></span>
+                        <a href="#create_question"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>create_user(user: <a href="../classes/CreateUser.html" target="_self">CreateUser</a>)</code>
+<code>create_question(question: <a href="../classes/NewQuestion.html" target="_self">NewQuestion</a>)</code>
                 </td>
             </tr>
 
@@ -194,14 +203,14 @@
             <tr>
                 <td class="col-md-4">
                     <div class="io-line">Defined in <a href="" data-line="32"
-                            class="link-to-prism">src/app/services/user.service.ts:32</a></div>
+                            class="link-to-prism">src/app/services/question.service.ts:32</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-description"><p>Take user input and create new user</p>
+                    <div class="io-description"><p>Creates a question for quiz</p>
 </div>
 
                     <div class="io-description">
@@ -217,9 +226,81 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>user</td>
+                                    <td>question</td>
                                     <td>
-                                                <code><a href="../classes/CreateUser.html" target="_self" >CreateUser</a></code>
+                                                <code><a href="../classes/NewQuestion.html" target="_self" >NewQuestion</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;any&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>Question</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="delete_question"></a>
+                    <span class="name">
+                        <span ><b>delete_question</b></span>
+                        <a href="#delete_question"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>delete_question(question: <a href="../classes/Question.html" target="_self">Question</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="84"
+                            class="link-to-prism">src/app/services/question.service.ts:84</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Removes question from database and associated answers.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>question</td>
+                                    <td>
+                                                <code><a href="../classes/Question.html" target="_self" >Question</a></code>
                                     </td>
 
                                     <td>
@@ -248,31 +329,31 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="edit_user"></a>
+                    <a name="get_quiz_questions"></a>
                     <span class="name">
-                        <span ><b>edit_user</b></span>
-                        <a href="#edit_user"><span class="icon ion-ios-link"></span></a>
+                        <span ><b>get_quiz_questions</b></span>
+                        <a href="#get_quiz_questions"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>edit_user(user: <a href="../classes/EditUser.html" target="_self">EditUser</a>, userID: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+<code>get_quiz_questions(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String" target="_blank">String</a>)</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="48"
-                            class="link-to-prism">src/app/services/user.service.ts:48</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="58"
+                            class="link-to-prism">src/app/services/question.service.ts:58</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-description"><p>Take new info and update current user.</p>
+                    <div class="io-description"><p>Get all questions belonging to a specifc quiz</p>
 </div>
 
                     <div class="io-description">
@@ -288,9 +369,126 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>user</td>
+                                    <td>id</td>
                                     <td>
-                                                <code><a href="../classes/EditUser.html" target="_self" >EditUser</a></code>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String" target="_blank" >String</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;any[]&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>Question[]</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getAllQuestions"></a>
+                    <span class="name">
+                        <span ><b>getAllQuestions</b></span>
+                        <a href="#getAllQuestions"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getAllQuestions()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="47"
+                            class="link-to-prism">src/app/services/question.service.ts:47</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Gets all questions for all quizzes</p>
+</div>
+
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;any[]&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>Question[]</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="update_question"></a>
+                    <span class="name">
+                        <span ><b>update_question</b></span>
+                        <a href="#update_question"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>update_question(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String" target="_blank">String</a>, question: <a href="../classes/UpdateQuestion.html" target="_self">UpdateQuestion</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="70"
+                            class="link-to-prism">src/app/services/question.service.ts:70</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Updates question values</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>id</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String" target="_blank" >String</a></code>
                                     </td>
 
                                     <td>
@@ -300,9 +498,9 @@
 
                                 </tr>
                                 <tr>
-                                    <td>userID</td>
+                                    <td>question</td>
                                     <td>
-                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                <code><a href="../classes/UpdateQuestion.html" target="_self" >UpdateQuestion</a></code>
                                     </td>
 
                                     <td>
@@ -321,7 +519,8 @@
 
                     </div>
                     <div class="io-description">
-                        
+                        <p>Question</p>
+
                     </div>
                 </td>
             </tr>
@@ -352,18 +551,18 @@
                 </tr>
                 <tr>
                     <td class="col-md-4">
-                        <i>Default value : </i><code>&quot;https://clumsy-apron-ray.cyclic.app/api/user&quot;</code>
+                        <i>Default value : </i><code>&quot;https://clumsy-apron-ray.cyclic.app/api/question&quot;</code>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/services/user.service.ts:25</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/services/question.service.ts:25</a></div>
                         </td>
                     </tr>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-description"><p>All user related requests use this base url</p>
+                    <div class="io-description"><p>Base url for question calls</p>
 </div>
                 </td>
             </tr>
@@ -376,63 +575,96 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { HttpClient, HttpErrorResponse, HttpHeaders } from &#x27;@angular/common/http&#x27;;
-import { Injectable } from &#x27;@angular/core&#x27;;
-import { catchError, Observable } from &#x27;rxjs&#x27;;
-
-import { CreateUser, EditUser, User } from &#x27;../models/user&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &#x27;@angular/core&#x27;;
+import { HttpClient, HttpErrorResponse, HttpHeaders } from &#x27;@angular/common/http&#x27;;
+import { NewQuestion, Question, UpdateQuestion } from &#x27;../models/question&#x27;;
+import { catchError, Observable, throwError } from &#x27;rxjs&#x27;;
+import { Category } from &#x27;../models/categories&#x27;;
 import { handleError } from &#x27;../utilities/errorhandler&#x27;;
 
 /**
- * Angular Directive
+ * Default angular directive
  */
 @Injectable({
   providedIn: &#x27;root&#x27;
 })
-export class UserService {
+export class QuestionService {
 
   /**
-   * Constructor to inject http Client
+   * Constructor to inject http client
    * @param http
    */
   constructor(private http: HttpClient) { }
 
   /**
-   * All user related requests use this base url
+   * Base url for question calls
    */
-  base_url &#x3D; &quot;https://clumsy-apron-ray.cyclic.app/api/user&quot;;
+  base_url &#x3D; &quot;https://clumsy-apron-ray.cyclic.app/api/question&quot;;
 
   /**
-   * Take user input and create new user
-   * @param user 
-   * @returns 
+   * Creates a question for quiz
+   * @param question 
+   * @returns Question
    */
-  create_user(user: CreateUser) : Observable&lt;any&gt;{
-    let userNew &#x3D; JSON.stringify(user);
-    return this.http.post&lt;CreateUser&gt;(this.base_url+&quot;/createUser&quot;,userNew,
-    {headers: new HttpHeaders({
-      &#x27;Content-Type&#x27;: &#x27;application/json&#x27;
-    })}).pipe(
+  create_question(question: NewQuestion): Observable&lt;any&gt; {
+    let nquestion &#x3D; JSON.stringify(question);
+    return this.http.post&lt;Question&gt;(this.base_url + &quot;/createQuestion&quot;, nquestion, {
+      headers: new HttpHeaders({
+        &#x27;Content-Type&#x27;: &#x27;application/json&#x27;
+      })
+    }).pipe(
+      catchError(handleError)
+    );
+  }
+
+  /**
+   * Gets all questions for all quizzes
+   * @returns Question[]
+   */
+  getAllQuestions() : Observable&lt;any[]&gt;{
+    return this.http.get&lt;Question[]&gt;(this.base_url+&quot;/getAllQuestions&quot;).pipe(
+      catchError(handleError)
+    );
+  }
+
+  /**
+   * Get all questions belonging to a specifc quiz
+   * @param id 
+   * @returns Question[]
+   */
+  get_quiz_questions(id: String) : Observable&lt;any[]&gt;{
+    return this.http.get&lt;Question[]&gt;(this.base_url+&quot;/getQuestions/&quot;+id).pipe(
       catchError(handleError)
     );
   }
   
   /**
-   * Take new info and update current user.
-   * @param user 
-   * @param userID 
+   * Updates question values
+   * @param id 
+   * @param question 
+   * @returns Question
+   */
+  update_question(id:String, question:UpdateQuestion) : Observable&lt;any&gt;{
+    let nquestion &#x3D; JSON.stringify(question);
+    return this.http.patch&lt;Question&gt;(this.base_url+&quot;/updateQuestion/&quot;+id, nquestion,{
+      headers: new HttpHeaders({
+        &#x27;Content-Type&#x27;: &#x27;application/json&#x27;
+      })
+    });
+  }
+
+  /**
+   * Removes question from database and associated answers.
+   * @param question 
    * @returns 
    */
-  edit_user(user: EditUser, userID: string) : Observable&lt;any&gt;{
-    let userUpdated &#x3D; JSON.stringify(user);
-    return this.http.patch&lt;EditUser&gt;(this.base_url+&quot;/updateUser/&quot;+userID,userUpdated,
-    {headers: new HttpHeaders({
-      &#x27;Content-Type&#x27;: &#x27;application/json&#x27;
-    })}).pipe(
+  delete_question(question: Question) : Observable&lt;any&gt;{
+    return this.http.delete(this.base_url+&quot;/deleteQuestion/&quot;+question._id).pipe(
       catchError(handleError)
     );
   }
-}</code></pre>
+}
+</code></pre>
     </div>
 
 </div>
@@ -475,7 +707,7 @@ export class UserService {
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
-            var COMPODOC_CURRENT_PAGE_URL = 'UserService.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'QuestionService.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
 

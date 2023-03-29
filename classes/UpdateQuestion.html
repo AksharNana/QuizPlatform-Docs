@@ -28,7 +28,7 @@
                    <compodoc-menu mode="normal"></compodoc-menu>
                </div>
                <!-- START CONTENT -->
-               <div class="content guard">
+               <div class="content class">
                    <div class="content-data">
 
 
@@ -40,9 +40,11 @@
 
 
 
+
+
 <ol class="breadcrumb">
-    <li>Guards</li>
-    <li >EditProfileGuard</li>
+  <li>Classes</li>
+  <li >UpdateQuestion</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -55,41 +57,40 @@
 </ul>
 
 <div class="tab-content">
-        <div class="tab-pane fade active in" id="c-info">
-            <p class="comment">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
             <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/app/models/question.ts</code>
+        </p>
+
+
+            <p class="comment">
+                <h3>Description</h3>
             </p>
             <p class="comment">
-                <code>src/app/guards/edit-profile.guard.ts</code>
+                <p>Update Question Interface</p>
+
             </p>
 
 
-                <p class="comment">
-                <h3>Description</h3>
-                </p>
-                <p class="comment">
-                    <p>Angular Directive</p>
-
-                </p>
 
 
-
-
-                <section>
+            <section>
     <h3 id="index">Index</h3>
     <table class="table table-sm table-bordered index-table">
         <tbody>
-
                 <tr>
                     <td class="col-md-4">
-                        <h6><b>Methods</b></h6>
+                        <h6><b>Properties</b></h6>
                     </td>
                 </tr>
                 <tr>
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <a href="#canActivate" >canActivate</a>
+                                <a href="#Question" >Question</a>
                             </li>
                         </ul>
                     </td>
@@ -99,137 +100,124 @@
 
 
 
+
         </tbody>
     </table>
 </section>
 
 
-                <section>
+            <section>
     
-    <h3 id="methods">
-        Methods
+    <h3 id="inputs">
+        Properties
     </h3>
     <table class="table table-sm table-bordered">
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="canActivate"></a>
+                    <a name="Question"></a>
                     <span class="name">
-                        <span ><b>canActivate</b></span>
-                        <a href="#canActivate"><span class="icon ion-ios-link"></span></a>
+                        <span ><b>Question</b></span>
+                        <a href="#Question"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String" target="_blank" >String</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&quot;&quot;</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="58" class="link-to-prism">src/app/models/question.ts:58</a></div>
+                        </td>
+                    </tr>
+
             <tr>
                 <td class="col-md-4">
-<code>canActivate(route: <a href="https://angular.io/api/router/ActivatedRouteSnapshot" target="_blank">ActivatedRouteSnapshot</a>, state: <a href="https://angular.io/api/router/RouterStateSnapshot" target="_blank">RouterStateSnapshot</a>)</code>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="18"
-                            class="link-to-prism">src/app/guards/edit-profile.guard.ts:18</a></div>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-description"><p>Can Activate function to test whether or not a user is logged in</p>
+                    <div class="io-description"><p>Updated question value</p>
 </div>
-
-                    <div class="io-description">
-                        <b>Parameters :</b>
-                        
-                        <table class="params">
-                            <thead>
-                                <tr>
-                                    <td>Name</td>
-                                    <td>Type</td>
-                                    <td>Optional</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>route</td>
-                                    <td>
-                                                <code><a href="https://angular.io/api/router/ActivatedRouteSnapshot" target="_blank" >ActivatedRouteSnapshot</a></code>
-                                    </td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-
-                                </tr>
-                                <tr>
-                                    <td>state</td>
-                                    <td>
-                                                <code><a href="https://angular.io/api/router/RouterStateSnapshot" target="_blank" >RouterStateSnapshot</a></code>
-                                    </td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div>
-                    </div>
-                    <div class="io-description">
-                        <b>Returns : </b>    <code>Observable | Promise | boolean | UrlTree</code>
-
-                    </div>
-                    <div class="io-description">
-                        
-                    </div>
                 </td>
             </tr>
+
         </tbody>
     </table>
 </section>
-        </div>
 
 
-        <div class="tab-pane fade  tab-source-code" id="c-source">
-            <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &#x27;@angular/core&#x27;;
-import { ActivatedRouteSnapshot, CanActivate, RouterStateSnapshot, UrlTree } from &#x27;@angular/router&#x27;;
-import { Observable } from &#x27;rxjs&#x27;;
+
+
+
+
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">export class NewQuestion{
+    /**
+     * QuizID to which the question is associated with
+     */
+    QuizID: String &#x3D; &quot;&quot;;
+
+    /**
+     * The type of question, multiplechoice, text answer etc
+     */
+    Type: String &#x3D;  &quot;&quot;;
+
+    /**
+     * The question itself
+     */
+    Question: String &#x3D; &quot;&quot;;
+}
 
 /**
- * Angular Directive
+ * Question interface
  */
-@Injectable({
-  providedIn: &#x27;root&#x27;
-})
-export class EditProfileGuard implements CanActivate {
-  /**
-   * Can Activate function to test whether or not a user is logged in
-   * @param route 
-   * @param state 
-   * @returns 
-   */
-  canActivate(
-    route: ActivatedRouteSnapshot,
-    state: RouterStateSnapshot): Observable&lt;boolean | UrlTree&gt; | Promise&lt;boolean | UrlTree&gt; | boolean | UrlTree {
-      let user &#x3D; sessionStorage.getItem(&quot;User&quot;);
-      if(user &#x3D;&#x3D; null){
-        alert(&quot;You can&#x27;t edit your profile without logging in!&quot;);
-        return false;
-      }
-    return true;
-  }
+export class Question{
+    /**
+     * QuizID to which the question is associated with
+     */
+    QuizID: String &#x3D; &quot;&quot;;
+
+    /**
+     * The type of question, multiplechoice, text answer etc
+     */
+    Type: String &#x3D;  &quot;&quot;;
+
+    /**
+     * The question itself
+     */
+    Question: String &#x3D; &quot;&quot;;
+
+    /**
+     * Id from database
+     */
+    _id: String &#x3D; &quot;&quot;;
+
+    /**
+     * Version
+     */
+    __v: Number &#x3D; 0;
 }
-</code></pre>
-        </div>
+
+/**
+ * Update Question Interface
+ */
+export class UpdateQuestion{
+    /**
+     * Updated question value
+     */
+    Question: String &#x3D; &quot;&quot;;
+}</code></pre>
+    </div>
 </div>
-
-
 
 
 
@@ -264,8 +252,8 @@ export class EditProfileGuard implements CanActivate {
 
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
-            var COMPODOC_CURRENT_PAGE_CONTEXT = 'guard';
-            var COMPODOC_CURRENT_PAGE_URL = 'EditProfileGuard.html';
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'class';
+            var COMPODOC_CURRENT_PAGE_URL = 'UpdateQuestion.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
 

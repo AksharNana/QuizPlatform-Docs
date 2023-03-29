@@ -441,7 +441,7 @@
                 </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="83" class="link-to-prism">src/app/edit-profile/edit-profile.component.ts:83</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="86" class="link-to-prism">src/app/edit-profile/edit-profile.component.ts:86</a></div>
                                 </td>
                             </tr>
                     <tr>
@@ -470,7 +470,7 @@
                 </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="89" class="link-to-prism">src/app/edit-profile/edit-profile.component.ts:89</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="92" class="link-to-prism">src/app/edit-profile/edit-profile.component.ts:92</a></div>
                                 </td>
                             </tr>
                     <tr>
@@ -499,7 +499,7 @@
                 </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="95" class="link-to-prism">src/app/edit-profile/edit-profile.component.ts:95</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="98" class="link-to-prism">src/app/edit-profile/edit-profile.component.ts:98</a></div>
                                 </td>
                             </tr>
                     <tr>
@@ -528,7 +528,7 @@
                 </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="101" class="link-to-prism">src/app/edit-profile/edit-profile.component.ts:101</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="104" class="link-to-prism">src/app/edit-profile/edit-profile.component.ts:104</a></div>
                                 </td>
                             </tr>
                     <tr>
@@ -557,7 +557,7 @@
                 </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="107" class="link-to-prism">src/app/edit-profile/edit-profile.component.ts:107</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="110" class="link-to-prism">src/app/edit-profile/edit-profile.component.ts:110</a></div>
                                 </td>
                             </tr>
                     <tr>
@@ -586,7 +586,7 @@
                 </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="113" class="link-to-prism">src/app/edit-profile/edit-profile.component.ts:113</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="116" class="link-to-prism">src/app/edit-profile/edit-profile.component.ts:116</a></div>
                                 </td>
                             </tr>
                     <tr>
@@ -604,7 +604,7 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { AfterViewInit, Component, OnInit } from &#x27;@angular/core&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component } from &#x27;@angular/core&#x27;;
 import { FormControl, FormGroup, Validators } from &#x27;@angular/forms&#x27;;
 import { EditUser, User } from &#x27;../models/user&#x27;;
 import { UserService } from &#x27;../services/user.service&#x27;;
@@ -676,6 +676,9 @@ export class EditProfileComponent{
       Email: this.email?.value!,
       Password: this.password?.value!,
     }
+    /**
+     * Edit user api call
+     */
     this.userService.edit_user(user,userId).subscribe(
       (response : User) &#x3D;&gt; { 
         console.log(response);
@@ -920,7 +923,7 @@ select {
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
         var COMPONENT_TEMPLATE = '<div><div class="class">    <form [formGroup]="update_form" (ngSubmit)="updateUser()" id="update_form">        <div class="update">            <div class="columns is-flex is-flex-direction-column box">                <div class="field">                    <p class="control has-icons-left">                        <input class="input" id="first_name" type="text" placeholder="First Name"                            formControlName="first_name" required>                        <span class="icon is-small is-left">                            <i class="fas fa-solid fa-user"></i>                        </span>                    </p>                    <div *ngIf="first_name?.invalid && (first_name?.dirty || first_name?.touched) ">                        <div *ngIf="first_name?.errors?.[\'required\']">                            First Name is required.                        </div>                    </div>                </div>                <div class="field">                    <p class="control has-icons-left">                        <input class="input" type="text" placeholder="Surname" formControlName="surname" required>                        <span class="icon is-small is-left">                            <i class="fas fa-solid fa-user"></i>                        </span>                    </p>                    <div *ngIf="surname?.invalid && (surname?.dirty || surname?.touched) ">                        <div *ngIf="surname?.errors?.[\'required\']">                            Surname is required.                        </div>                    </div>                </div>                <div class="field">                    <p class="control has-icons-left">                        <input class="input" type="text" placeholder="Username" formControlName="username" required>                        <span class="icon is-small is-left">                            <i class="fas fa-solid fa-user"></i>                        </span>                    </p>                    <div *ngIf="username?.invalid && (username?.dirty || username?.touched) ">                        <div *ngIf="username?.errors?.[\'required\']">                            Username is required.                        </div>                    </div>                </div>                <div class="field">                    <p class="control has-icons-left has-icons-right">                        <input class="input" type="email" placeholder="Email" formControlName="email" required>                        <span class="icon is-small is-left">                            <i class="fas fa-envelope"></i>                        </span>                        <span class="icon is-small is-right">                            <i class="fas fa-check"></i>                        </span>                    </p>                    <div *ngIf="email?.invalid && (email?.dirty || email?.touched) ">                        <div *ngIf="email?.errors?.[\'required\']">                            Email is required.                        </div>                        <div *ngIf="email?.errors?.[\'email\']">                            Invalid Email                        </div>                    </div>                </div>                <div class="field">                    <p class="control has-icons-left">                        <input class="input" type="password" placeholder="Password" formControlName="password" required>                        <span class="icon is-small is-left">                            <i class="fas fa-lock"></i>                        </span>                    </p>                    <div *ngIf="password?.invalid && (password?.dirty || password?.touched) ">                        <div *ngIf="password?.errors?.[\'required\']">                            Password is required.                        </div>                        <div *ngIf="password?.errors?.[\'minlength\']">                            Password too short.                        </div>                    </div>                </div>                <div class="field">                    <p class="control has-icons-left">                        <input class="input" type="password" placeholder="Confirm Password"                            formControlName="confirm_password" required>                        <span class="icon is-small is-left">                            <i class="fas fa-lock"></i>                        </span>                    </p>                    <div *ngIf="confirm_password?.dirty || confirm_password?.touched">                        <div *ngIf="confirm_password?.errors?.[\'required\']">                            Password is required.                        </div>                        <div *ngIf="update_form.errors?.[\'confirmPassword\'] == false">                            Passwords don\'t match.                        </div>                    </div>                </div>                <div class="field">                    <p class="control">                        <button class="button is-success is-fullwidth" [disabled]="!update_form.valid">                            Update                        </button>                    </p>                </div>            </div>        </div>    </form></div></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'EditProfileComponent', 'selector': 'app-edit-profile'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'QuizAnswerComponent', 'selector': 'app-quiz-answer'},{'name': 'RegistrationComponent', 'selector': 'app-registration'}];
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'EditProfileComponent', 'selector': 'app-edit-profile'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'QuizAnswerComponent', 'selector': 'app-quiz-answer'},{'name': 'QuizInfoComponent', 'selector': 'app-quiz-info'},{'name': 'RegistrationComponent', 'selector': 'app-registration'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'EditProfileComponent'};
 </script>
