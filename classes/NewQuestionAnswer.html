@@ -44,7 +44,7 @@
 
 <ol class="breadcrumb">
   <li>Classes</li>
-  <li >AddBookmark</li>
+  <li >NewQuestionAnswer</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -62,7 +62,7 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>src/app/models/bookmarks.ts</code>
+            <code>src/app/models/qna.ts</code>
         </p>
 
 
@@ -70,7 +70,7 @@
                 <h3>Description</h3>
             </p>
             <p class="comment">
-                <p>Add Bookmark interface</p>
+                <p>QNA interface</p>
 
             </p>
 
@@ -90,10 +90,16 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <a href="#QuizID" >QuizID</a>
+                                <a href="#Answer" >Answer</a>
                             </li>
                             <li>
-                                <a href="#UserID" >UserID</a>
+                                <a href="#Correct" >Correct</a>
+                            </li>
+                            <li>
+                                <a href="#Question" >Question</a>
+                            </li>
+                            <li>
+                                <a href="#QuizID" >QuizID</a>
                             </li>
                         </ul>
                     </td>
@@ -118,6 +124,111 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
+                    <a name="Answer"></a>
+                    <span class="name">
+                        <span ><b>Answer</b></span>
+                        <a href="#Answer"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&quot;&quot;</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/models/qna.ts:18</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>The answer for this question</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="Correct"></a>
+                    <span class="name">
+                        <span ><b>Correct</b></span>
+                        <a href="#Correct"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/app/models/qna.ts:20</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="Question"></a>
+                    <span class="name">
+                        <span ><b>Question</b></span>
+                        <a href="#Question"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&quot;&quot;</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/app/models/qna.ts:13</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>The question itself</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
                     <a name="QuizID"></a>
                     <span class="name">
                         <span ><b>QuizID</b></span>
@@ -138,50 +249,13 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="34" class="link-to-prism">src/app/models/bookmarks.ts:34</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">src/app/models/qna.ts:8</a></div>
                         </td>
                     </tr>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-description"><p>QuizID: Which quiz is being bookmarked?</p>
-</div>
-                </td>
-            </tr>
-
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="UserID"></a>
-                    <span class="name">
-                        <span ><b>UserID</b></span>
-                        <a href="#UserID"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <i>Default value : </i><code>&quot;&quot;</code>
-                    </td>
-                </tr>
-                    <tr>
-                        <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/app/models/bookmarks.ts:30</a></div>
-                        </td>
-                    </tr>
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-description"><p>UserID to which bookmark belongs</p>
+                    <div class="io-description"><p>QuizID to which the question is associated with</p>
 </div>
                 </td>
             </tr>
@@ -200,37 +274,25 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">export class Bookmark{
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">export class NewQuestionAnswer{
     /**
-     * ID from database
-     */
-    _id: string &#x3D; &quot;&quot;;
-    /**
-     * UserID to which bookmark belongs
-     */
-    UserID: string &#x3D; &quot;&quot;;
-    /**
-     * QuizID: Which quiz is being bookmarked?
+     * QuizID to which the question is associated with
      */
     QuizID: string &#x3D; &quot;&quot;;
 
     /**
-     * Version
+     * The question itself
      */
-    __v: Number &#x3D; 0;
-}
-/**
- * Add Bookmark interface
- */
-export class AddBookmark{
+    Question: string &#x3D; &quot;&quot;;
+
     /**
-     * UserID to which bookmark belongs 
-     */    
-    UserID: string &#x3D; &quot;&quot;;
-    /**
-     * QuizID: Which quiz is being bookmarked?
-     */
-    QuizID: string &#x3D; &quot;&quot;;
+     * The answer for this question
+    */
+    Answer: string &#x3D; &quot;&quot;;
+
+    Correct: boolean &#x3D; false;
+
+    
 }</code></pre>
     </div>
 </div>
@@ -269,7 +331,7 @@ export class AddBookmark{
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'class';
-            var COMPODOC_CURRENT_PAGE_URL = 'AddBookmark.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'NewQuestionAnswer.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
 

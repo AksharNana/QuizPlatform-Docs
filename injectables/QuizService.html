@@ -106,10 +106,19 @@
                                 <a href="#delete_quiz" >delete_quiz</a>
                             </li>
                             <li>
+                                <a href="#get_category_byID" >get_category_byID</a>
+                            </li>
+                            <li>
+                                <a href="#get_quiz_byID" >get_quiz_byID</a>
+                            </li>
+                            <li>
                                 <a href="#get_quiz_categories" >get_quiz_categories</a>
                             </li>
                             <li>
                                 <a href="#getAllQuiz" >getAllQuiz</a>
+                            </li>
+                            <li>
+                                <a href="#search_quiz" >search_quiz</a>
                             </li>
                             <li>
                                 <a href="#update_quiz" >update_quiz</a>
@@ -330,6 +339,150 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
+                    <a name="get_category_byID"></a>
+                    <span class="name">
+                        <span ><b>get_category_byID</b></span>
+                        <a href="#get_category_byID"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>get_category_byID(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="108"
+                            class="link-to-prism">src/app/services/quiz.service.ts:108</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Get the Category object given it&#39;s ID;</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>id</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;any&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>Category</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="get_quiz_byID"></a>
+                    <span class="name">
+                        <span ><b>get_quiz_byID</b></span>
+                        <a href="#get_quiz_byID"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>get_quiz_byID(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="97"
+                            class="link-to-prism">src/app/services/quiz.service.ts:97</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Get Quiz by QuizID</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>id</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;any&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>Quiz</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
                     <a name="get_quiz_categories"></a>
                     <span class="name">
                         <span ><b>get_quiz_categories</b></span>
@@ -411,6 +564,75 @@
                     <div class="io-description">
                         <p>Quiz[]</p>
 
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="search_quiz"></a>
+                    <span class="name">
+                        <span ><b>search_quiz</b></span>
+                        <a href="#search_quiz"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>search_quiz(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="114"
+                            class="link-to-prism">src/app/services/quiz.service.ts:114</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>id</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;any&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
                     </div>
                 </td>
             </tr>
@@ -577,7 +799,7 @@ export class QuizService {
 
   /**
    * Creates a new quiz
-   * @param newQuiz 
+   * @param newQuiz
    * @returns Quiz
    */
   create_quiz(newQuiz: CreateQuiz): Observable&lt;any&gt; {
@@ -604,8 +826,8 @@ export class QuizService {
 
   /**
    * Update the values of a particular quiz
-   * @param update 
-   * @param id 
+   * @param update
+   * @param id
    * @returns Quiz
    */
   update_quiz(update : Quiz, id: String) : Observable&lt;any&gt;{
@@ -617,11 +839,11 @@ export class QuizService {
     }).pipe(
       catchError(handleError)
     );
-  }  
+  }
 
   /**
    * Remove a quiz from the database
-   * @param id 
+   * @param id
    * @returns any
    */
   delete_quiz(id: String): Observable&lt;any&gt; {
@@ -639,8 +861,35 @@ export class QuizService {
       catchError(handleError)
     );
   }
-}
-</code></pre>
+
+  /**
+   * Get Quiz by QuizID
+   * @param id
+   * @returns Quiz
+   */
+  get_quiz_byID(id: string) : Observable&lt;any&gt;{
+    return this.http.get&lt;Quiz&gt;(this.base_url+&quot;/getQuiz/&quot;+id).pipe(
+      catchError(handleError)
+    );
+  }
+
+  /**
+   * Get the Category object given it&#x27;s ID;
+   * @param id
+   * @returns Category
+   */
+  get_category_byID(id: string): Observable&lt;any&gt;{
+    return this.http.get&lt;Category&gt;(&quot;https://clumsy-apron-ray.cyclic.app/api/category/getCategory/&quot;+id).pipe(
+      catchError(handleError)
+    );
+  }
+
+  search_quiz(id: string): Observable&lt;any&gt;{
+    return this.http.get&lt;Category&gt;(this.base_url+&quot;/searchQuiz/&quot;+id).pipe(
+      catchError(handleError)
+    );
+  }
+}</code></pre>
     </div>
 
 </div>

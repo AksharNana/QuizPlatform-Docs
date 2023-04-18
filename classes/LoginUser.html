@@ -44,7 +44,7 @@
 
 <ol class="breadcrumb">
   <li>Classes</li>
-  <li >AddBookmark</li>
+  <li >LoginUser</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -62,7 +62,7 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>src/app/models/bookmarks.ts</code>
+            <code>src/app/models/user.ts</code>
         </p>
 
 
@@ -70,7 +70,7 @@
                 <h3>Description</h3>
             </p>
             <p class="comment">
-                <p>Add Bookmark interface</p>
+                <p>LoginUser interface</p>
 
             </p>
 
@@ -90,10 +90,10 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <a href="#QuizID" >QuizID</a>
+                                <a href="#Email" >Email</a>
                             </li>
                             <li>
-                                <a href="#UserID" >UserID</a>
+                                <a href="#Password" >Password</a>
                             </li>
                         </ul>
                     </td>
@@ -118,10 +118,10 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="QuizID"></a>
+                    <a name="Email"></a>
                     <span class="name">
-                        <span ><b>QuizID</b></span>
-                        <a href="#QuizID"><span class="icon ion-ios-link"></span></a>
+                        <span ><b>Email</b></span>
+                        <a href="#Email"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
@@ -138,13 +138,13 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="34" class="link-to-prism">src/app/models/bookmarks.ts:34</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="110" class="link-to-prism">src/app/models/user.ts:110</a></div>
                         </td>
                     </tr>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-description"><p>QuizID: Which quiz is being bookmarked?</p>
+                    <div class="io-description"><p>Users Email Address</p>
 </div>
                 </td>
             </tr>
@@ -155,10 +155,10 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="UserID"></a>
+                    <a name="Password"></a>
                     <span class="name">
-                        <span ><b>UserID</b></span>
-                        <a href="#UserID"><span class="icon ion-ios-link"></span></a>
+                        <span ><b>Password</b></span>
+                        <a href="#Password"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
@@ -175,13 +175,13 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/app/models/bookmarks.ts:30</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="114" class="link-to-prism">src/app/models/user.ts:114</a></div>
                         </td>
                     </tr>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-description"><p>UserID to which bookmark belongs</p>
+                    <div class="io-description"><p>Users Password</p>
 </div>
                 </td>
             </tr>
@@ -200,37 +200,117 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">export class Bookmark{
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">export class User {
     /**
-     * ID from database
+     * ID Genereated by Database
      */
     _id: string &#x3D; &quot;&quot;;
-    /**
-     * UserID to which bookmark belongs
-     */
-    UserID: string &#x3D; &quot;&quot;;
-    /**
-     * QuizID: Which quiz is being bookmarked?
-     */
-    QuizID: string &#x3D; &quot;&quot;;
 
     /**
-     * Version
+     * Username for user
      */
-    __v: Number &#x3D; 0;
+    Username: string &#x3D; &quot;&quot;;
+
+    /**
+     * Users first name
+     */
+    FirstName: string &#x3D; &quot;&quot;;
+    /**
+     * Users Surname
+     */
+    Surname: string &#x3D; &quot;&quot;;
+    /**
+     * Users Email Address
+     */
+    Email: string &#x3D; &quot;&quot;;
+    /**
+     * Users Password
+     */
+    Password: string &#x3D; &quot;&quot;;
+    /**
+     * Number of plays made by user
+     */
+    Plays: number &#x3D; 0;
+    /**
+     * List of users friends!
+     */
+    Friends: string[] &#x3D; [];
+    /**
+     * Unknown
+     */
+    __v: number &#x3D; 0;
 }
+
 /**
- * Add Bookmark interface
+ * CreateUser class, used to parse form data when creating a user
  */
-export class AddBookmark{
+export class CreateUser {
     /**
-     * UserID to which bookmark belongs 
-     */    
-    UserID: string &#x3D; &quot;&quot;;
-    /**
-     * QuizID: Which quiz is being bookmarked?
+     * Username for user
      */
-    QuizID: string &#x3D; &quot;&quot;;
+    Username: string &#x3D; &quot;&quot;;
+
+    /**
+     * Users first name
+     */
+    FirstName: string &#x3D; &quot;&quot;;
+    /**
+     * Users Surname
+     */
+    Surname: string &#x3D; &quot;&quot;;
+    /**
+     * Users Email Address
+     */
+    Email: string &#x3D; &quot;&quot;;
+    /**
+     * Users Password
+     */
+    Password: string &#x3D; &quot;&quot;;
+    /**
+     * Number of plays made by user
+     */
+    Plays: number &#x3D; 0;
+}
+
+/**
+ * EditUser class, used to parse form data when updating a user
+ */
+export class EditUser {
+    /**
+     * Username for user
+     */
+    Username: string &#x3D; &quot;&quot;;
+
+    /**
+     * Users first name
+     */
+    FirstName: string &#x3D; &quot;&quot;;
+    /**
+     * Users Surname
+     */
+    Surname: string &#x3D; &quot;&quot;;
+    /**
+     * Users Email Address
+     */
+    Email: string &#x3D; &quot;&quot;;
+    /**
+     * Users Password
+     */
+    Password: string &#x3D; &quot;&quot;;
+}
+
+/**
+ * LoginUser interface
+ */
+export class LoginUser {
+    /**
+     * Users Email Address
+     */
+    Email: string &#x3D; &quot;&quot;;
+    /**
+     * Users Password
+     */
+    Password: string &#x3D; &quot;&quot;;
 }</code></pre>
     </div>
 </div>
@@ -269,7 +349,7 @@ export class AddBookmark{
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'class';
-            var COMPODOC_CURRENT_PAGE_URL = 'AddBookmark.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'LoginUser.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
 

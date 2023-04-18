@@ -100,6 +100,9 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
+                                <a href="#create_many_questions" >create_many_questions</a>
+                            </li>
+                            <li>
                                 <a href="#create_question" >create_question</a>
                             </li>
                             <li>
@@ -182,6 +185,78 @@
     <h3 id="methods">
         Methods
     </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="create_many_questions"></a>
+                    <span class="name">
+                        <span ><b>create_many_questions</b></span>
+                        <a href="#create_many_questions"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>create_many_questions(questions: NewQuestion[])</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="48"
+                            class="link-to-prism">src/app/services/question.service.ts:48</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Create many questions</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>questions</td>
+                                    <td>
+                                            <code>NewQuestion[]</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;any&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>Question[]</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
     <table class="table table-sm table-bordered">
         <tbody>
             <tr>
@@ -274,8 +349,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="84"
-                            class="link-to-prism">src/app/services/question.service.ts:84</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="100"
+                            class="link-to-prism">src/app/services/question.service.ts:100</a></div>
                 </td>
             </tr>
 
@@ -345,8 +420,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="58"
-                            class="link-to-prism">src/app/services/question.service.ts:58</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="74"
+                            class="link-to-prism">src/app/services/question.service.ts:74</a></div>
                 </td>
             </tr>
 
@@ -417,8 +492,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="47"
-                            class="link-to-prism">src/app/services/question.service.ts:47</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="63"
+                            class="link-to-prism">src/app/services/question.service.ts:63</a></div>
                 </td>
             </tr>
 
@@ -462,8 +537,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="70"
-                            class="link-to-prism">src/app/services/question.service.ts:70</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="86"
+                            class="link-to-prism">src/app/services/question.service.ts:86</a></div>
                 </td>
             </tr>
 
@@ -611,6 +686,22 @@ export class QuestionService {
     return this.http.post&lt;Question&gt;(this.base_url + &quot;/createQuestion&quot;, nquestion, {
       headers: new HttpHeaders({
         &#x27;Content-Type&#x27;: &#x27;application/json&#x27;
+      })
+    }).pipe(
+      catchError(handleError)
+    );
+  }
+
+  /**
+   * Create many questions
+   * @param questions 
+   * @returns Question[]
+   */
+  create_many_questions(questions: NewQuestion[]) : Observable&lt;any&gt;{
+    let nquestions &#x3D; JSON.stringify(questions);
+    return this.http.post&lt;Question[]&gt;(this.base_url+&quot;/createManyQuestions&quot;,nquestions,{
+      headers: new HttpHeaders({
+        &#x27;Content-Type&#x27;:&#x27;application/json&#x27;
       })
     }).pipe(
       catchError(handleError)

@@ -28,7 +28,7 @@
                    <compodoc-menu mode="normal"></compodoc-menu>
                </div>
                <!-- START CONTENT -->
-               <div class="content guard">
+               <div class="content pipe">
                    <div class="content-data">
 
 
@@ -40,9 +40,10 @@
 
 
 
+
 <ol class="breadcrumb">
-    <li>Guards</li>
-    <li >EditProfileGuard</li>
+  <li>Pipes</li>
+  <li >FilterPipe</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -55,56 +56,31 @@
 </ul>
 
 <div class="tab-content">
-        <div class="tab-pane fade active in" id="c-info">
-            <p class="comment">
+    <div class="tab-pane fade active in" id="c-info">
+
+        <p class="comment">
             <h3>File</h3>
-            </p>
-            <p class="comment">
-                <code>src/app/guards/edit-profile.guard.ts</code>
-            </p>
-
-
-                <p class="comment">
-                <h3>Description</h3>
-                </p>
-                <p class="comment">
-                    <p>Angular Directive</p>
-
-                </p>
+        </p>
+        <p class="comment">
+            <code>src/app/pipes/filter.pipe.ts</code>
+        </p>
 
 
 
 
-                <section>
-    <h3 id="index">Index</h3>
-    <table class="table table-sm table-bordered index-table">
-        <tbody>
+        <section>
+            <h3>Metadata</h3>
+            <table class="table table-sm table-hover metadata">
+                <tbody>
+                    <tr>
+                        <td class="col-md-3">Name</td>
+                        <td class="col-md-9">filter</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
 
-                <tr>
-                    <td class="col-md-4">
-                        <h6><b>Methods</b></h6>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <ul class="index-list">
-                            <li>
-                                <a href="#canActivate" >canActivate</a>
-                            </li>
-                        </ul>
-                    </td>
-                </tr>
-
-
-
-
-
-        </tbody>
-    </table>
-</section>
-
-
-                <section>
+            <section>
     
     <h3 id="methods">
         Methods
@@ -113,32 +89,30 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="canActivate"></a>
+                    <a name="transform"></a>
                     <span class="name">
-                        <span ><b>canActivate</b></span>
-                        <a href="#canActivate"><span class="icon ion-ios-link"></span></a>
+                        <span ><b>transform</b></span>
+                        <a href="#transform"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>canActivate(route: <a href="https://angular.io/api/router/ActivatedRouteSnapshot" target="_blank">ActivatedRouteSnapshot</a>, state: <a href="https://angular.io/api/router/RouterStateSnapshot" target="_blank">RouterStateSnapshot</a>)</code>
+<code>transform(quizzes: <a href="../classes/Quiz.html" target="_self">Quiz[]</a>, cat: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="18"
-                            class="link-to-prism">src/app/guards/edit-profile.guard.ts:18</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="14"
+                            class="link-to-prism">src/app/pipes/filter.pipe.ts:14</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-description"><p>Can Activate function to test whether or not a user is logged in</p>
-</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -153,9 +127,9 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>route</td>
+                                    <td>quizzes</td>
                                     <td>
-                                                <code><a href="https://angular.io/api/router/ActivatedRouteSnapshot" target="_blank" >ActivatedRouteSnapshot</a></code>
+                                                <code><a href="../classes/Quiz.html" target="_self" >Quiz[]</a></code>
                                     </td>
 
                                     <td>
@@ -165,9 +139,9 @@
 
                                 </tr>
                                 <tr>
-                                    <td>state</td>
+                                    <td>cat</td>
                                     <td>
-                                                <code><a href="https://angular.io/api/router/RouterStateSnapshot" target="_blank" >RouterStateSnapshot</a></code>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
                                     </td>
 
                                     <td>
@@ -182,7 +156,7 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>    <code>Observable | Promise | boolean | UrlTree</code>
+                        <b>Returns : </b>    <code>any[]</code>
 
                     </div>
                     <div class="io-description">
@@ -193,42 +167,32 @@
         </tbody>
     </table>
 </section>
-        </div>
+
+    </div>
 
 
-        <div class="tab-pane fade  tab-source-code" id="c-source">
-            <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &#x27;@angular/core&#x27;;
-import { ActivatedRouteSnapshot, CanActivate, RouterStateSnapshot, UrlTree } from &#x27;@angular/router&#x27;;
-import { Observable } from &#x27;rxjs&#x27;;
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Pipe, PipeTransform } from &#x27;@angular/core&#x27;;
+import { Quiz } from &#x27;../models/quiz&#x27;;
 
-/**
- * Angular Directive
- */
-@Injectable({
-  providedIn: &#x27;root&#x27;
+@Pipe({
+  name: &#x27;filter&#x27;
 })
-export class EditProfileGuard implements CanActivate {
-  /**
-   * Can Activate function to test whether or not a user is logged in
-   * @param route 
-   * @param state 
-   * @returns 
-   */
-  canActivate(
-    route: ActivatedRouteSnapshot,
-    state: RouterStateSnapshot): Observable&lt;boolean | UrlTree&gt; | Promise&lt;boolean | UrlTree&gt; | boolean | UrlTree {
-      let user &#x3D; sessionStorage.getItem(&quot;User&quot;);
-      if(user &#x3D;&#x3D; null){
-        alert(&quot;You can&#x27;t access this feature without logging in!&quot;);
-        return false;
-      }
-    return true;
+export class FilterPipe implements PipeTransform {
+
+  transform(quizzes: Quiz[], cat: string): any[]{
+    if(cat &#x3D;&#x3D;&#x3D; &quot;Catergories&quot; || cat &#x3D;&#x3D;&#x3D; &#x27;&#x27;){
+      return quizzes;
+    }else{
+      return quizzes.filter(quiz&#x3D;&gt; quiz.Category &#x3D;&#x3D;&#x3D; cat);
+    }
   }
+
 }
 </code></pre>
-        </div>
-</div>
+    </div>
 
+</div>
 
 
 
@@ -264,8 +228,8 @@ export class EditProfileGuard implements CanActivate {
 
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
-            var COMPODOC_CURRENT_PAGE_CONTEXT = 'guard';
-            var COMPODOC_CURRENT_PAGE_URL = 'EditProfileGuard.html';
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'pipe';
+            var COMPODOC_CURRENT_PAGE_URL = 'FilterPipe.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
 

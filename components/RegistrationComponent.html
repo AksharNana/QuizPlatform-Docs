@@ -355,7 +355,7 @@
     confirm_password: new FormControl(&#x27;&#x27;, [
       Validators.required,
     ])
-  },{validators: confirmPassword})</code>
+  }, { validators: confirmPassword })</code>
                     </td>
                 </tr>
                     <tr>
@@ -449,7 +449,7 @@
                 </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="77" class="link-to-prism">src/app/registration/registration.component.ts:77</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="85" class="link-to-prism">src/app/registration/registration.component.ts:85</a></div>
                                 </td>
                             </tr>
                     <tr>
@@ -478,7 +478,7 @@
                 </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="83" class="link-to-prism">src/app/registration/registration.component.ts:83</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="91" class="link-to-prism">src/app/registration/registration.component.ts:91</a></div>
                                 </td>
                             </tr>
                     <tr>
@@ -507,7 +507,7 @@
                 </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="89" class="link-to-prism">src/app/registration/registration.component.ts:89</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="97" class="link-to-prism">src/app/registration/registration.component.ts:97</a></div>
                                 </td>
                             </tr>
                     <tr>
@@ -536,7 +536,7 @@
                 </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="95" class="link-to-prism">src/app/registration/registration.component.ts:95</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="103" class="link-to-prism">src/app/registration/registration.component.ts:103</a></div>
                                 </td>
                             </tr>
                     <tr>
@@ -565,7 +565,7 @@
                 </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="101" class="link-to-prism">src/app/registration/registration.component.ts:101</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="109" class="link-to-prism">src/app/registration/registration.component.ts:109</a></div>
                                 </td>
                             </tr>
                     <tr>
@@ -594,7 +594,7 @@
                 </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="107" class="link-to-prism">src/app/registration/registration.component.ts:107</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="115" class="link-to-prism">src/app/registration/registration.component.ts:115</a></div>
                                 </td>
                             </tr>
                     <tr>
@@ -633,7 +633,7 @@ export class RegistrationComponent {
    * @param userService 
    * @param router 
    */
-  constructor(public userService : UserService, public router: Router) {}
+  constructor(public userService: UserService, public router: Router) { }
 
   /**
    * Create a FormGroup and setup form controls for each field along with Validators
@@ -659,7 +659,7 @@ export class RegistrationComponent {
     confirm_password: new FormControl(&#x27;&#x27;, [
       Validators.required,
     ])
-  },{validators: confirmPassword});
+  }, { validators: confirmPassword });
 
   /**
    * Function that will register a new user
@@ -673,16 +673,24 @@ export class RegistrationComponent {
       Password: this.password?.value!,
       Plays: 0
     }
-    /**
-     * Calls userService to perform http request
-     */
-    this.userService.create_user(user).subscribe(
-      (response : User) &#x3D;&gt; { 
-        console.log(response);
-        sessionStorage.setItem(&quot;User&quot;, JSON.stringify(response));
-        this.router.navigate([&#x27;/login&#x27;]);
-      });
-    this.registration_form.reset();
+    // First check whether email is taken or not!
+    let result &#x3D; { email_status: true };
+    this.userService.check_email_exists(user.Email).subscribe((res) &#x3D;&gt; {
+      console.log(res);
+      result &#x3D; res;
+      if (result[&#x27;email_status&#x27;] &#x3D;&#x3D; false) {
+        /**
+         * Calls userService to perform http request
+         */
+        this.userService.create_user(user).subscribe(
+          (response: User) &#x3D;&gt; {
+            this.router.navigate([&#x27;/login&#x27;]);
+          });
+        this.registration_form.reset();
+      }else{
+        alert(&quot;Email already exists, try another email!&quot;);
+      }
+    });
   }
 
   /**
@@ -693,7 +701,7 @@ export class RegistrationComponent {
   }
   /**
    * Returns surname form control
-   */  
+   */
   get surname() {
     return this.registration_form.get(&quot;surname&quot;);
   }
@@ -966,7 +974,7 @@ select {
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
         var COMPONENT_TEMPLATE = '<div><div class="class">  <div class="columns">    <div class="column">      <div class="back">        <div class="hero-body">          <div class="">            <p class="title has-text-white is-size-1">              Quiz Platform            </p>            <p class="subtitle has-text-white is-size-4">              Worlds Best!            </p>          </div>        </div>      </div>    </div>    <div class="column">      <form [formGroup]="registration_form" (ngSubmit)="registerUser()" id="register_form">        <div class="register">          <div class="columns is-flex is-flex-direction-column box">            <div class="field">              <p class="control has-icons-left">                <input class="input" id="first_name" type="text" placeholder="First Name" formControlName="first_name" required>                <span class="icon is-small is-left">                  <i class="fas fa-solid fa-user"></i>                </span>              </p>              <div *ngIf="first_name?.invalid && (first_name?.dirty || first_name?.touched) ">                <div *ngIf="first_name?.errors?.[\'required\']">                  First Name is required.                </div>              </div>            </div>            <div class="field">              <p class="control has-icons-left">                <input class="input" type="text" placeholder="Surname" formControlName="surname" required>                <span class="icon is-small is-left">                  <i class="fas fa-solid fa-user"></i>                </span>              </p>              <div *ngIf="surname?.invalid && (surname?.dirty || surname?.touched) ">                <div *ngIf="surname?.errors?.[\'required\']">                  Surname is required.                </div>              </div>            </div>            <div class="field">              <p class="control has-icons-left">                <input class="input" type="text" placeholder="Username" formControlName="username" required>                <span class="icon is-small is-left">                  <i class="fas fa-solid fa-user"></i>                </span>              </p>              <div *ngIf="username?.invalid && (username?.dirty || username?.touched) ">                <div *ngIf="username?.errors?.[\'required\']">                  Username is required.                </div>              </div>            </div>            <div class="field">              <p class="control has-icons-left has-icons-right">                <input class="input" type="email" placeholder="Email" formControlName="email" required>                <span class="icon is-small is-left">                  <i class="fas fa-envelope"></i>                </span>                <span class="icon is-small is-right">                  <i class="fas fa-check"></i>                </span>              </p>              <div *ngIf="email?.invalid && (email?.dirty || email?.touched) ">                <div *ngIf="email?.errors?.[\'required\']">                  Email is required.                </div>                <div *ngIf="email?.errors?.[\'email\']">                  Invalid Email                </div>              </div>            </div>            <div class="field">              <p class="control has-icons-left">                <input class="input" type="password" placeholder="Password" formControlName="password" required>                <span class="icon is-small is-left">                  <i class="fas fa-lock"></i>                </span>              </p>              <div *ngIf="password?.invalid && (password?.dirty || password?.touched) ">                <div *ngIf="password?.errors?.[\'required\']">                  Password is required.                </div>                <div *ngIf="password?.errors?.[\'minlength\']">                  Password too short.                </div>              </div>            </div>            <div class="field">              <p class="control has-icons-left">                <input class="input" type="password" placeholder="Confirm Password" formControlName="confirm_password" required>                <span class="icon is-small is-left">                  <i class="fas fa-lock"></i>                </span>              </p>              <div *ngIf="confirm_password?.dirty || confirm_password?.touched">                <div *ngIf="confirm_password?.errors?.[\'required\']">                  Password is required.                </div>                <div *ngIf="registration_form.errors?.[\'confirmPassword\'] == false">                  Passwords don\'t match.                </div>              </div>            </div>            <div class="field">              <p class="control">                <button class="button is-success is-fullwidth" [disabled]="!registration_form.valid">                  Register                </button>              </p>            </div>            <div class="field has-text-centered has-text-white">              <p class="control">                Already have an account? <a routerLink="/login" class="has-text-white">Login</a>              </p>            </div>          </div>        </div>      </form>    </div>  </div></div></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'EditProfileComponent', 'selector': 'app-edit-profile'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'QuizAnswerComponent', 'selector': 'app-quiz-answer'},{'name': 'QuizInfoComponent', 'selector': 'app-quiz-info'},{'name': 'RegistrationComponent', 'selector': 'app-registration'}];
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BookmarksComponent', 'selector': 'app-bookmarks'},{'name': 'EditProfileComponent', 'selector': 'app-edit-profile'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MasterAnswerComponent', 'selector': 'app-master-answer'},{'name': 'QuizAnswerComponent', 'selector': 'app-quiz-answer'},{'name': 'QuizCreateComponent', 'selector': 'app-quiz-create'},{'name': 'QuizInfoComponent', 'selector': 'app-quiz-info'},{'name': 'QuizSearchComponent', 'selector': 'app-quiz-search'},{'name': 'RegistrationComponent', 'selector': 'app-registration'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'RegistrationComponent'};
 </script>

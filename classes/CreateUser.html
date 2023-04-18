@@ -150,7 +150,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="61" class="link-to-prism">src/app/models/user.ts:61</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="65" class="link-to-prism">src/app/models/user.ts:65</a></div>
                         </td>
                     </tr>
 
@@ -187,7 +187,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="53" class="link-to-prism">src/app/models/user.ts:53</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="57" class="link-to-prism">src/app/models/user.ts:57</a></div>
                         </td>
                     </tr>
 
@@ -224,7 +224,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="65" class="link-to-prism">src/app/models/user.ts:65</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="69" class="link-to-prism">src/app/models/user.ts:69</a></div>
                         </td>
                     </tr>
 
@@ -261,7 +261,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="69" class="link-to-prism">src/app/models/user.ts:69</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="73" class="link-to-prism">src/app/models/user.ts:73</a></div>
                         </td>
                     </tr>
 
@@ -298,7 +298,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="57" class="link-to-prism">src/app/models/user.ts:57</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="61" class="link-to-prism">src/app/models/user.ts:61</a></div>
                         </td>
                     </tr>
 
@@ -335,7 +335,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="48" class="link-to-prism">src/app/models/user.ts:48</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="52" class="link-to-prism">src/app/models/user.ts:52</a></div>
                         </td>
                     </tr>
 
@@ -360,11 +360,11 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">export class User{
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">export class User {
     /**
      * ID Genereated by Database
      */
-    _id : string &#x3D; &quot;&quot;;
+    _id: string &#x3D; &quot;&quot;;
 
     /**
      * Username for user
@@ -392,6 +392,10 @@
      */
     Plays: number &#x3D; 0;
     /**
+     * List of users friends!
+     */
+    Friends: string[] &#x3D; [];
+    /**
      * Unknown
      */
     __v: number &#x3D; 0;
@@ -400,7 +404,7 @@
 /**
  * CreateUser class, used to parse form data when creating a user
  */
-export class CreateUser{
+export class CreateUser {
     /**
      * Username for user
      */
@@ -431,7 +435,7 @@ export class CreateUser{
 /**
  * EditUser class, used to parse form data when updating a user
  */
-export class EditUser{
+export class EditUser {
     /**
      * Username for user
      */
@@ -445,6 +449,20 @@ export class EditUser{
      * Users Surname
      */
     Surname: string &#x3D; &quot;&quot;;
+    /**
+     * Users Email Address
+     */
+    Email: string &#x3D; &quot;&quot;;
+    /**
+     * Users Password
+     */
+    Password: string &#x3D; &quot;&quot;;
+}
+
+/**
+ * LoginUser interface
+ */
+export class LoginUser {
     /**
      * Users Email Address
      */

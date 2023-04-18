@@ -147,7 +147,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="92" class="link-to-prism">src/app/models/user.ts:92</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="96" class="link-to-prism">src/app/models/user.ts:96</a></div>
                         </td>
                     </tr>
 
@@ -184,7 +184,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="84" class="link-to-prism">src/app/models/user.ts:84</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="88" class="link-to-prism">src/app/models/user.ts:88</a></div>
                         </td>
                     </tr>
 
@@ -221,7 +221,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="96" class="link-to-prism">src/app/models/user.ts:96</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="100" class="link-to-prism">src/app/models/user.ts:100</a></div>
                         </td>
                     </tr>
 
@@ -258,7 +258,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="88" class="link-to-prism">src/app/models/user.ts:88</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="92" class="link-to-prism">src/app/models/user.ts:92</a></div>
                         </td>
                     </tr>
 
@@ -295,7 +295,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="79" class="link-to-prism">src/app/models/user.ts:79</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="83" class="link-to-prism">src/app/models/user.ts:83</a></div>
                         </td>
                     </tr>
 
@@ -320,11 +320,11 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">export class User{
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">export class User {
     /**
      * ID Genereated by Database
      */
-    _id : string &#x3D; &quot;&quot;;
+    _id: string &#x3D; &quot;&quot;;
 
     /**
      * Username for user
@@ -352,6 +352,10 @@
      */
     Plays: number &#x3D; 0;
     /**
+     * List of users friends!
+     */
+    Friends: string[] &#x3D; [];
+    /**
      * Unknown
      */
     __v: number &#x3D; 0;
@@ -360,7 +364,7 @@
 /**
  * CreateUser class, used to parse form data when creating a user
  */
-export class CreateUser{
+export class CreateUser {
     /**
      * Username for user
      */
@@ -391,7 +395,7 @@ export class CreateUser{
 /**
  * EditUser class, used to parse form data when updating a user
  */
-export class EditUser{
+export class EditUser {
     /**
      * Username for user
      */
@@ -405,6 +409,20 @@ export class EditUser{
      * Users Surname
      */
     Surname: string &#x3D; &quot;&quot;;
+    /**
+     * Users Email Address
+     */
+    Email: string &#x3D; &quot;&quot;;
+    /**
+     * Users Password
+     */
+    Password: string &#x3D; &quot;&quot;;
+}
+
+/**
+ * LoginUser interface
+ */
+export class LoginUser {
     /**
      * Users Email Address
      */

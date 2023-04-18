@@ -76,23 +76,33 @@
 import { RouterModule, Routes } from &#x27;@angular/router&#x27;;
 import { EditProfileComponent } from &#x27;./edit-profile/edit-profile.component&#x27;;
 import { EditProfileGuard } from &#x27;./guards/edit-profile.guard&#x27;;
+import { LoginGuard } from &#x27;./guards/login.guard&#x27;;
 import { HomeComponent } from &#x27;./home/home.component&#x27;;
 import { LoginComponent } from &#x27;./login/login.component&#x27;;
 import { QuizAnswerComponent } from &#x27;./quiz-answer/quiz-answer.component&#x27;;
 import { QuizInfoComponent } from &#x27;./quiz-info/quiz-info.component&#x27;;
 import { RegistrationComponent } from &#x27;./registration/registration.component&#x27;;
+import { BookmarksComponent } from &#x27;./bookmarks/bookmarks.component&#x27;;
+import { MasterAnswerComponent } from &#x27;./master-answer/master-answer.component&#x27;;
+import { QuizCreateComponent } from &#x27;./quiz-create/quiz-create.component&#x27;;
+import { QuizSearchComponent } from &#x27;./quiz-search/quiz-search.component&#x27;;
 
 
 /**
  * Add component and the path at which they will load in the router
  */
 const routes: Routes &#x3D; [
-  {path: &quot;register&quot;, component: RegistrationComponent},
-  {path: &quot;edit-profile&quot;, component: EditProfileComponent, canActivate: [EditProfileGuard]},
-  {path: &quot;login&quot;, component: LoginComponent},
-  {path: &quot;answerQuiz&quot;, component: QuizAnswerComponent},
   {path: &quot;home&quot;, component: HomeComponent},
-  {path: &quot;quiz-info&quot;, component:QuizInfoComponent}
+  {path: &quot;register&quot;, component: RegistrationComponent, canActivate: [LoginGuard]},
+  {path: &quot;login&quot;, component: LoginComponent, canActivate: [LoginGuard]},
+  {path: &quot;edit-profile&quot;, component: EditProfileComponent, canActivate: [EditProfileGuard]},
+  {path: &quot;answerQuiz&quot;, component: QuizAnswerComponent},
+  {path: &quot;quiz-info/:id&quot;, component:QuizInfoComponent},
+  {path: &quot;bookmarks&quot;, component: BookmarksComponent, canActivate: [EditProfileGuard]},
+  {path: &quot;quiz-answer/:id&quot;, component: MasterAnswerComponent},
+  {path: &quot;quiz-create&quot;, component: QuizCreateComponent, canActivate: [EditProfileGuard]},
+  {path: &quot;quiz-search/:id&quot;, component: QuizSearchComponent},
+  {path: &#x27;**&#x27;, redirectTo: &#x27;home&#x27;, pathMatch: &#x27;full&#x27;}
 ];
 
 
@@ -103,8 +113,7 @@ const routes: Routes &#x3D; [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
-</code></pre>
+export class AppRoutingModule { }</code></pre>
     </div>
 </div>
 
