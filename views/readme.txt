@@ -1,0 +1,1 @@
+This is folder to store view diagrams for all classes etc.
