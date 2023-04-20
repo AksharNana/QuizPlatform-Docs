@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-04-20T12:38:16.457Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36" etag="YORVY-TluE7WJPyuGgjI" version="21.1.9" type="github">
+<mxfile host="app.diagrams.net" modified="2023-04-20T12:43:28.335Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36" etag="x65drlsct15KlyFbpo2p" version="21.1.9" type="github">
   <diagram name="Page-1" id="_WfFzRUXWuLZo9CQUCGU">
-    <mxGraphModel dx="1685" dy="2525" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1417" dy="2102" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -244,11 +244,11 @@
         <mxCell id="f6ae7u1-R86q0625S-pQ-104" value="Clicks on Friends button" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
           <mxGeometry x="170" y="-87.5" width="150" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="f6ae7u1-R86q0625S-pQ-105" value="Get Friends" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
-          <mxGeometry x="503.75" y="-77.5" width="90" height="30" as="geometry" />
+        <mxCell id="f6ae7u1-R86q0625S-pQ-105" value="Get Friend list" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="498.75" y="-77.5" width="100" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="f6ae7u1-R86q0625S-pQ-106" value="Returns Friends" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
-          <mxGeometry x="493.75" y="-35" width="110" height="30" as="geometry" />
+        <mxCell id="f6ae7u1-R86q0625S-pQ-106" value="Returns user&#39;s Friend list" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="468.75" y="-35" width="160" height="30" as="geometry" />
         </mxCell>
         <mxCell id="f6ae7u1-R86q0625S-pQ-107" value="Displays Friends Page" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
           <mxGeometry x="175" y="-10" width="140" height="30" as="geometry" />
