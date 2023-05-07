@@ -38,7 +38,7 @@
   <li>Components</li>
   <li
   >
-  QuizAnswerComponent</li>
+  QuizTypeinComponent</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -64,26 +64,12 @@
     <h3>File</h3>
 </p>
 <p class="comment">
-    <code>src/app/quiz-answer/quiz-answer.component.ts</code>
+    <code>src/app/quiz-typein/quiz-typein.component.ts</code>
 </p>
 
 
-    <p class="comment">
-        <h3>Description</h3>
-    </p>
-    <p class="comment">
-        <p>Angular Directive</p>
-
-    </p>
 
 
-    <p class="comment">
-        <h3>Implements</h3>
-    </p>
-    <p class="comment">
-                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
-                    <code><a href="https://angular.io/api/core/OnDestroy" target="_blank" >OnDestroy</a></code>
-    </p>
 
 
 <section>
@@ -103,19 +89,19 @@
 
             <tr>
                 <td class="col-md-3">selector</td>
-                <td class="col-md-9"><code>app-quiz-answer</code></td>
+                <td class="col-md-9"><code>app-quiz-typein</code></td>
             </tr>
 
             <tr>
                 <td class="col-md-3">styleUrls</td>
-                <td class="col-md-9"><code>./quiz-answer.component.scss</code></td>
+                <td class="col-md-9"><code>./quiz-typein.component.scss</code></td>
             </tr>
 
 
 
             <tr>
                 <td class="col-md-3">templateUrl</td>
-                <td class="col-md-9"><code>./quiz-answer.component.html</code></td>
+                <td class="col-md-9"><code>./quiz-typein.component.html</code></td>
             </tr>
 
 
@@ -154,28 +140,13 @@
                                 <a href="#boolTimesUp" >boolTimesUp</a>
                             </li>
                             <li>
-                                <a href="#buttonDispl" >buttonDispl</a>
-                            </li>
-                            <li>
                                 <a href="#countdownTimer" >countdownTimer</a>
-                            </li>
-                            <li>
-                                <a href="#done" >done</a>
-                            </li>
-                            <li>
-                                <a href="#link" >link</a>
                             </li>
                             <li>
                                 <a href="#questions" >questions</a>
                             </li>
                             <li>
                                 <a href="#quiz_id" >quiz_id</a>
-                            </li>
-                            <li>
-                                <a href="#quizName" >quizName</a>
-                            </li>
-                            <li>
-                                <a href="#rating_form" >rating_form</a>
                             </li>
                             <li>
                                 <a href="#scoreDisplay" >scoreDisplay</a>
@@ -186,9 +157,6 @@
                             </li>
                             <li>
                                 <a href="#timeLeftDisplay" >timeLeftDisplay</a>
-                            </li>
-                            <li>
-                                <a href="#user" >user</a>
                             </li>
                         </ul>
                     </td>
@@ -203,13 +171,7 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <a href="#addRating" >addRating</a>
-                            </li>
-                            <li>
                                 <a href="#checkAnswers" >checkAnswers</a>
-                            </li>
-                            <li>
-                                <a href="#CopyResults" >CopyResults</a>
                             </li>
                             <li>
                                 <a href="#ngOnDestroy" >ngOnDestroy</a>
@@ -252,12 +214,12 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(questionService: <a href="../injectables/QuestionService.html" target="_self">QuestionService</a>, answerService: <a href="../injectables/AnswerService.html" target="_self">AnswerService</a>, route: <a href="https://angular.io/api/router/ActivatedRoute" target="_blank">ActivatedRoute</a>, quizService: <a href="../injectables/QuizService.html" target="_self">QuizService</a>, historyService: <a href="../injectables/HistoryService.html" target="_self">HistoryService</a>, clipBoard: Clipboard)</code>
+<code>constructor(questionService: <a href="../injectables/QuestionService.html" target="_self">QuestionService</a>, answerService: <a href="../injectables/AnswerService.html" target="_self">AnswerService</a>, route: <a href="https://angular.io/api/router/ActivatedRoute" target="_blank">ActivatedRoute</a>)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="50" class="link-to-prism">src/app/quiz-answer/quiz-answer.component.ts:50</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="38" class="link-to-prism">src/app/quiz-typein/quiz-typein.component.ts:38</a></div>
                             </td>
                         </tr>
 
@@ -310,42 +272,6 @@
                                                     </td>
                                                     
                                                 </tr>
-                                                <tr>
-                                                        <td>quizService</td>
-                                                  
-                                                        <td>
-                                                                        <code><a href="../injectables/QuizService.html" target="_self" >QuizService</a></code>
-                                                        </td>
-                                                  
-                                                    <td>
-                                                            No
-                                                    </td>
-                                                    
-                                                </tr>
-                                                <tr>
-                                                        <td>historyService</td>
-                                                  
-                                                        <td>
-                                                                        <code><a href="../injectables/HistoryService.html" target="_self" >HistoryService</a></code>
-                                                        </td>
-                                                  
-                                                    <td>
-                                                            No
-                                                    </td>
-                                                    
-                                                </tr>
-                                                <tr>
-                                                        <td>clipBoard</td>
-                                                  
-                                                        <td>
-                                                                    <code>Clipboard</code>
-                                                        </td>
-                                                  
-                                                    <td>
-                                                            No
-                                                    </td>
-                                                    
-                                                </tr>
                                         </tbody>
                                     </table>
                             </div>
@@ -378,7 +304,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/app/quiz-answer/quiz-answer.component.ts:26</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/quiz-typein/quiz-typein.component.ts:15</a></div>
                             </td>
                         </tr>
             </tbody>
@@ -392,43 +318,6 @@
     <h3 id="methods">
         Methods
     </h3>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="addRating"></a>
-                    <span class="name">
-                        <span ><b>addRating</b></span>
-                        <a href="#addRating"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-<code>addRating()</code>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="167"
-                            class="link-to-prism">src/app/quiz-answer/quiz-answer.component.ts:167</a></div>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-
-                    <div class="io-description">
-                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
-
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
     <table class="table table-sm table-bordered">
         <tbody>
             <tr>
@@ -449,8 +338,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="123"
-                            class="link-to-prism">src/app/quiz-answer/quiz-answer.component.ts:123</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="100"
+                            class="link-to-prism">src/app/quiz-typein/quiz-typein.component.ts:100</a></div>
                 </td>
             </tr>
 
@@ -459,43 +348,6 @@
                 <td class="col-md-4">
                     <div class="io-description"><p>Function to check answers</p>
 </div>
-
-                    <div class="io-description">
-                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
-
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="CopyResults"></a>
-                    <span class="name">
-                        <span ><b>CopyResults</b></span>
-                        <a href="#CopyResults"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-<code>CopyResults()</code>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="181"
-                            class="link-to-prism">src/app/quiz-answer/quiz-answer.component.ts:181</a></div>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
 
                     <div class="io-description">
                         <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
@@ -525,8 +377,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="108"
-                            class="link-to-prism">src/app/quiz-answer/quiz-answer.component.ts:108</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="85"
+                            class="link-to-prism">src/app/quiz-typein/quiz-typein.component.ts:85</a></div>
                 </td>
             </tr>
 
@@ -562,8 +414,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="69"
-                            class="link-to-prism">src/app/quiz-answer/quiz-answer.component.ts:69</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="49"
+                            class="link-to-prism">src/app/quiz-typein/quiz-typein.component.ts:49</a></div>
                 </td>
             </tr>
 
@@ -601,8 +453,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="115"
-                            class="link-to-prism">src/app/quiz-answer/quiz-answer.component.ts:115</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="92"
+                            class="link-to-prism">src/app/quiz-typein/quiz-typein.component.ts:92</a></div>
                 </td>
             </tr>
 
@@ -645,7 +497,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="50" class="link-to-prism">src/app/quiz-answer/quiz-answer.component.ts:50</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="38" class="link-to-prism">src/app/quiz-typein/quiz-typein.component.ts:38</a></div>
                         </td>
                     </tr>
 
@@ -671,7 +523,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/app/quiz-answer/quiz-answer.component.ts:29</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/quiz-typein/quiz-typein.component.ts:18</a></div>
                         </td>
                     </tr>
 
@@ -702,7 +554,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="56" class="link-to-prism">src/app/quiz-answer/quiz-answer.component.ts:56</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="44" class="link-to-prism">src/app/quiz-typein/quiz-typein.component.ts:44</a></div>
                         </td>
                     </tr>
 
@@ -733,38 +585,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="48" class="link-to-prism">src/app/quiz-answer/quiz-answer.component.ts:48</a></div>
-                        </td>
-                    </tr>
-
-
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="buttonDispl"></a>
-                    <span class="name">
-                        <span ><b>buttonDispl</b></span>
-                        <a href="#buttonDispl"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <i>Default value : </i><code>&quot;Share Results&quot;</code>
-                    </td>
-                </tr>
-                    <tr>
-                        <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="46" class="link-to-prism">src/app/quiz-answer/quiz-answer.component.ts:46</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="36" class="link-to-prism">src/app/quiz-typein/quiz-typein.component.ts:36</a></div>
                         </td>
                     </tr>
 
@@ -790,7 +611,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="36" class="link-to-prism">src/app/quiz-answer/quiz-answer.component.ts:36</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/app/quiz-typein/quiz-typein.component.ts:26</a></div>
                         </td>
                     </tr>
 
@@ -800,63 +621,6 @@
 </div>
                 </td>
             </tr>
-
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="done"></a>
-                    <span class="name">
-                        <span ><b>done</b></span>
-                        <a href="#done"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
-
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <i>Default value : </i><code>false</code>
-                    </td>
-                </tr>
-                    <tr>
-                        <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/app/quiz-answer/quiz-answer.component.ts:30</a></div>
-                        </td>
-                    </tr>
-
-
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="link"></a>
-                    <span class="name">
-                        <span ><b>link</b></span>
-                        <a href="#link"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
-
-                    </td>
-                </tr>
-                    <tr>
-                        <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">src/app/quiz-answer/quiz-answer.component.ts:32</a></div>
-                        </td>
-                    </tr>
-
 
         </tbody>
     </table>
@@ -884,7 +648,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="54" class="link-to-prism">src/app/quiz-answer/quiz-answer.component.ts:54</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="42" class="link-to-prism">src/app/quiz-typein/quiz-typein.component.ts:42</a></div>
                         </td>
                     </tr>
 
@@ -910,65 +674,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/app/quiz-answer/quiz-answer.component.ts:28</a></div>
-                        </td>
-                    </tr>
-
-
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="quizName"></a>
-                    <span class="name">
-                        <span ><b>quizName</b></span>
-                        <a href="#quizName"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <i>Default value : </i><code>&quot;&quot;</code>
-                    </td>
-                </tr>
-                    <tr>
-                        <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="64" class="link-to-prism">src/app/quiz-answer/quiz-answer.component.ts:64</a></div>
-                        </td>
-                    </tr>
-
-
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="rating_form"></a>
-                    <span class="name">
-                        <span ><b>rating_form</b></span>
-                        <a href="#rating_form"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <i>Default value : </i><code>new FormGroup({
-    rating: new FormControl(&#x27;&#x27;)
-  })</code>
-                    </td>
-                </tr>
-                    <tr>
-                        <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="60" class="link-to-prism">src/app/quiz-answer/quiz-answer.component.ts:60</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/quiz-typein/quiz-typein.component.ts:17</a></div>
                         </td>
                     </tr>
 
@@ -994,7 +700,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="44" class="link-to-prism">src/app/quiz-answer/quiz-answer.component.ts:44</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="34" class="link-to-prism">src/app/quiz-typein/quiz-typein.component.ts:34</a></div>
                         </td>
                     </tr>
 
@@ -1027,7 +733,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">src/app/quiz-answer/quiz-answer.component.ts:31</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/app/quiz-typein/quiz-typein.component.ts:20</a></div>
                         </td>
                     </tr>
 
@@ -1053,7 +759,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="40" class="link-to-prism">src/app/quiz-answer/quiz-answer.component.ts:40</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/app/quiz-typein/quiz-typein.component.ts:30</a></div>
                         </td>
                     </tr>
 
@@ -1063,31 +769,6 @@
 </div>
                 </td>
             </tr>
-
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="user"></a>
-                    <span class="name">
-                        <span ><b>user</b></span>
-                        <a href="#user"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <i>Default value : </i><code>sessionStorage.getItem(&quot;User&quot;)</code>
-                    </td>
-                </tr>
-                    <tr>
-                        <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="58" class="link-to-prism">src/app/quiz-answer/quiz-answer.component.ts:58</a></div>
-                        </td>
-                    </tr>
-
 
         </tbody>
     </table>
@@ -1104,31 +785,21 @@ import { AnswerService } from &#x27;../services/answer.service&#x27;;
 import { Question } from &#x27;../models/question&#x27;;
 import { Answer } from &#x27;../models/answer&#x27;;
 import { ActivatedRoute } from &#x27;@angular/router&#x27;;
-import { QuizService } from &#x27;../services/quiz.service&#x27;;
-import { User } from &#x27;../models/user&#x27;;
-import { History } from &#x27;../models/history&#x27;;
-import { HistoryService } from &#x27;../services/history.service&#x27;;
-import { Clipboard } from &#x27;@angular/cdk/clipboard&#x27;;
-import { Quiz } from &#x27;../models/quiz&#x27;;
 
-
-/**
- * Angular Directive
- */
 @Component({
-  selector: &#x27;app-quiz-answer&#x27;,
-  templateUrl: &#x27;./quiz-answer.component.html&#x27;,
-  styleUrls: [&#x27;./quiz-answer.component.scss&#x27;]
+  selector: &#x27;app-quiz-typein&#x27;,
+  templateUrl: &#x27;./quiz-typein.component.html&#x27;,
+  styleUrls: [&#x27;./quiz-typein.component.scss&#x27;]
 })
-
-export class QuizAnswerComponent implements OnInit ,OnDestroy{
-  @Input() timeLeft &#x3D; 30;
+export class QuizTypeinComponent {
+    @Input() timeLeft &#x3D; 30;
 
   quiz_id: any;
   answer_id: any;
-  done: boolean &#x3D; false;
+
   private sub: any;
-  link: any;
+
+
   /**
    * Timer
    */
@@ -1142,36 +813,23 @@ export class QuizAnswerComponent implements OnInit ,OnDestroy{
    */
   scoreDisplay: any;
 
-  buttonDispl &#x3D; &quot;Share Results&quot;
-
   boolTimesUp: boolean &#x3D; false;
 
   answer_form!: FormGroup;
 
-  constructor(private questionService: QuestionService, private answerService: AnswerService, private route: ActivatedRoute, private quizService: QuizService, private historyService: HistoryService, private clipBoard: Clipboard) { }
+  constructor(private questionService: QuestionService, private answerService: AnswerService, private route: ActivatedRoute) { }
 
   questions: Question[] &#x3D; [];
 
   answers: Answer[] &#x3D; [];
 
-  user &#x3D; sessionStorage.getItem(&quot;User&quot;);
-
-  rating_form &#x3D; new FormGroup({
-    rating: new FormControl(&#x27;&#x27;)
-  });
-
-  quizName: string &#x3D; &quot;&quot;;
-
   /**
    * Run these functions when the component is initialised
   */
   ngOnInit() {
-
     this.sub &#x3D; this.route.params.subscribe(params &#x3D;&gt; {
       this.quiz_id &#x3D; params[&#x27;id&#x27;];
-      this.quizService.get_quiz_byID(this.quiz_id).subscribe((res: Quiz) &#x3D;&gt;{
-        this.quizName &#x3D; res.Name;
-      });
+
       this.questionService.get_quiz_questions(this.quiz_id).subscribe((value) &#x3D;&gt; {
         this.questions &#x3D; value;
 
@@ -1230,58 +888,13 @@ export class QuizAnswerComponent implements OnInit ,OnDestroy{
         if (element._id &#x3D;&#x3D;&#x3D; answer &amp;&amp; element.Correct) {
           numCorrect++;
         }
-
       });
 
     });
 
     this.timeLeftDisplay &#x3D; &quot;Time Left: &quot; + this.timeLeft + &quot;s&quot;;
     this.scoreDisplay &#x3D; &quot;You scored &quot; + numCorrect + &quot; out of &quot; + this.questions.length;
-    if(this.user !&#x3D; null){
-      this.done &#x3D; true;
-    }
-    let ans &#x3D; this.rating_form.get(&quot;rating&quot;)?.value;
-    let USer: User;
-    if(this.user !&#x3D; null){
-      USer &#x3D;  JSON.parse(this.user!);
-      this.scoreDisplay &#x3D; USer.FirstName + &quot; scored &quot; + numCorrect + &quot; out of &quot; + this.questions.length;
-      this.link &#x3D; this.scoreDisplay + &quot;, play the quiz now: &quot; + &quot;https://quiz-platform-28fcb.web.app/quiz-info/&quot;+this.quiz_id;
-      // Add history:
-      let history: History &#x3D; {
-        QuizID: this.quiz_id,
-        UserID: USer._id,
-        Score: numCorrect
-      }
-      this.historyService.create_history(history).subscribe((res)&#x3D;&gt;{
-        console.log(res);
-      });
-      this.historyService.update_user_plays(USer.Plays,USer._id).subscribe((res) &#x3D;&gt;{
-        console.log(res);
-        USer.Plays &#x3D; USer.Plays + 1;
-        sessionStorage.setItem(&quot;User&quot;,JSON.stringify(USer));
-      });
-    }
   }
-
-  addRating(){
-    let ans &#x3D; this.rating_form.get(&quot;rating&quot;)?.value;
-    let USer: User;
-    if(this.user !&#x3D; null){
-      USer &#x3D;  JSON.parse(this.user!);
-      if(ans &#x3D;&#x3D; null){
-        ans &#x3D; &quot;0&quot;
-      }
-      this.quizService.addRating(parseInt(ans),this.quiz_id,USer._id).subscribe((res) &#x3D;&gt;{
-        console.log(res);
-      });
-    }
-  }
-
-  CopyResults(){
-    this.clipBoard.copy(this.link);
-    this.buttonDispl &#x3D; &quot;Copied Results&quot;;
-  }
-
 }
 </code></pre>
     </div>
@@ -1290,19 +903,19 @@ export class QuizAnswerComponent implements OnInit ,OnDestroy{
         <pre class="line-numbers"><code class="language-html">&lt;div&gt;
     &lt;title&gt;Quiz Page&lt;/title&gt;
     &lt;div class&#x3D;&quot;quiz-container has-text-white&quot;&gt;
-        &lt;h2&gt;{{quizName}}&lt;/h2&gt;
+        &lt;h2&gt;Quiz Program&lt;/h2&gt;
         &lt;span&gt; {{timeLeft}} &lt;/span&gt;
-        &lt;div class&#x3D;&quot;has-text-white&quot;&gt;
+        &lt;div class&#x3D;&quot;card has-text-black&quot;&gt;
             &lt;form *ngIf&#x3D;&quot;answer_form&quot; [formGroup]&#x3D;&quot;answer_form&quot; (ngSubmit)&#x3D;&quot;checkAnswers()&quot; id&#x3D;&quot;answer_form&quot;&gt;
-                &lt;div class&#x3D;&quot;card has-text-white&quot; *ngFor&#x3D;&quot;let question of questions;index as idx&quot;&gt;
-                    &lt;h3 class&#x3D;&quot;quest&quot;&gt;Question {{idx+1}}:&lt;/h3&gt;
-                    &lt;p class&#x3D;&quot;quest&quot;&gt;{{question.Question}}&lt;/p&gt;
+                &lt;div *ngFor&#x3D;&quot;let question of questions;index as idx&quot;&gt;
+                    &lt;h3&gt;Question {{idx+1}}:&lt;/h3&gt;
+                    &lt;p&gt;{{question.Question}}&lt;/p&gt;
                     &lt;div class&#x3D;&quot;field&quot;&gt;
                         &lt;div class&#x3D;&quot;control&quot; *ngFor&#x3D;&quot;let answer of answers&quot;&gt;
                             &lt;div class&#x3D;&quot;fl&quot; *ngIf&#x3D;&quot;answer.QuestionID &#x3D;&#x3D;&#x3D; question._id&quot;&gt;
-                                &lt;label class&#x3D;&quot;radio&quot;&gt;
-                                    &lt;input type&#x3D;&quot;radio&quot; value&#x3D;&quot;{{answer._id}}&quot; formControlName&#x3D;&quot;{{question._id}}&quot;&gt;
-                                    {{answer.Answer}}
+                                &lt;label class&#x3D;&quot;text&quot;&gt;
+                                    &lt;input type&#x3D;&quot;text&quot; value&#x3D;&quot;{{answer._id}}&quot; formControlName&#x3D;&quot;{{question._id}}&quot;&gt;
+                                   
                                 &lt;/label&gt;
                             &lt;/div&gt;
                         &lt;/div&gt;
@@ -1313,48 +926,12 @@ export class QuizAnswerComponent implements OnInit ,OnDestroy{
             &lt;p id&#x3D;&quot;time-left&quot;&gt;{{timeLeftDisplay}}&lt;/p&gt;
             &lt;p id&#x3D;&quot;score&quot;&gt;{{scoreDisplay}}&lt;/p&gt;
         &lt;/div&gt;
-        &lt;div class&#x3D;&quot;card has-text-white&quot; *ngIf&#x3D;&quot;done&#x3D;&#x3D;true &amp;&amp; user!&#x3D;null&quot;&gt;
-            &lt;form [formGroup]&#x3D;&quot;rating_form&quot; (ngSubmit)&#x3D;&quot;addRating()&quot;&gt;
-                &lt;div class&#x3D;&quot;field&quot;&gt;
-                    &lt;div class&#x3D;&quot;control&quot;&gt;
-                        &lt;label class&#x3D;&quot;radio&quot;&gt;
-                            &lt;input type&#x3D;&quot;radio&quot; value&#x3D;&quot;1&quot; formControlName&#x3D;&quot;rating&quot;&gt;
-                            1
-                        &lt;/label&gt;
-                        &lt;label class&#x3D;&quot;radio&quot;&gt;
-                            &lt;input type&#x3D;&quot;radio&quot; value&#x3D;&quot;2&quot; formControlName&#x3D;&quot;rating&quot;&gt;
-                            2
-                        &lt;/label&gt;
-                        &lt;label class&#x3D;&quot;radio&quot;&gt;
-                            &lt;input type&#x3D;&quot;radio&quot; value&#x3D;&quot;3&quot; formControlName&#x3D;&quot;rating&quot;&gt;
-                            3
-                        &lt;/label&gt;
-                        &lt;label class&#x3D;&quot;radio&quot;&gt;
-                            &lt;input type&#x3D;&quot;radio&quot; value&#x3D;&quot;4&quot; formControlName&#x3D;&quot;rating&quot;&gt;
-                            4
-                        &lt;/label&gt;
-                        &lt;label class&#x3D;&quot;radio&quot;&gt;
-                            &lt;input type&#x3D;&quot;radio&quot; value&#x3D;&quot;5&quot; formControlName&#x3D;&quot;rating&quot;&gt;
-                            5
-                        &lt;/label&gt;
-                    &lt;/div&gt;
-                &lt;/div&gt;
-                &lt;button class&#x3D;&quot;button is-primary is-rounded&quot;&gt;Submit rating&lt;/button&gt;
-            &lt;/form&gt;
-
-            &lt;div class&#x3D;&quot;result has-text-white&quot;&gt;
-                {{scoreDisplay}}
-                &lt;!-- &lt;a href&#x3D;&quot;{{link}}&quot;&gt;{{link}}&lt;/a&gt; --&gt;
-                &lt;button class&#x3D;&quot;button is-success&quot; (click)&#x3D;&quot;CopyResults()&quot;&gt;{{buttonDispl}}&lt;/button&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;</code></pre>
+    &lt;/div&gt;</code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-styleData">
                 <p class="comment">
-                    <code>./quiz-answer.component.scss</code>
+                    <code>./quiz-typein.component.scss</code>
                 </p>
                 <pre class="line-numbers"><code class="language-scss">.quiz-container {
     background-image: url(&quot;../../assets/images/pexels-kellie-churchman-1001682.jpg&quot;);
@@ -1417,7 +994,7 @@ input[type&#x3D;&quot;text&quot;] {
     font-weight: bold;
 }
 
-.radio{
+.text{
     font-size: medium;
 }</code></pre>
     </div>
@@ -1447,10 +1024,10 @@ input[type&#x3D;&quot;text&quot;] {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div>    <title>Quiz Page</title>    <div class="quiz-container has-text-white">        <h2>{{quizName}}</h2>        <span> {{timeLeft}} </span>        <div class="has-text-white">            <form *ngIf="answer_form" [formGroup]="answer_form" (ngSubmit)="checkAnswers()" id="answer_form">                <div class="card has-text-white" *ngFor="let question of questions;index as idx">                    <h3 class="quest">Question {{idx+1}}:</h3>                    <p class="quest">{{question.Question}}</p>                    <div class="field">                        <div class="control" *ngFor="let answer of answers">                            <div class="fl" *ngIf="answer.QuestionID === question._id">                                <label class="radio">                                    <input type="radio" value="{{answer._id}}" formControlName="{{question._id}}">                                    {{answer.Answer}}                                </label>                            </div>                        </div>                    </div>                </div>                <button class="button is-primary is-rounded" *ngIf="!boolTimesUp">Submit</button>            </form>            <p id="time-left">{{timeLeftDisplay}}</p>            <p id="score">{{scoreDisplay}}</p>        </div>        <div class="card has-text-white" *ngIf="done==true && user!=null">            <form [formGroup]="rating_form" (ngSubmit)="addRating()">                <div class="field">                    <div class="control">                        <label class="radio">                            <input type="radio" value="1" formControlName="rating">                            1                        </label>                        <label class="radio">                            <input type="radio" value="2" formControlName="rating">                            2                        </label>                        <label class="radio">                            <input type="radio" value="3" formControlName="rating">                            3                        </label>                        <label class="radio">                            <input type="radio" value="4" formControlName="rating">                            4                        </label>                        <label class="radio">                            <input type="radio" value="5" formControlName="rating">                            5                        </label>                    </div>                </div>                <button class="button is-primary is-rounded">Submit rating</button>            </form>            <div class="result has-text-white">                {{scoreDisplay}}                <!-- <a href="{{link}}">{{link}}</a> -->                <button class="button is-success" (click)="CopyResults()">{{buttonDispl}}</button>            </div>        </div>    </div></div></div>'
+        var COMPONENT_TEMPLATE = '<div><div>    <title>Quiz Page</title>    <div class="quiz-container has-text-white">        <h2>Quiz Program</h2>        <span> {{timeLeft}} </span>        <div class="card has-text-black">            <form *ngIf="answer_form" [formGroup]="answer_form" (ngSubmit)="checkAnswers()" id="answer_form">                <div *ngFor="let question of questions;index as idx">                    <h3>Question {{idx+1}}:</h3>                    <p>{{question.Question}}</p>                    <div class="field">                        <div class="control" *ngFor="let answer of answers">                            <div class="fl" *ngIf="answer.QuestionID === question._id">                                <label class="text">                                    <input type="text" value="{{answer._id}}" formControlName="{{question._id}}">                                                                   </label>                            </div>                        </div>                    </div>                </div>                <button class="button is-primary is-rounded" *ngIf="!boolTimesUp">Submit</button>            </form>            <p id="time-left">{{timeLeftDisplay}}</p>            <p id="score">{{scoreDisplay}}</p>        </div>    </div></div>'
     var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BookmarksComponent', 'selector': 'app-bookmarks'},{'name': 'EditProfileComponent', 'selector': 'app-edit-profile'},{'name': 'FriendInfoComponent', 'selector': 'app-friend-info'},{'name': 'FriendsComponent', 'selector': 'app-friends'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LeaderboardComponent', 'selector': 'app-leaderboard'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MasterAnswerComponent', 'selector': 'app-master-answer'},{'name': 'QuizAnswerComponent', 'selector': 'app-quiz-answer'},{'name': 'QuizCreateComponent', 'selector': 'app-quiz-create'},{'name': 'QuizInfoComponent', 'selector': 'app-quiz-info'},{'name': 'QuizResultComponent', 'selector': 'app-quiz-result'},{'name': 'QuizSearchComponent', 'selector': 'app-quiz-search'},{'name': 'QuizTypeinComponent', 'selector': 'app-quiz-typein'},{'name': 'RegistrationComponent', 'selector': 'app-registration'}];
     var DIRECTIVES = [];
-    var ACTUAL_COMPONENT = {'name': 'QuizAnswerComponent'};
+    var ACTUAL_COMPONENT = {'name': 'QuizTypeinComponent'};
 </script>
 <script src="../js/tree.js"></script>
 
@@ -1496,7 +1073,7 @@ input[type&#x3D;&quot;text&quot;] {
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
-            var COMPODOC_CURRENT_PAGE_URL = 'QuizAnswerComponent.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'QuizTypeinComponent.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
 

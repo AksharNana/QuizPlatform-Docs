@@ -28,7 +28,7 @@
                    <compodoc-menu mode="normal"></compodoc-menu>
                </div>
                <!-- START CONTENT -->
-               <div class="content class">
+               <div class="content injectable">
                    <div class="content-data">
 
 
@@ -38,13 +38,9 @@
 
 
 
-
-
-
-
 <ol class="breadcrumb">
-  <li>Classes</li>
-  <li >LoginUser</li>
+  <li>Injectables</li>
+  <li >LeaderboardService</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -62,17 +58,9 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>src/app/models/user.ts</code>
+            <code>src/app/services/leaderboard.service.ts</code>
         </p>
 
-
-            <p class="comment">
-                <h3>Description</h3>
-            </p>
-            <p class="comment">
-                <p>LoginUser interface</p>
-
-            </p>
 
 
 
@@ -90,10 +78,22 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <a href="#Email" >Email</a>
+                                <a href="#base_url" >base_url</a>
                             </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
                             <li>
-                                <a href="#Password" >Password</a>
+                                <a href="#getLeaderboard" >getLeaderboard</a>
                             </li>
                         </ul>
                     </td>
@@ -103,12 +103,102 @@
 
 
 
-
         </tbody>
     </table>
 </section>
 
+            <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(http: <a href="https://angular.io/api/common/http/HttpClient" target="_blank">HttpClient</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="10" class="link-to-prism">src/app/services/leaderboard.service.ts:10</a></div>
+                            </td>
+                        </tr>
 
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>http</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/common/http/HttpClient" target="_blank" >HttpClient</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getLeaderboard"></a>
+                    <span class="name">
+                        <span ><b>getLeaderboard</b></span>
+                        <a href="#getLeaderboard"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getLeaderboard()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="19"
+                            class="link-to-prism">src/app/services/leaderboard.service.ts:19</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/User.html" target="_self" >Observable&lt;User[]&gt;</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
             <section>
     
     <h3 id="inputs">
@@ -118,10 +208,10 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="Email"></a>
+                    <a name="base_url"></a>
                     <span class="name">
-                        <span ><b>Email</b></span>
-                        <a href="#Email"><span class="icon ion-ios-link"></span></a>
+                        <span ><b>base_url</b></span>
+                        <a href="#base_url"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
@@ -133,55 +223,18 @@
                 </tr>
                 <tr>
                     <td class="col-md-4">
-                        <i>Default value : </i><code>&quot;&quot;</code>
+                        <i>Default value : </i><code>&quot;https://clumsy-apron-ray.cyclic.app/api/leaderboard&quot;</code>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="110" class="link-to-prism">src/app/models/user.ts:110</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/services/leaderboard.service.ts:17</a></div>
                         </td>
                     </tr>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-description"><p>Users Email Address</p>
-</div>
-                </td>
-            </tr>
-
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="Password"></a>
-                    <span class="name">
-                        <span ><b>Password</b></span>
-                        <a href="#Password"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <i>Default value : </i><code>&quot;&quot;</code>
-                    </td>
-                </tr>
-                    <tr>
-                        <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="114" class="link-to-prism">src/app/models/user.ts:114</a></div>
-                        </td>
-                    </tr>
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-description"><p>Users Password</p>
+                    <div class="io-description"><p>Base url for calls</p>
 </div>
                 </td>
             </tr>
@@ -190,130 +243,42 @@
     </table>
 </section>
 
-
-
-
-
-
-
     </div>
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">export class User {
-    /**
-     * ID Genereated by Database
-     */
-    _id: string &#x3D; &quot;&quot;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { HttpClient } from &#x27;@angular/common/http&#x27;;
+import { Injectable } from &#x27;@angular/core&#x27;;
+import { Observable, catchError } from &#x27;rxjs&#x27;;
+import { User } from &#x27;../models/user&#x27;;
+import { handleError } from &#x27;../utilities/errorhandler&#x27;;
 
-    /**
-     * Username for user
-     */
-    Username: string &#x3D; &quot;&quot;;
+@Injectable({
+  providedIn: &#x27;root&#x27;
+})
+export class LeaderboardService {
 
-    /**
-     * Users first name
-     */
-    FirstName: string &#x3D; &quot;&quot;;
-    /**
-     * Users Surname
-     */
-    Surname: string &#x3D; &quot;&quot;;
-    /**
-     * Users Email Address
-     */
-    Email: string &#x3D; &quot;&quot;;
-    /**
-     * Users Password
-     */
-    Password: string &#x3D; &quot;&quot;;
-    /**
-     * Number of plays made by user
-     */
-    Plays: number &#x3D; 0;
-    /**
-     * List of users friends!
-     */
-    Score: number &#x3D; 0;
-    /**
-     * Unknown
-     */
-    __v: number &#x3D; 0;
+  constructor(private http: HttpClient) { }
+
+  /**
+   * Base url for calls
+   */
+    base_url &#x3D; &quot;https://clumsy-apron-ray.cyclic.app/api/leaderboard&quot;;
+    
+    getLeaderboard(): Observable&lt;User[]&gt;{
+      return this.http.get&lt;User[]&gt;(this.base_url+&quot;/highestScores&quot;).pipe(
+        catchError(handleError)
+      );
+    }
 }
-
-/**
- * CreateUser class, used to parse form data when creating a user
- */
-export class CreateUser {
-    /**
-     * Username for user
-     */
-    Username: string &#x3D; &quot;&quot;;
-
-    /**
-     * Users first name
-     */
-    FirstName: string &#x3D; &quot;&quot;;
-    /**
-     * Users Surname
-     */
-    Surname: string &#x3D; &quot;&quot;;
-    /**
-     * Users Email Address
-     */
-    Email: string &#x3D; &quot;&quot;;
-    /**
-     * Users Password
-     */
-    Password: string &#x3D; &quot;&quot;;
-    /**
-     * Number of plays made by user
-     */
-    Plays: number &#x3D; 0;
-}
-
-/**
- * EditUser class, used to parse form data when updating a user
- */
-export class EditUser {
-    /**
-     * Username for user
-     */
-    Username: string &#x3D; &quot;&quot;;
-
-    /**
-     * Users first name
-     */
-    FirstName: string &#x3D; &quot;&quot;;
-    /**
-     * Users Surname
-     */
-    Surname: string &#x3D; &quot;&quot;;
-    /**
-     * Users Email Address
-     */
-    Email: string &#x3D; &quot;&quot;;
-    /**
-     * Users Password
-     */
-    Password: string &#x3D; &quot;&quot;;
-}
-
-/**
- * LoginUser interface
- */
-export class LoginUser {
-    /**
-     * Users Email Address
-     */
-    Email: string &#x3D; &quot;&quot;;
-    /**
-     * Users Password
-     */
-    Password: string &#x3D; &quot;&quot;;
-}</code></pre>
+</code></pre>
     </div>
+
 </div>
+
+
+
+
 
 
 
@@ -348,8 +313,8 @@ export class LoginUser {
 
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
-            var COMPODOC_CURRENT_PAGE_CONTEXT = 'class';
-            var COMPODOC_CURRENT_PAGE_URL = 'LoginUser.html';
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'LeaderboardService.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
 

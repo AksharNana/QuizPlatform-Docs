@@ -106,10 +106,22 @@
                                 <a href="#check_email_exists" >check_email_exists</a>
                             </li>
                             <li>
+                                <a href="#create_friends" >create_friends</a>
+                            </li>
+                            <li>
                                 <a href="#create_user" >create_user</a>
                             </li>
                             <li>
+                                <a href="#delete_friend" >delete_friend</a>
+                            </li>
+                            <li>
                                 <a href="#edit_user" >edit_user</a>
+                            </li>
+                            <li>
+                                <a href="#get_usernameID" >get_usernameID</a>
+                            </li>
+                            <li>
+                                <a href="#getFriends" >getFriends</a>
                             </li>
                             <li>
                                 <a href="#login" >login</a>
@@ -137,7 +149,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/services/user.service.ts:14</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/services/user.service.ts:15</a></div>
                             </td>
                         </tr>
 
@@ -202,8 +214,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="33"
-                            class="link-to-prism">src/app/services/user.service.ts:33</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="34"
+                            class="link-to-prism">src/app/services/user.service.ts:34</a></div>
                 </td>
             </tr>
 
@@ -258,6 +270,89 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
+                    <a name="create_friends"></a>
+                    <span class="name">
+                        <span ><b>create_friends</b></span>
+                        <a href="#create_friends"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>create_friends(friendID: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, userID: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="93"
+                            class="link-to-prism">src/app/services/user.service.ts:93</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Create friends</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>friendID</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>userID</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
                     <a name="create_user"></a>
                     <span class="name">
                         <span ><b>create_user</b></span>
@@ -274,8 +369,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="44"
-                            class="link-to-prism">src/app/services/user.service.ts:44</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="45"
+                            class="link-to-prism">src/app/services/user.service.ts:45</a></div>
                 </td>
             </tr>
 
@@ -329,6 +424,78 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
+                    <a name="delete_friend"></a>
+                    <span class="name">
+                        <span ><b>delete_friend</b></span>
+                        <a href="#delete_friend"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>delete_friend(friendObjID: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="121"
+                            class="link-to-prism">src/app/services/user.service.ts:121</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Remove friends</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>friendObjID</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;any&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>Message: true/false</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
                     <a name="edit_user"></a>
                     <span class="name">
                         <span ><b>edit_user</b></span>
@@ -345,8 +512,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="60"
-                            class="link-to-prism">src/app/services/user.service.ts:60</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="61"
+                            class="link-to-prism">src/app/services/user.service.ts:61</a></div>
                 </td>
             </tr>
 
@@ -412,6 +579,150 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
+                    <a name="get_usernameID"></a>
+                    <span class="name">
+                        <span ><b>get_usernameID</b></span>
+                        <a href="#get_usernameID"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>get_usernameID(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="132"
+                            class="link-to-prism">src/app/services/user.service.ts:132</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Get username by id</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>id</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>User Name</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getFriends"></a>
+                    <span class="name">
+                        <span ><b>getFriends</b></span>
+                        <a href="#getFriends"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getFriends(userID: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="110"
+                            class="link-to-prism">src/app/services/user.service.ts:110</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Get Friends List</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>userID</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;any&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>Array of friends IDs</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
                     <a name="login"></a>
                     <span class="name">
                         <span ><b>login</b></span>
@@ -428,8 +739,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="76"
-                            class="link-to-prism">src/app/services/user.service.ts:76</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="77"
+                            class="link-to-prism">src/app/services/user.service.ts:77</a></div>
                 </td>
             </tr>
 
@@ -510,7 +821,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/services/user.service.ts:25</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/app/services/user.service.ts:26</a></div>
                         </td>
                     </tr>
 
@@ -547,7 +858,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/app/services/user.service.ts:26</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/app/services/user.service.ts:27</a></div>
                         </td>
                     </tr>
 
@@ -566,6 +877,7 @@ import { catchError, Observable } from &#x27;rxjs&#x27;;
 
 import { CreateUser, EditUser, LoginUser, User } from &#x27;../models/user&#x27;;
 import { handleError } from &#x27;../utilities/errorhandler&#x27;;
+import { FRIEND } from &#x27;../models/friend&#x27;;
 
 /**
  * Angular Directive
@@ -642,6 +954,56 @@ export class UserService {
         &#x27;Content-Type&#x27; : &#x27;application/json&#x27;
       })
     }).pipe(
+      catchError(handleError)
+    );
+  }
+
+  /**
+   * Create friends
+   * @param friendArray
+   * @param userID
+   */
+  create_friends(friendID: string, userID : string) {
+    let body &#x3D; JSON.stringify({
+      &quot;UserID&quot;: userID,
+      &quot;FriendID&quot;: friendID
+    });
+    return this.http.post&lt;any&gt;(&quot;https://clumsy-apron-ray.cyclic.app/api/friend/createFriend&quot;,body,{
+      headers: new HttpHeaders({
+        &#x27;Content-Type&#x27; : &#x27;application/json&#x27;
+      })
+    }).pipe(catchError(handleError));
+  }
+
+  /**
+   * Get Friends List
+   * @param userID
+   * @returns Array of friends IDs
+   */
+  getFriends(userID: string): Observable&lt;any&gt;{
+    return this.http.get(&quot;https://clumsy-apron-ray.cyclic.app/api/friend/getFriends/&quot;+userID).pipe(
+      catchError(handleError)
+    );
+  }
+
+  /**
+   * Remove friends
+   * @param friendObjID 
+   * @returns Message: true/false
+   */
+  delete_friend(friendObjID: string): Observable&lt;any&gt;{
+    return this.http.delete(&quot;https://clumsy-apron-ray.cyclic.app/api/friend/deleteFriend/&quot;+friendObjID).pipe(
+      catchError(handleError)
+    );
+  }
+
+  /**
+   * Get username by id
+   * @param id 
+   * @returns User Name
+   */
+  get_usernameID(id:string){
+    return this.http.get(this.base_url+&quot;/getName/&quot;+id).pipe(
       catchError(handleError)
     );
   }

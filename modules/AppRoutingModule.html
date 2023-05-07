@@ -86,6 +86,11 @@ import { BookmarksComponent } from &#x27;./bookmarks/bookmarks.component&#x27;;
 import { MasterAnswerComponent } from &#x27;./master-answer/master-answer.component&#x27;;
 import { QuizCreateComponent } from &#x27;./quiz-create/quiz-create.component&#x27;;
 import { QuizSearchComponent } from &#x27;./quiz-search/quiz-search.component&#x27;;
+import { FriendsComponent } from &#x27;./friends/friends.component&#x27;;
+import { QuizResultComponent } from &#x27;./quiz-result/quiz-result.component&#x27;;
+import { FriendInfoComponent } from &#x27;./friend-info/friend-info.component&#x27;;
+import { LeaderboardComponent } from &#x27;./leaderboard/leaderboard.component&#x27;;
+import { QuizTypeinComponent } from &#x27;./quiz-typein/quiz-typein.component&#x27;;
 
 
 /**
@@ -100,8 +105,13 @@ const routes: Routes &#x3D; [
   {path: &quot;quiz-info/:id&quot;, component:QuizInfoComponent},
   {path: &quot;bookmarks&quot;, component: BookmarksComponent, canActivate: [EditProfileGuard]},
   {path: &quot;quiz-answer/:id&quot;, component: MasterAnswerComponent},
+  {path: &quot;quiz-typein/:id&quot;, component: QuizTypeinComponent},
   {path: &quot;quiz-create&quot;, component: QuizCreateComponent, canActivate: [EditProfileGuard]},
+  {path: &quot;quiz-result/:user/:quiz/:result&quot;, component: QuizResultComponent},
   {path: &quot;quiz-search/:id&quot;, component: QuizSearchComponent},
+  {path: &quot;friends&quot;, component: FriendsComponent, canActivate: [EditProfileGuard]},
+  {path: &quot;friend-info/:id&quot;, component: FriendInfoComponent, canActivate: [EditProfileGuard]},
+  {path: &quot;leaderboard&quot;, component: LeaderboardComponent},
   {path: &#x27;**&#x27;, redirectTo: &#x27;home&#x27;, pathMatch: &#x27;full&#x27;}
 ];
 
