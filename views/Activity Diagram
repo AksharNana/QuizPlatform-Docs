@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-05-03T12:19:34.930Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36" etag="WaqS1y06a9XGWRYpxc6w" version="21.2.4" type="github">
+<mxfile host="app.diagrams.net" modified="2023-05-28T12:26:17.063Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36" etag="ibSH_6KmXFHmsbbJTQ2Z" version="21.2.9" type="github">
   <diagram name="Page-1" id="n5T7W3uJJ5LUcggtuW8M">
-    <mxGraphModel dx="2876" dy="1080" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2176" dy="1969" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -317,12 +317,12 @@
         <mxCell id="srs4021jFeDzSFWa1VJF-98" value="[valid login]" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="260" y="1008" width="80" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="p4Lhiv-uy1LG8fBzoNJo-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;startArrow=classic;startFill=1;endArrow=none;endFill=0;" edge="1" parent="1" source="p4Lhiv-uy1LG8fBzoNJo-1">
+        <mxCell id="p4Lhiv-uy1LG8fBzoNJo-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;startArrow=classic;startFill=1;endArrow=none;endFill=0;" parent="1" source="p4Lhiv-uy1LG8fBzoNJo-1" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="519.7142857142858" y="1290" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="p4Lhiv-uy1LG8fBzoNJo-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.65;entryY=0.429;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="p4Lhiv-uy1LG8fBzoNJo-1" target="srs4021jFeDzSFWa1VJF-77">
+        <mxCell id="p4Lhiv-uy1LG8fBzoNJo-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.65;entryY=0.429;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="p4Lhiv-uy1LG8fBzoNJo-1" target="srs4021jFeDzSFWa1VJF-77" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="520" y="1560" />
@@ -330,8 +330,24 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="p4Lhiv-uy1LG8fBzoNJo-1" value="Visit Leaderboard page" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="p4Lhiv-uy1LG8fBzoNJo-1" value="Visit Leaderboard page" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="460" y="1410" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Eo-Sqif8t97yKqLqRniC-1" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="274" y="1545" as="sourcePoint" />
+            <mxPoint x="90" y="1610" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="274" y="1555" />
+              <mxPoint x="90" y="1555" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Eo-Sqif8t97yKqLqRniC-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.347;entryY=0.534;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="Eo-Sqif8t97yKqLqRniC-2" target="srs4021jFeDzSFWa1VJF-77">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Eo-Sqif8t97yKqLqRniC-2" value="Verse Friends" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="30" y="1610" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
