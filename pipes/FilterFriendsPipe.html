@@ -105,14 +105,18 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="9"
-                            class="link-to-prism">src/app/pipes/filter-friends.pipe.ts:9</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="22"
+                            class="link-to-prism">src/app/pipes/filter-friends.pipe.ts:22</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Filters the friends array based on the given friend name.
+If the friend name is empty, returns the original friends array.
+If the friend name is not empty, filters the array based on the friend&#39;s username.</p>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -123,6 +127,7 @@
                                     <td>Name</td>
                                     <td>Type</td>
                                     <td>Optional</td>
+                                    <td>Description</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -137,6 +142,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>: The array of FRIEND objects to filter.</p>
+
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>friend</td>
@@ -149,6 +158,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>: The friend name to filter by.</p>
+
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -160,7 +173,8 @@
 
                     </div>
                     <div class="io-description">
-                        
+                        <p>The filtered array of FRIEND objects.</p>
+
                     </div>
                 </td>
             </tr>
@@ -180,11 +194,20 @@ import { FRIEND } from &#x27;../models/friend&#x27;;
 })
 export class FilterFriendsPipe implements PipeTransform {
 
+  /**
+   * Filters the friends array based on the given friend name.
+   * If the friend name is empty, returns the original friends array.
+   * If the friend name is not empty, filters the array based on the friend&#x27;s username.
+   * @param friends: The array of FRIEND objects to filter.
+   * @param friend: The friend name to filter by.
+   * @returns The filtered array of FRIEND objects.
+   */
+  
   transform(friends: FRIEND[], friend: string): any[]{
     if(friend &#x3D;&#x3D;&#x3D; &#x27;&#x27;){
       return friends;
     }else{
-      return friends.filter(Friend&#x3D;&gt; Friend.FriendID &#x3D;&#x3D;&#x3D; friend);
+      return friends.filter(Friend&#x3D;&gt; Friend.FriendUsername &#x3D;&#x3D;&#x3D; friend);
     }
   }
 

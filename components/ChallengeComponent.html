@@ -38,7 +38,7 @@
   <li>Components</li>
   <li
   >
-  QuizTypeinComponent</li>
+  ChallengeComponent</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -64,7 +64,7 @@
     <h3>File</h3>
 </p>
 <p class="comment">
-    <code>src/app/quiz-typein/quiz-typein.component.ts</code>
+    <code>src/app/challenge/challenge.component.ts</code>
 </p>
 
 
@@ -89,19 +89,19 @@
 
             <tr>
                 <td class="col-md-3">selector</td>
-                <td class="col-md-9"><code>app-quiz-typein</code></td>
+                <td class="col-md-9"><code>app-challenge</code></td>
             </tr>
 
             <tr>
                 <td class="col-md-3">styleUrls</td>
-                <td class="col-md-9"><code>./quiz-typein.component.scss</code></td>
+                <td class="col-md-9"><code>./challenge.component.scss</code></td>
             </tr>
 
 
 
             <tr>
                 <td class="col-md-3">templateUrl</td>
-                <td class="col-md-9"><code>./quiz-typein.component.html</code></td>
+                <td class="col-md-9"><code>./challenge.component.html</code></td>
             </tr>
 
 
@@ -140,16 +140,16 @@
                                 <a href="#boolTimesUp" >boolTimesUp</a>
                             </li>
                             <li>
-                                <a href="#buttonDispl" >buttonDispl</a>
-                            </li>
-                            <li>
                                 <a href="#countdownTimer" >countdownTimer</a>
                             </li>
                             <li>
                                 <a href="#done" >done</a>
                             </li>
                             <li>
-                                <a href="#link" >link</a>
+                                <a href="#friendname" >friendname</a>
+                            </li>
+                            <li>
+                                <a href="#history" >history</a>
                             </li>
                             <li>
                                 <a href="#questions" >questions</a>
@@ -159,9 +159,6 @@
                             </li>
                             <li>
                                 <a href="#quizName" >quizName</a>
-                            </li>
-                            <li>
-                                <a href="#rated" >rated</a>
                             </li>
                             <li>
                                 <a href="#rating_form" >rating_form</a>
@@ -179,6 +176,9 @@
                             <li>
                                 <a href="#user" >user</a>
                             </li>
+                            <li>
+                                <a href="#winner" >winner</a>
+                            </li>
                         </ul>
                     </td>
                 </tr>
@@ -192,13 +192,7 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <a href="#addRating" >addRating</a>
-                            </li>
-                            <li>
                                 <a href="#checkAnswers" >checkAnswers</a>
-                            </li>
-                            <li>
-                                <a href="#CopyResults" >CopyResults</a>
                             </li>
                             <li>
                                 <a href="#ngOnDestroy" >ngOnDestroy</a>
@@ -241,17 +235,19 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(questionService: <a href="../injectables/QuestionService.html" target="_self">QuestionService</a>, answerService: <a href="../injectables/AnswerService.html" target="_self">AnswerService</a>, route: <a href="https://angular.io/api/router/ActivatedRoute" target="_blank">ActivatedRoute</a>, quizService: <a href="../injectables/QuizService.html" target="_self">QuizService</a>, clipBoard: Clipboard, historyService: <a href="../injectables/HistoryService.html" target="_self">HistoryService</a>)</code>
+<code>constructor(userService: <a href="../injectables/UserService.html" target="_self">UserService</a>, questionService: <a href="../injectables/QuestionService.html" target="_self">QuestionService</a>, answerService: <a href="../injectables/AnswerService.html" target="_self">AnswerService</a>, route: <a href="https://angular.io/api/router/ActivatedRoute" target="_blank">ActivatedRoute</a>, quizService: <a href="../injectables/QuizService.html" target="_self">QuizService</a>, historyService: <a href="../injectables/HistoryService.html" target="_self">HistoryService</a>, clipBoard: Clipboard)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="46" class="link-to-prism">src/app/quiz-typein/quiz-typein.component.ts:46</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="56" class="link-to-prism">src/app/challenge/challenge.component.ts:56</a></div>
                             </td>
                         </tr>
 
                 <tr>
                     <td class="col-md-4">
+                            <div class="io-description"><p>The constructor initializes the component with the required services. (Dependency injection)</p>
+</div>
                             <div>
                                     <b>Parameters :</b>
                                     <table class="params">
@@ -263,6 +259,18 @@
                                             </tr>
                                         </thead>
                                         <tbody>
+                                                <tr>
+                                                        <td>userService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/UserService.html" target="_self" >UserService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
                                                 <tr>
                                                         <td>questionService</td>
                                                   
@@ -312,10 +320,10 @@
                                                     
                                                 </tr>
                                                 <tr>
-                                                        <td>clipBoard</td>
+                                                        <td>historyService</td>
                                                   
                                                         <td>
-                                                                    <code>Clipboard</code>
+                                                                        <code><a href="../injectables/HistoryService.html" target="_self" >HistoryService</a></code>
                                                         </td>
                                                   
                                                     <td>
@@ -324,10 +332,10 @@
                                                     
                                                 </tr>
                                                 <tr>
-                                                        <td>historyService</td>
+                                                        <td>clipBoard</td>
                                                   
                                                         <td>
-                                                                        <code><a href="../injectables/HistoryService.html" target="_self" >HistoryService</a></code>
+                                                                    <code>Clipboard</code>
                                                         </td>
                                                   
                                                     <td>
@@ -367,7 +375,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/app/quiz-typein/quiz-typein.component.ts:20</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/app/challenge/challenge.component.ts:23</a></div>
                             </td>
                         </tr>
             </tbody>
@@ -381,48 +389,6 @@
     <h3 id="methods">
         Methods
     </h3>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="addRating"></a>
-                    <span class="name">
-                        <span ><b>addRating</b></span>
-                        <a href="#addRating"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-<code>addRating()</code>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="178"
-                            class="link-to-prism">src/app/quiz-typein/quiz-typein.component.ts:178</a></div>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-description"><p>addRating(): This function is called when the user adds a rating for the quiz.
-It retrieves the rating from the rating_form and the user object from sessionStorage.
-If a user is logged in, it calls the addRating method of QuizService to add the rating for the quiz.
-It displays an alert indicating the success of the rating and sets the rated property to true.</p>
-</div>
-
-                    <div class="io-description">
-                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
-
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
     <table class="table table-sm table-bordered">
         <tbody>
             <tr>
@@ -443,64 +409,17 @@ It displays an alert indicating the success of the rating and sets the rated pro
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="127"
-                            class="link-to-prism">src/app/quiz-typein/quiz-typein.component.ts:127</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="169"
+                            class="link-to-prism">src/app/challenge/challenge.component.ts:169</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-description"><p>checkAnswers(): This function is called when the time is up or when the user submits their answers.
-It stops the timer by calling the stopTimer function. It then iterates over each question and compares
-the user&#39;s answer with the correct answers stored in the answers property. If the user&#39;s answer matches a correct answer,
-it increments the numCorrect variable. It updates the timeLeftDisplay property with the remaining time,
-and the scoreDisplay property with the user&#39;s score. If a user is logged in, it sets the done property to true.
-It also retrieves the user&#39;s rating from the rating_form and updates the scoreDisplay with the user&#39;s name and score.
-It creates a link property with the result and a link to the quiz. It adds a new history entry using the create_history
- method of HistoryService and updates the user&#39;s play count using the update_user_plays method of HistoryService.
-Finally, it updates the User object in the sessionStorage and assigns it to the USer variable.</p>
-</div>
-
-                    <div class="io-description">
-                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
-
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="CopyResults"></a>
-                    <span class="name">
-                        <span ><b>CopyResults</b></span>
-                        <a href="#CopyResults"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-<code>CopyResults()</code>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="200"
-                            class="link-to-prism">src/app/quiz-typein/quiz-typein.component.ts:200</a></div>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-description"><p>CopyResults(): This function is called when the user wants to copy the results to their clipboard.
-It uses the Clipboard service from @angular/cdk/clipboard to copy the link property to the clipboard.
-It updates the buttonDispl property to indicate that the results have been copied.</p>
+                    <div class="io-description"><p>The checkAnswers method is called when the time is up or when the user submits their answers.
+It stops the timer, checks the user&#39;s answers against the correct answers, calculates the score,
+and displays the results.</p>
 </div>
 
                     <div class="io-description">
@@ -531,14 +450,17 @@ It updates the buttonDispl property to indicate that the results have been copie
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="104"
-                            class="link-to-prism">src/app/quiz-typein/quiz-typein.component.ts:104</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="152"
+                            class="link-to-prism">src/app/challenge/challenge.component.ts:152</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>The ngOnDestroy method is called when the component is destroyed.
+It stops the timer by clearing the interval.</p>
+</div>
 
                     <div class="io-description">
                         <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
@@ -568,21 +490,18 @@ It updates the buttonDispl property to indicate that the results have been copie
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="67"
-                            class="link-to-prism">src/app/quiz-typein/quiz-typein.component.ts:67</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="101"
+                            class="link-to-prism">src/app/challenge/challenge.component.ts:101</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-description"><p>ngOnInit(): This is a lifecycle hook that is called after the component has been initialized.
-In this function, the component retrieves the route parameters using ActivatedRoute and subscribes to the params observable.
-It retrieves the value of the id parameter from the route and assigns it to the quiz_id property of the component.
-It then calls the get_quiz_questions method of QuestionService to fetch the questions for the quiz.
-The fetched questions are stored in the questions property of the component. It also retrieves the name of the quiz using
-the get_quiz_byID method of QuizService and assigns it to the quizName property. For each question, it creates a form control for the corresponding answer and adds it to the answer_form group.
-Additionally, it sets up a countdown timer using setInterval to decrement the timeLeft property every second until it reaches 0.</p>
+                    <div class="io-description"><p>The ngOnInit method is called when the component is created.
+It retrieves the quiz ID from the route parameters and fetches the quiz questions,
+answers, and user details using the corresponding services. It also starts a
+countdown timer and updates the time left every second.</p>
 </div>
 
                     <div class="io-description">
@@ -613,15 +532,15 @@ Additionally, it sets up a countdown timer using setInterval to decrement the ti
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="111"
-                            class="link-to-prism">src/app/quiz-typein/quiz-typein.component.ts:111</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="159"
+                            class="link-to-prism">src/app/challenge/challenge.component.ts:159</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-description"><p>Function to stop timer</p>
+                    <div class="io-description"><p>Function to stop countdown timer</p>
 </div>
 
                     <div class="io-description">
@@ -657,10 +576,16 @@ Additionally, it sets up a countdown timer using setInterval to decrement the ti
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="46" class="link-to-prism">src/app/quiz-typein/quiz-typein.component.ts:46</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="56" class="link-to-prism">src/app/challenge/challenge.component.ts:56</a></div>
                         </td>
                     </tr>
 
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Declare empty form group, will have answers dynamically added in ngOnInit function</p>
+</div>
+                </td>
+            </tr>
 
         </tbody>
     </table>
@@ -683,7 +608,7 @@ Additionally, it sets up a countdown timer using setInterval to decrement the ti
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/app/quiz-typein/quiz-typein.component.ts:23</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/app/challenge/challenge.component.ts:29</a></div>
                         </td>
                     </tr>
 
@@ -714,10 +639,16 @@ Additionally, it sets up a countdown timer using setInterval to decrement the ti
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="52" class="link-to-prism">src/app/quiz-typein/quiz-typein.component.ts:52</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="78" class="link-to-prism">src/app/challenge/challenge.component.ts:78</a></div>
                         </td>
                     </tr>
 
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Array of answers</p>
+</div>
+                </td>
+            </tr>
 
         </tbody>
     </table>
@@ -745,41 +676,16 @@ Additionally, it sets up a countdown timer using setInterval to decrement the ti
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="44" class="link-to-prism">src/app/quiz-typein/quiz-typein.component.ts:44</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="51" class="link-to-prism">src/app/challenge/challenge.component.ts:51</a></div>
                         </td>
                     </tr>
 
-
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="buttonDispl"></a>
-                    <span class="name">
-                        <span ><b>buttonDispl</b></span>
-                        <a href="#buttonDispl"><span class="icon ion-ios-link"></span></a>
-                    </span>
+                    <div class="io-description"><p>Set the variable for when time is up to false at start</p>
+</div>
                 </td>
             </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <i>Default value : </i><code>&quot;Share Results&quot;</code>
-                    </td>
-                </tr>
-                    <tr>
-                        <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/app/quiz-typein/quiz-typein.component.ts:26</a></div>
-                        </td>
-                    </tr>
-
 
         </tbody>
     </table>
@@ -802,7 +708,7 @@ Additionally, it sets up a countdown timer using setInterval to decrement the ti
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="34" class="link-to-prism">src/app/quiz-typein/quiz-typein.component.ts:34</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="38" class="link-to-prism">src/app/challenge/challenge.component.ts:38</a></div>
                         </td>
                     </tr>
 
@@ -839,7 +745,7 @@ Additionally, it sets up a countdown timer using setInterval to decrement the ti
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/app/quiz-typein/quiz-typein.component.ts:28</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/app/challenge/challenge.component.ts:30</a></div>
                         </td>
                     </tr>
 
@@ -850,10 +756,10 @@ Additionally, it sets up a countdown timer using setInterval to decrement the ti
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="link"></a>
+                    <a name="friendname"></a>
                     <span class="name">
-                        <span ><b>link</b></span>
-                        <a href="#link"><span class="icon ion-ios-link"></span></a>
+                        <span ><b>friendname</b></span>
+                        <a href="#friendname"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
@@ -865,7 +771,33 @@ Additionally, it sets up a countdown timer using setInterval to decrement the ti
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/app/quiz-typein/quiz-typein.component.ts:27</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">src/app/challenge/challenge.component.ts:33</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="history"></a>
+                    <span class="name">
+                        <span ><b>history</b></span>
+                        <a href="#history"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../classes/HistoryArr.html" target="_self" >HistoryArr</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">src/app/challenge/challenge.component.ts:32</a></div>
                         </td>
                     </tr>
 
@@ -896,10 +828,16 @@ Additionally, it sets up a countdown timer using setInterval to decrement the ti
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="50" class="link-to-prism">src/app/quiz-typein/quiz-typein.component.ts:50</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="73" class="link-to-prism">src/app/challenge/challenge.component.ts:73</a></div>
                         </td>
                     </tr>
 
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Questions array</p>
+</div>
+                </td>
+            </tr>
 
         </tbody>
     </table>
@@ -922,10 +860,16 @@ Additionally, it sets up a countdown timer using setInterval to decrement the ti
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/app/quiz-typein/quiz-typein.component.ts:22</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/app/challenge/challenge.component.ts:28</a></div>
                         </td>
                     </tr>
 
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Declare variables required by this component</p>
+</div>
+                </td>
+            </tr>
 
         </tbody>
     </table>
@@ -942,44 +886,18 @@ Additionally, it sets up a countdown timer using setInterval to decrement the ti
             </tr>
                 <tr>
                     <td class="col-md-4">
-                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
-
-                    </td>
-                </tr>
-                    <tr>
-                        <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/app/quiz-typein/quiz-typein.component.ts:24</a></div>
-                        </td>
-                    </tr>
-
-
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="rated"></a>
-                    <span class="name">
-                        <span ><b>rated</b></span>
-                        <a href="#rated"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 
                     </td>
                 </tr>
                 <tr>
                     <td class="col-md-4">
-                        <i>Default value : </i><code>false</code>
+                        <i>Default value : </i><code>&quot;&quot;</code>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/app/quiz-typein/quiz-typein.component.ts:29</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="93" class="link-to-prism">src/app/challenge/challenge.component.ts:93</a></div>
                         </td>
                     </tr>
 
@@ -1006,10 +924,16 @@ Additionally, it sets up a countdown timer using setInterval to decrement the ti
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="54" class="link-to-prism">src/app/quiz-typein/quiz-typein.component.ts:54</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="89" class="link-to-prism">src/app/challenge/challenge.component.ts:89</a></div>
                         </td>
                     </tr>
 
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Declare Rating form, once quiz is done, present this form to rate the quiz</p>
+</div>
+                </td>
+            </tr>
 
         </tbody>
     </table>
@@ -1032,7 +956,7 @@ Additionally, it sets up a countdown timer using setInterval to decrement the ti
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="42" class="link-to-prism">src/app/quiz-typein/quiz-typein.component.ts:42</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="46" class="link-to-prism">src/app/challenge/challenge.component.ts:46</a></div>
                         </td>
                     </tr>
 
@@ -1065,7 +989,7 @@ Additionally, it sets up a countdown timer using setInterval to decrement the ti
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/quiz-typein/quiz-typein.component.ts:25</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">src/app/challenge/challenge.component.ts:31</a></div>
                         </td>
                     </tr>
 
@@ -1091,7 +1015,7 @@ Additionally, it sets up a countdown timer using setInterval to decrement the ti
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="38" class="link-to-prism">src/app/quiz-typein/quiz-typein.component.ts:38</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="42" class="link-to-prism">src/app/challenge/challenge.component.ts:42</a></div>
                         </td>
                     </tr>
 
@@ -1122,7 +1046,39 @@ Additionally, it sets up a countdown timer using setInterval to decrement the ti
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/app/quiz-typein/quiz-typein.component.ts:30</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="84" class="link-to-prism">src/app/challenge/challenge.component.ts:84</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Gets user from session storage, user=null if the client is not logged in</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="winner"></a>
+                    <span class="name">
+                        <span ><b>winner</b></span>
+                        <a href="#winner"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="34" class="link-to-prism">src/app/challenge/challenge.component.ts:34</a></div>
                         </td>
                     </tr>
 
@@ -1136,35 +1092,39 @@ Additionally, it sets up a countdown timer using setInterval to decrement the ti
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, Input, OnDestroy, OnInit } from &#x27;@angular/core&#x27;;
-import { FormBuilder, FormControl, FormGroup, Validators } from &#x27;@angular/forms&#x27;;
+import { FormControl, FormGroup } from &#x27;@angular/forms&#x27;;
 import { QuestionService } from &#x27;../services/question.service&#x27;;
 import { AnswerService } from &#x27;../services/answer.service&#x27;;
 import { Question } from &#x27;../models/question&#x27;;
 import { Answer } from &#x27;../models/answer&#x27;;
 import { ActivatedRoute } from &#x27;@angular/router&#x27;;
-import { User } from &#x27;../models/user&#x27;;
 import { QuizService } from &#x27;../services/quiz.service&#x27;;
-import { Clipboard } from &#x27;@angular/cdk/clipboard&#x27;;
+import { User } from &#x27;../models/user&#x27;;
+import { History, HistoryArr } from &#x27;../models/history&#x27;;
 import { HistoryService } from &#x27;../services/history.service&#x27;;
-import { History } from &#x27;../models/history&#x27;;
+import { Clipboard } from &#x27;@angular/cdk/clipboard&#x27;;
 import { Quiz } from &#x27;../models/quiz&#x27;;
-@Component({
-  selector: &#x27;app-quiz-typein&#x27;,
-  templateUrl: &#x27;./quiz-typein.component.html&#x27;,
-  styleUrls: [&#x27;./quiz-typein.component.scss&#x27;]
-})
-export class QuizTypeinComponent {
-    @Input() timeLeft &#x3D; 30;
+import { FRIEND } from &#x27;../models/friend&#x27;;
+import { UserService } from &#x27;../services/user.service&#x27;;
 
+@Component({
+  selector: &#x27;app-challenge&#x27;,
+  templateUrl: &#x27;./challenge.component.html&#x27;,
+  styleUrls: [&#x27;./challenge.component.scss&#x27;]
+})
+export class ChallengeComponent {
+  @Input() timeLeft &#x3D; 30;
+
+  /**
+   * Declare variables required by this component
+   */
   quiz_id: any;
   answer_id: any;
-  quizName: any;
-  private sub: any;
-  buttonDispl &#x3D; &quot;Share Results&quot;
-  link: any;
   done: boolean &#x3D; false;
-  rated: boolean &#x3D; false;
-  user &#x3D; sessionStorage.getItem(&quot;User&quot;);
+  private sub: any;
+  history!: HistoryArr;
+  friendname: any;
+  winner: any;
   /**
    * Timer
    */
@@ -1178,50 +1138,90 @@ export class QuizTypeinComponent {
    */
   scoreDisplay: any;
 
+  /**
+   * Set the variable for when time is up to false at start
+   */
   boolTimesUp: boolean &#x3D; false;
 
+  /**
+   * Declare empty form group, will have answers dynamically added in ngOnInit function
+   */
   answer_form!: FormGroup;
 
-  constructor(private questionService: QuestionService, private answerService: AnswerService, private route: ActivatedRoute, private quizService: QuizService,private clipBoard: Clipboard, private historyService: HistoryService) { }
+  /**
+   * The constructor initializes the component with the required services. (Dependency injection)
+   * @param userService 
+   * @param questionService 
+   * @param answerService 
+   * @param route 
+   * @param quizService 
+   * @param historyService 
+   * @param clipBoard 
+   */
+  constructor(private userService: UserService ,private questionService: QuestionService, private answerService: AnswerService, private route: ActivatedRoute, private quizService: QuizService, private historyService: HistoryService, private clipBoard: Clipboard) { }
 
+  /**
+   * Questions array
+   */
   questions: Question[] &#x3D; [];
 
+  /**
+   * Array of answers
+   */
   answers: Answer[] &#x3D; [];
 
+
+  /**
+   * Gets user from session storage, user&#x3D;null if the client is not logged in
+   */
+  user &#x3D; sessionStorage.getItem(&quot;User&quot;);
+
+  /**
+   * Declare Rating form, once quiz is done, present this form to rate the quiz
+   */
   rating_form &#x3D; new FormGroup({
     rating: new FormControl(&#x27;&#x27;)
   });
 
-  /**
-   * ngOnInit(): This is a lifecycle hook that is called after the component has been initialized. 
-   * In this function, the component retrieves the route parameters using ActivatedRoute and subscribes to the params observable. 
-   * It retrieves the value of the id parameter from the route and assigns it to the quiz_id property of the component. 
-   * It then calls the get_quiz_questions method of QuestionService to fetch the questions for the quiz. 
-   * The fetched questions are stored in the questions property of the component. It also retrieves the name of the quiz using 
-   * the get_quiz_byID method of QuizService and assigns it to the quizName property. For each question, it creates a form control for the corresponding answer and adds it to the answer_form group. 
-   * Additionally, it sets up a countdown timer using setInterval to decrement the timeLeft property every second until it reaches 0.
-   */
+  quizName: string &#x3D; &quot;&quot;;
+
+/**
+ * The ngOnInit method is called when the component is created. 
+ * It retrieves the quiz ID from the route parameters and fetches the quiz questions, 
+ * answers, and user details using the corresponding services. It also starts a 
+ * countdown timer and updates the time left every second.
+ */
   ngOnInit() {
+
     this.sub &#x3D; this.route.params.subscribe(params &#x3D;&gt; {
-      this.quiz_id &#x3D; params[&#x27;id&#x27;];
-      this.questionService.get_quiz_questions(this.quiz_id).subscribe((value) &#x3D;&gt; {
-        this.questions &#x3D; value;
-        this.quizService.get_quiz_byID(this.quiz_id).subscribe((res: Quiz) &#x3D;&gt;{
+      //Get quiz id sent by the parameter and set the variables that will display the quiz questions and values
+      let historyID &#x3D; params[&#x27;id&#x27;];
+      this.historyService.get_history_by_id(historyID).subscribe((result: HistoryArr) &#x3D;&gt;{
+        this.history &#x3D; result;
+        this.quizService.get_quiz_byID(result.QuizID).subscribe((res: Quiz) &#x3D;&gt; {
           this.quizName &#x3D; res.Name;
-        });
-        let answer: any &#x3D; {}
-
-        this.questions.forEach(element &#x3D;&gt; {
-          answer[element._id] &#x3D; new FormControl(&#x27;&#x27;)
-          this.answerService.get_question_answer(element._id).subscribe((result: Answer[]) &#x3D;&gt; {
-            result.forEach(element &#x3D;&gt; {
-              this.answers.push(element)
+          this.questionService.get_quiz_questions(result.QuizID).subscribe((value) &#x3D;&gt; {
+            this.questions &#x3D; value;
+            
+            let answer: any &#x3D; {}
+  
+            //Get user&#x27;s answers to the quiz&#x27;s questions
+            this.questions.forEach(element &#x3D;&gt; {
+              answer[element._id] &#x3D; new FormControl(&#x27;&#x27;)
+              this.answerService.get_question_answer(element._id).subscribe((result: Answer[]) &#x3D;&gt; {
+                result.forEach(element &#x3D;&gt; {
+                  this.answers.push(element)
+                });
+              })
+              
             });
-          })
-
+            
+            this.answer_form &#x3D; new FormGroup(answer);
+            this.userService.get_usernameID(this.history.UserID).subscribe((res)&#x3D;&gt;{
+              this.friendname &#x3D; res;
+            });
+          });
         });
-
-        this.answer_form &#x3D; new FormGroup(answer);
       });
       // Update the timer every second
       this.countdownTimer &#x3D; setInterval(() &#x3D;&gt; {
@@ -1238,12 +1238,16 @@ export class QuizTypeinComponent {
 
   }
 
-  ngOnDestroy(){
+  /**
+   * The ngOnDestroy method is called when the component is destroyed. 
+   * It stops the timer by clearing the interval.
+   */
+  ngOnDestroy() {
     this.stopTimer();
   }
 
   /**
-   * Function to stop timer
+   * Function to stop countdown timer
    */
   stopTimer() {
     clearInterval(this.countdownTimer);
@@ -1251,25 +1255,21 @@ export class QuizTypeinComponent {
 
 
   /**
-   * checkAnswers(): This function is called when the time is up or when the user submits their answers. 
-   * It stops the timer by calling the stopTimer function. It then iterates over each question and compares 
-   * the user&#x27;s answer with the correct answers stored in the answers property. If the user&#x27;s answer matches a correct answer, 
-   * it increments the numCorrect variable. It updates the timeLeftDisplay property with the remaining time, 
-   * and the scoreDisplay property with the user&#x27;s score. If a user is logged in, it sets the done property to true. 
-   * It also retrieves the user&#x27;s rating from the rating_form and updates the scoreDisplay with the user&#x27;s name and score. 
-   * It creates a link property with the result and a link to the quiz. It adds a new history entry using the create_history
-   *  method of HistoryService and updates the user&#x27;s play count using the update_user_plays method of HistoryService. 
-   * Finally, it updates the User object in the sessionStorage and assigns it to the USer variable.
+   * The checkAnswers method is called when the time is up or when the user submits their answers. 
+   * It stops the timer, checks the user&#x27;s answers against the correct answers, calculates the score, 
+   * and displays the results.
    */
   checkAnswers() {
     this.stopTimer();
 
     var numCorrect &#x3D; 0;
 
+    //Check if answers are correct
     this.questions.forEach(element &#x3D;&gt; {
       let answer &#x3D; this.answer_form.get(element._id)?.value;
       this.answers.forEach(element &#x3D;&gt; {
-        if (element.Answer &#x3D;&#x3D;&#x3D; answer &amp;&amp; element.Correct) {
+        if (element._id &#x3D;&#x3D;&#x3D; answer &amp;&amp; element.Correct) {
+          //Increase the value for all correct answers
           numCorrect++;
         }
 
@@ -1277,67 +1277,44 @@ export class QuizTypeinComponent {
 
     });
 
+    //Display time and the score the user got
     this.timeLeftDisplay &#x3D; &quot;Time Left: &quot; + this.timeLeft + &quot;s&quot;;
-    this.scoreDisplay &#x3D; &quot;You scored &quot; + numCorrect + &quot; out of &quot; + this.questions.length;
-    if(this.user !&#x3D; null){
-      this.done &#x3D; true;
+      this.scoreDisplay &#x3D; &quot;You scored &quot; + numCorrect + &quot;/&quot; + this.questions.length + &quot; and your friend scored: &quot; + this.history.Score + &quot;/&quot; + this.questions.length;
+    if(numCorrect &lt; this.history.Score){
+      this.winner &#x3D; this.friendname + &quot; won! Better luck next time!&quot;;
+    }else if(numCorrect &gt; this.history.Score){
+      this.winner &#x3D; &quot;You won! Congratulations!&quot;;
+    }else{
+      this.winner &#x3D; &quot;You drew with your friend! A worthy battle!&quot;;
     }
+
+    this.done &#x3D; true;
+
     let ans &#x3D; this.rating_form.get(&quot;rating&quot;)?.value;
     let USer: User;
-    if(this.user !&#x3D; null){
-      USer &#x3D;  JSON.parse(this.user!);
-      this.scoreDisplay &#x3D; USer.FirstName + &quot; scored &quot; + numCorrect + &quot; out of &quot; + this.questions.length;
-      this.link &#x3D; this.scoreDisplay + &quot;, play the quiz now: &quot; + &quot;https://quiz-platform-28fcb.web.app/quiz-info/&quot;+this.quiz_id;
+    if (this.user !&#x3D; null) {
+      /**
+       * If the user is logged in, the score and history are updated and stored in the session storage.
+       */
+      USer &#x3D; JSON.parse(this.user!);
+      this.scoreDisplay &#x3D; USer.FirstName + &quot; scored &quot; + numCorrect + &quot;/&quot; + this.questions.length + &quot; and your friend scored: &quot; + this.history.Score + &quot;/&quot; + this.questions.length;
       // Add history:
       let history: History &#x3D; {
         QuizID: this.quiz_id,
         UserID: USer._id,
         Score: numCorrect
       }
-      this.historyService.create_history(history).subscribe((res)&#x3D;&gt;{
+      this.historyService.create_history(history).subscribe((res) &#x3D;&gt; {
         console.log(res);
       });
       //Update user&#x27;s plays
-      this.historyService.update_user_plays(USer.Plays,USer._id).subscribe((res) &#x3D;&gt;{
+      this.historyService.update_user_plays(USer.Plays, USer._id).subscribe((res) &#x3D;&gt; {
         console.log(res);
         USer.Plays &#x3D; USer.Plays + 1;
-        sessionStorage.setItem(&quot;User&quot;,JSON.stringify(USer));
+        sessionStorage.setItem(&quot;User&quot;, JSON.stringify(USer));
       });
     }
   }
-
-    /**
-     * addRating(): This function is called when the user adds a rating for the quiz.
-     * It retrieves the rating from the rating_form and the user object from sessionStorage. 
-     * If a user is logged in, it calls the addRating method of QuizService to add the rating for the quiz.
-     * It displays an alert indicating the success of the rating and sets the rated property to true.
-     */
-    addRating(){
-      let ans &#x3D; this.rating_form.get(&quot;rating&quot;)?.value;
-      let USer: User;
-      if(this.user !&#x3D; null){
-        USer &#x3D;  JSON.parse(this.user!);
-        if(ans &#x3D;&#x3D; null){
-          ans &#x3D; &quot;0&quot;
-        }
-        this.quizService.addRating(parseInt(ans),this.quiz_id,USer._id).subscribe((res) &#x3D;&gt;{
-          alert(&quot;Successfully rated the quiz!&quot;);
-          console.log(res);
-          this.rated &#x3D; true;
-        });
-      }
-    }
-  
-  
-    /**
-     * CopyResults(): This function is called when the user wants to copy the results to their clipboard. 
-     * It uses the Clipboard service from @angular/cdk/clipboard to copy the link property to the clipboard. 
-     * It updates the buttonDispl property to indicate that the results have been copied.
-     */
-    CopyResults(){
-      this.clipBoard.copy(this.link);
-      this.buttonDispl &#x3D; &quot;Copied Results&quot;;
-    }
 }
 </code></pre>
     </div>
@@ -1346,18 +1323,19 @@ export class QuizTypeinComponent {
         <pre class="line-numbers"><code class="language-html">&lt;div&gt;
     &lt;title&gt;Quiz Page&lt;/title&gt;
     &lt;div class&#x3D;&quot;quiz-container has-text-white&quot;&gt;
-        &lt;h2 class&#x3D;&quot;is-size-1 mt-5 has-text-weight-bold&quot;&gt;{{quizName}}&lt;/h2&gt;
+        &lt;h2 class&#x3D;&quot;is-size-1 mt-5 has-text-weight-bold&quot;&gt;Challenge: {{quizName}}&lt;/h2&gt;
         &lt;span&gt; {{timeLeft}} &lt;/span&gt;
-        &lt;div class&#x3D;&quot;card has-text-white&quot;&gt;
+        &lt;div class&#x3D;&quot;has-text-white&quot;&gt;
             &lt;form *ngIf&#x3D;&quot;answer_form&quot; [formGroup]&#x3D;&quot;answer_form&quot; (ngSubmit)&#x3D;&quot;checkAnswers()&quot; id&#x3D;&quot;answer_form&quot;&gt;
-                &lt;div class&#x3D;&quot;has-text-white&quot; *ngFor&#x3D;&quot;let question of questions;index as idx&quot;&gt;
-                    &lt;h3 class&#x3D;&quot;is-size-3 has-text-weight-bold&quot;&gt;Question {{idx+1}}:&lt;/h3&gt;
-                    &lt;p class&#x3D;&quot;is-size-4&quot;&gt;{{question.Question}}&lt;/p&gt;
+                &lt;div class&#x3D;&quot;card has-text-white&quot; *ngFor&#x3D;&quot;let question of questions;index as idx&quot;&gt;
+                    &lt;h3 class&#x3D;&quot;quest&quot;&gt;Question {{idx+1}}:&lt;/h3&gt;
+                    &lt;p class&#x3D;&quot;quest&quot;&gt;{{question.Question}}&lt;/p&gt;
                     &lt;div class&#x3D;&quot;field&quot;&gt;
                         &lt;div class&#x3D;&quot;control&quot; *ngFor&#x3D;&quot;let answer of answers&quot;&gt;
                             &lt;div class&#x3D;&quot;fl&quot; *ngIf&#x3D;&quot;answer.QuestionID &#x3D;&#x3D;&#x3D; question._id&quot;&gt;
-                                &lt;label class&#x3D;&quot;text&quot;&gt;
-                                    &lt;input type&#x3D;&quot;text&quot; value&#x3D;&quot;{{answer._id}}&quot; formControlName&#x3D;&quot;{{question._id}}&quot;&gt;        
+                                &lt;label class&#x3D;&quot;radio&quot;&gt;
+                                    &lt;input type&#x3D;&quot;radio&quot; value&#x3D;&quot;{{answer._id}}&quot; formControlName&#x3D;&quot;{{question._id}}&quot;&gt;
+                                    {{answer.Answer}}
                                 &lt;/label&gt;
                             &lt;/div&gt;
                         &lt;/div&gt;
@@ -1365,50 +1343,17 @@ export class QuizTypeinComponent {
                 &lt;/div&gt;
                 &lt;button class&#x3D;&quot;button is-primary is-rounded mt-5 mb-5 is-size-4&quot; *ngIf&#x3D;&quot;!boolTimesUp&quot;&gt;Submit&lt;/button&gt;
             &lt;/form&gt;
-            &lt;p class&#x3D;&quot;is-size-5&quot; id&#x3D;&quot;time-left&quot;&gt;{{timeLeftDisplay}}&lt;/p&gt;
-            &lt;p class&#x3D;&quot;is-size-5 has-text-weight-bold&quot; id&#x3D;&quot;score&quot;&gt;{{scoreDisplay}}&lt;/p&gt;
+            &lt;p id&#x3D;&quot;time-left&quot;&gt;{{timeLeftDisplay}}&lt;/p&gt;
+            &lt;p class&#x3D;&quot;is-size-3&quot; id&#x3D;&quot;score&quot;&gt;{{scoreDisplay}}&lt;/p&gt;
+            &lt;p class&#x3D;&quot;is-size-3 has-text-weight-bold&quot; id&#x3D;&quot;win&quot;&gt;{{winner}}&lt;/p&gt;
         &lt;/div&gt;
-        &lt;div class&#x3D;&quot;card has-text-white&quot; *ngIf&#x3D;&quot;done&#x3D;&#x3D;true &amp;&amp; user!&#x3D;null&quot;&gt;
-            &lt;form [formGroup]&#x3D;&quot;rating_form&quot; (ngSubmit)&#x3D;&quot;addRating()&quot; *ngIf&#x3D;&quot;rated !&#x3D; true&quot;&gt;
-                &lt;div class&#x3D;&quot;field is-size-5&quot;&gt;
-                    &lt;div class&#x3D;&quot;control&quot;&gt;
-                        &lt;label class&#x3D;&quot;radio&quot;&gt;
-                            &lt;input type&#x3D;&quot;radio&quot; value&#x3D;&quot;1&quot; formControlName&#x3D;&quot;rating&quot;&gt;
-                            1
-                        &lt;/label&gt;
-                        &lt;label class&#x3D;&quot;radio&quot;&gt;
-                            &lt;input type&#x3D;&quot;radio&quot; value&#x3D;&quot;2&quot; formControlName&#x3D;&quot;rating&quot;&gt;
-                            2
-                        &lt;/label&gt;
-                        &lt;label class&#x3D;&quot;radio&quot;&gt;
-                            &lt;input type&#x3D;&quot;radio&quot; value&#x3D;&quot;3&quot; formControlName&#x3D;&quot;rating&quot;&gt;
-                            3
-                        &lt;/label&gt;
-                        &lt;label class&#x3D;&quot;radio&quot;&gt;
-                            &lt;input type&#x3D;&quot;radio&quot; value&#x3D;&quot;4&quot; formControlName&#x3D;&quot;rating&quot;&gt;
-                            4
-                        &lt;/label&gt;
-                        &lt;label class&#x3D;&quot;radio&quot;&gt;
-                            &lt;input type&#x3D;&quot;radio&quot; value&#x3D;&quot;5&quot; formControlName&#x3D;&quot;rating&quot;&gt;
-                            5
-                        &lt;/label&gt;
-                    &lt;/div&gt;
-                &lt;/div&gt;
-                &lt;button class&#x3D;&quot;button is-primary is-rounded is-size-5&quot;&gt;Submit rating&lt;/button&gt;
-            &lt;/form&gt;
-
-            &lt;div class&#x3D;&quot;result has-text-white is-size-5&quot;&gt;
-                {{scoreDisplay}}
-                &lt;!-- &lt;a href&#x3D;&quot;{{link}}&quot;&gt;{{link}}&lt;/a&gt; --&gt;
-                &lt;button class&#x3D;&quot;button is-success&quot; (click)&#x3D;&quot;CopyResults()&quot;&gt;{{buttonDispl}}&lt;/button&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;</code></pre>
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-styleData">
                 <p class="comment">
-                    <code>./quiz-typein.component.scss</code>
+                    <code>./challenge.component.scss</code>
                 </p>
                 <pre class="line-numbers"><code class="language-scss">.quiz-container {
     background: rgb(4, 82, 137);
@@ -1499,10 +1444,10 @@ p {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div>    <title>Quiz Page</title>    <div class="quiz-container has-text-white">        <h2 class="is-size-1 mt-5 has-text-weight-bold">{{quizName}}</h2>        <span> {{timeLeft}} </span>        <div class="card has-text-white">            <form *ngIf="answer_form" [formGroup]="answer_form" (ngSubmit)="checkAnswers()" id="answer_form">                <div class="has-text-white" *ngFor="let question of questions;index as idx">                    <h3 class="is-size-3 has-text-weight-bold">Question {{idx+1}}:</h3>                    <p class="is-size-4">{{question.Question}}</p>                    <div class="field">                        <div class="control" *ngFor="let answer of answers">                            <div class="fl" *ngIf="answer.QuestionID === question._id">                                <label class="text">                                    <input type="text" value="{{answer._id}}" formControlName="{{question._id}}">                                        </label>                            </div>                        </div>                    </div>                </div>                <button class="button is-primary is-rounded mt-5 mb-5 is-size-4" *ngIf="!boolTimesUp">Submit</button>            </form>            <p class="is-size-5" id="time-left">{{timeLeftDisplay}}</p>            <p class="is-size-5 has-text-weight-bold" id="score">{{scoreDisplay}}</p>        </div>        <div class="card has-text-white" *ngIf="done==true && user!=null">            <form [formGroup]="rating_form" (ngSubmit)="addRating()" *ngIf="rated != true">                <div class="field is-size-5">                    <div class="control">                        <label class="radio">                            <input type="radio" value="1" formControlName="rating">                            1                        </label>                        <label class="radio">                            <input type="radio" value="2" formControlName="rating">                            2                        </label>                        <label class="radio">                            <input type="radio" value="3" formControlName="rating">                            3                        </label>                        <label class="radio">                            <input type="radio" value="4" formControlName="rating">                            4                        </label>                        <label class="radio">                            <input type="radio" value="5" formControlName="rating">                            5                        </label>                    </div>                </div>                <button class="button is-primary is-rounded is-size-5">Submit rating</button>            </form>            <div class="result has-text-white is-size-5">                {{scoreDisplay}}                <!-- <a href="{{link}}">{{link}}</a> -->                <button class="button is-success" (click)="CopyResults()">{{buttonDispl}}</button>            </div>        </div>    </div></div>'
+        var COMPONENT_TEMPLATE = '<div><div>    <title>Quiz Page</title>    <div class="quiz-container has-text-white">        <h2 class="is-size-1 mt-5 has-text-weight-bold">Challenge: {{quizName}}</h2>        <span> {{timeLeft}} </span>        <div class="has-text-white">            <form *ngIf="answer_form" [formGroup]="answer_form" (ngSubmit)="checkAnswers()" id="answer_form">                <div class="card has-text-white" *ngFor="let question of questions;index as idx">                    <h3 class="quest">Question {{idx+1}}:</h3>                    <p class="quest">{{question.Question}}</p>                    <div class="field">                        <div class="control" *ngFor="let answer of answers">                            <div class="fl" *ngIf="answer.QuestionID === question._id">                                <label class="radio">                                    <input type="radio" value="{{answer._id}}" formControlName="{{question._id}}">                                    {{answer.Answer}}                                </label>                            </div>                        </div>                    </div>                </div>                <button class="button is-primary is-rounded mt-5 mb-5 is-size-4" *ngIf="!boolTimesUp">Submit</button>            </form>            <p id="time-left">{{timeLeftDisplay}}</p>            <p class="is-size-3" id="score">{{scoreDisplay}}</p>            <p class="is-size-3 has-text-weight-bold" id="win">{{winner}}</p>        </div>    </div></div></div>'
     var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BookmarksComponent', 'selector': 'app-bookmarks'},{'name': 'ChallengeComponent', 'selector': 'app-challenge'},{'name': 'EditProfileComponent', 'selector': 'app-edit-profile'},{'name': 'FriendInfoComponent', 'selector': 'app-friend-info'},{'name': 'FriendsComponent', 'selector': 'app-friends'},{'name': 'FriendSelectComponent', 'selector': 'app-friend-select'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LeaderboardComponent', 'selector': 'app-leaderboard'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MasterAnswerComponent', 'selector': 'app-master-answer'},{'name': 'QuizAnswerComponent', 'selector': 'app-quiz-answer'},{'name': 'QuizCreateComponent', 'selector': 'app-quiz-create'},{'name': 'QuizImageComponent', 'selector': 'app-quiz-image'},{'name': 'QuizInfoComponent', 'selector': 'app-quiz-info'},{'name': 'QuizResultComponent', 'selector': 'app-quiz-result'},{'name': 'QuizSearchComponent', 'selector': 'app-quiz-search'},{'name': 'QuizTypeinComponent', 'selector': 'app-quiz-typein'},{'name': 'RegistrationComponent', 'selector': 'app-registration'}];
     var DIRECTIVES = [];
-    var ACTUAL_COMPONENT = {'name': 'QuizTypeinComponent'};
+    var ACTUAL_COMPONENT = {'name': 'ChallengeComponent'};
 </script>
 <script src="../js/tree.js"></script>
 
@@ -1548,7 +1493,7 @@ p {
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
-            var COMPODOC_CURRENT_PAGE_URL = 'QuizTypeinComponent.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'ChallengeComponent.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
 

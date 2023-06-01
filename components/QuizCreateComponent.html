@@ -143,6 +143,9 @@
                                 <a href="#questionForm" >questionForm</a>
                             </li>
                             <li>
+                                <a href="#questionFormImage" >questionFormImage</a>
+                            </li>
+                            <li>
                                 <a href="#questionFormText" >questionFormText</a>
                             </li>
                             <li>
@@ -177,6 +180,9 @@
                         <ul class="index-list">
                             <li>
                                 <a href="#createQuestion" >createQuestion</a>
+                            </li>
+                            <li>
+                                <a href="#createQuestionImage" >createQuestionImage</a>
                             </li>
                             <li>
                                 <a href="#createQuestionText" >createQuestionText</a>
@@ -222,6 +228,8 @@
 
                 <tr>
                     <td class="col-md-4">
+                            <div class="io-description"><p>Inject dependencies</p>
+</div>
                             <div>
                                     <b>Parameters :</b>
                                     <table class="params">
@@ -307,14 +315,57 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="106"
-                            class="link-to-prism">src/app/quiz-create/quiz-create.component.ts:106</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="138"
+                            class="link-to-prism">src/app/quiz-create/quiz-create.component.ts:138</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>createQuestion(): This method is called when the user submits the create question form.
+It creates a new question object based on the user input from the form and pushes it to the questions
+array. It performs form validation and displays an alert if any required fields are missing.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="createQuestionImage"></a>
+                    <span class="name">
+                        <span ><b>createQuestionImage</b></span>
+                        <a href="#createQuestionImage"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>createQuestionImage()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="179"
+                            class="link-to-prism">src/app/quiz-create/quiz-create.component.ts:179</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>createQuestionImage(): This method is similar to createQuestion(), but it is specifically used for creating image-based questions.</p>
+</div>
 
                     <div class="io-description">
                         <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
@@ -344,14 +395,16 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="124"
-                            class="link-to-prism">src/app/quiz-create/quiz-create.component.ts:124</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="159"
+                            class="link-to-prism">src/app/quiz-create/quiz-create.component.ts:159</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>createQuestionText(): This method is similar to createQuestion(), but it is specifically used for creating text-based questions.</p>
+</div>
 
                     <div class="io-description">
                         <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
@@ -381,14 +434,19 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="77"
-                            class="link-to-prism">src/app/quiz-create/quiz-create.component.ts:77</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="104"
+                            class="link-to-prism">src/app/quiz-create/quiz-create.component.ts:104</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>createQuiz(): This method is called when the user submits the create quiz form.
+It creates a new quiz object based on the user input from the form and saves it to a temporary variable called tempQuiz.
+It performs form validation and displays an alert if any required fields are missing.
+If the form is valid, the tempQuiz is updated with the user input, and the quizSaved flag is set to true.</p>
+</div>
 
                     <div class="io-description">
                         <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
@@ -418,14 +476,18 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="30"
-                            class="link-to-prism">src/app/quiz-create/quiz-create.component.ts:30</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="41"
+                            class="link-to-prism">src/app/quiz-create/quiz-create.component.ts:41</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>ngOnInit(): This is a lifecycle hook that is called when the component is initialized.
+It retrieves the user information from the session storage and calls the get_quiz_categories()
+method of the QuizService to fetch the quiz categories and assigns them to the categories property.</p>
+</div>
 
                     <div class="io-description">
                         <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
@@ -455,14 +517,20 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="152"
-                            class="link-to-prism">src/app/quiz-create/quiz-create.component.ts:152</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="220"
+                            class="link-to-prism">src/app/quiz-create/quiz-create.component.ts:220</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>publishQuiz(): This function is called when the user clicks the &quot;Publish Quiz&quot; button.
+It performs validation to ensure that at least one question is added and the quiz has a name.
+If the validation passes, it calls the create_quiz() method of the QuizService to create the quiz.
+It also creates the corresponding questions and answers based on the user input and sends the data
+to the respective services (QuestionService and AnswerService) to save them in the database.</p>
+</div>
 
                     <div class="io-description">
                         <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
@@ -492,14 +560,17 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="141"
-                            class="link-to-prism">src/app/quiz-create/quiz-create.component.ts:141</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="202"
+                            class="link-to-prism">src/app/quiz-create/quiz-create.component.ts:202</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>removeQuestion(question: NewQuestionAnswer): This function is called when the user clicks the &quot;Remove&quot; button next to a question.
+It takes the question object as a parameter and removes it from the questions array.</p>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -571,7 +642,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/quiz-create/quiz-create.component.ts:25</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">src/app/quiz-create/quiz-create.component.ts:31</a></div>
                         </td>
                     </tr>
 
@@ -612,7 +683,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="38" class="link-to-prism">src/app/quiz-create/quiz-create.component.ts:38</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="49" class="link-to-prism">src/app/quiz-create/quiz-create.component.ts:49</a></div>
                         </td>
                     </tr>
 
@@ -647,7 +718,40 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="56" class="link-to-prism">src/app/quiz-create/quiz-create.component.ts:56</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="67" class="link-to-prism">src/app/quiz-create/quiz-create.component.ts:67</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="questionFormImage"></a>
+                    <span class="name">
+                        <span ><b>questionFormImage</b></span>
+                        <a href="#questionFormImage"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>new FormGroup({
+    question: new FormControl(&#x27;&#x27;,[
+      Validators.required,
+    ]),
+    answer: new FormControl(&#x27;&#x27;),
+    truth: new FormControl(&#x27;false&#x27;,[
+      Validators.required,
+    ]),
+  })</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="88" class="link-to-prism">src/app/quiz-create/quiz-create.component.ts:88</a></div>
                         </td>
                     </tr>
 
@@ -679,7 +783,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="68" class="link-to-prism">src/app/quiz-create/quiz-create.component.ts:68</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="79" class="link-to-prism">src/app/quiz-create/quiz-create.component.ts:79</a></div>
                         </td>
                     </tr>
 
@@ -710,7 +814,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/app/quiz-create/quiz-create.component.ts:26</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">src/app/quiz-create/quiz-create.component.ts:32</a></div>
                         </td>
                     </tr>
 
@@ -741,7 +845,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="21" class="link-to-prism">src/app/quiz-create/quiz-create.component.ts:21</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/app/quiz-create/quiz-create.component.ts:27</a></div>
                         </td>
                     </tr>
 
@@ -772,7 +876,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/app/quiz-create/quiz-create.component.ts:22</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/app/quiz-create/quiz-create.component.ts:28</a></div>
                         </td>
                     </tr>
 
@@ -803,7 +907,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/app/quiz-create/quiz-create.component.ts:28</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="34" class="link-to-prism">src/app/quiz-create/quiz-create.component.ts:34</a></div>
                         </td>
                     </tr>
 
@@ -834,7 +938,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/app/quiz-create/quiz-create.component.ts:24</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/app/quiz-create/quiz-create.component.ts:30</a></div>
                         </td>
                     </tr>
 
@@ -865,7 +969,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/app/quiz-create/quiz-create.component.ts:20</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/app/quiz-create/quiz-create.component.ts:26</a></div>
                         </td>
                     </tr>
 
@@ -896,6 +1000,12 @@ import { Answer, NewAnswer } from &#x27;../models/answer&#x27;;
   styleUrls: [&#x27;./quiz-create.component.scss&#x27;]
 })
 export class QuizCreateComponent implements OnInit {
+  /**
+   * Inject dependencies
+   * @param quizService 
+   * @param questionService 
+   * @param answerService 
+   */
   constructor(private quizService: QuizService, private questionService: QuestionService, private answerService: AnswerService){}
   user: User &#x3D; new User;
   quiz: Quiz &#x3D; new Quiz;
@@ -907,6 +1017,11 @@ export class QuizCreateComponent implements OnInit {
 
   quizType: string &#x3D; &quot;&quot;;
 
+  /**
+   * ngOnInit(): This is a lifecycle hook that is called when the component is initialized. 
+   * It retrieves the user information from the session storage and calls the get_quiz_categories() 
+   * method of the QuizService to fetch the quiz categories and assigns them to the categories property.
+   */
   ngOnInit(){
     let use &#x3D; sessionStorage.getItem(&quot;User&quot;);
     this.user &#x3D; JSON.parse(use!);
@@ -953,7 +1068,23 @@ export class QuizCreateComponent implements OnInit {
       Validators.required,
     ])
   });
-//The method creates a new quiz object based on the user input from a form and saves it to a temporary variable called &quot;tempQuiz&quot;
+
+  questionFormImage &#x3D; new FormGroup({
+    question: new FormControl(&#x27;&#x27;,[
+      Validators.required,
+    ]),
+    answer: new FormControl(&#x27;&#x27;),
+    truth: new FormControl(&#x27;false&#x27;,[
+      Validators.required,
+    ]),
+  });
+
+  /**
+   * createQuiz(): This method is called when the user submits the create quiz form. 
+   * It creates a new quiz object based on the user input from the form and saves it to a temporary variable called tempQuiz. 
+   * It performs form validation and displays an alert if any required fields are missing. 
+   * If the form is valid, the tempQuiz is updated with the user input, and the quizSaved flag is set to true.
+   */
   createQuiz(){
     this.quizService.get_quiz_categories().subscribe((res: Category[]) &#x3D;&gt;{
       let qName &#x3D; this.createQuizForm.get(&quot;quizName&quot;)?.value!;
@@ -982,7 +1113,12 @@ export class QuizCreateComponent implements OnInit {
       }
     })
   }
-//method creates a new question object based on the user input from a form and pushes it to an array called &quot;questions&quot;.
+
+  /**
+   * createQuestion(): This method is called when the user submits the create question form. 
+   * It creates a new question object based on the user input from the form and pushes it to the questions 
+   * array. It performs form validation and displays an alert if any required fields are missing.
+   */
   createQuestion(){
     if(this.questionForm.valid){
       let question &#x3D; this.questionForm.get(&quot;question&quot;)?.value;
@@ -1001,6 +1137,9 @@ export class QuizCreateComponent implements OnInit {
     }
   }
 
+  /**
+   * createQuestionText(): This method is similar to createQuestion(), but it is specifically used for creating text-based questions.
+   */
   createQuestionText(){
     if(this.questionFormText.valid){
       let question &#x3D; this.questionFormText.get(&quot;question&quot;)?.value;
@@ -1017,7 +1156,33 @@ export class QuizCreateComponent implements OnInit {
       alert(&quot;Invalid question and answer, please fill in all the fields!&quot;);
     }
   }
-//This function is called when the user clicks the &quot;Remove&quot; button next to a question.
+
+  /**
+   * createQuestionImage(): This method is similar to createQuestion(), but it is specifically used for creating image-based questions.
+   */
+  createQuestionImage(){
+    if(this.questionFormImage.valid){
+      let question &#x3D; this.questionFormImage.get(&quot;question&quot;)?.value;
+      let answer &#x3D; this.questionFormImage.get(&quot;answer&quot;)?.value;
+      let correct &#x3D; this.questionFormImage.get(&quot;truth&quot;)?.value;
+      let qna: NewQuestionAnswer &#x3D; {
+        QuizID: &quot;ReplaceID&quot;,
+        Question: question!,
+        Answer: answer,
+        Correct: JSON.parse(correct!)
+      }
+      console.log(qna);
+      this.questions.push(qna);
+    }else{
+      alert(&quot;Invalid question and answer, please fill in all the fields!&quot;);
+    }
+  }
+
+  /**
+   * removeQuestion(question: NewQuestionAnswer): This function is called when the user clicks the &quot;Remove&quot; button next to a question. 
+   * It takes the question object as a parameter and removes it from the questions array.
+   * @param question 
+   */
   removeQuestion(question: NewQuestionAnswer){
     let index &#x3D; -1;
     for(let i &#x3D; 0; i &lt; this.questions.length; i++){
@@ -1028,7 +1193,14 @@ export class QuizCreateComponent implements OnInit {
     }
     this.questions.splice(index,1);
   }
-// function is used to publish a quiz
+
+  /**
+   * publishQuiz(): This function is called when the user clicks the &quot;Publish Quiz&quot; button. 
+   * It performs validation to ensure that at least one question is added and the quiz has a name. 
+   * If the validation passes, it calls the create_quiz() method of the QuizService to create the quiz. 
+   * It also creates the corresponding questions and answers based on the user input and sends the data
+   * to the respective services (QuestionService and AnswerService) to save them in the database.
+   */
   publishQuiz(){
     if(this.questions.length &#x3D;&#x3D; 0 || this.tempQuiz.Name &#x3D;&#x3D;&#x3D; &quot;&quot;){
       alert(&quot;Please save quiz and add questions before proceeding!&quot;);
@@ -1056,26 +1228,55 @@ export class QuizCreateComponent implements OnInit {
             newQuestions.push(qnew);
           }
         }
-        this.questionService.create_many_questions(newQuestions).subscribe((res) &#x3D;&gt;{
-          let newQ: Question[] &#x3D; res;
-          let manyAns: NewAnswer[] &#x3D; [];
-          for(let i &#x3D; 0; i &lt; newQ.length; i++){
-            for(let j &#x3D; 0; j &lt; this.questions.length; j++){
-              if(newQ[i].Question &#x3D;&#x3D;&#x3D; this.questions[j].Question){
-                let nAns: NewAnswer &#x3D; {
-                  QuestionID: newQ[i]._id,
-                  Answer: this.questions[j].Answer,
-                  Correct: this.questions[j].Correct,
-                  Type: &quot;Text&quot;
+        if(this.tempQuiz.Type &#x3D;&#x3D;&#x3D; &quot;Image-MCQ&quot;){
+          this.questionService.create_many_questions(newQuestions).subscribe((res) &#x3D;&gt;{
+            let newQ: Question[] &#x3D; res;
+            let manyAns: NewAnswer[] &#x3D; [];
+            for(let i &#x3D; 0; i &lt; newQ.length; i++){
+              for(let j &#x3D; 0; j &lt; this.questions.length; j++){
+                if(newQ[i].Question &#x3D;&#x3D;&#x3D; this.questions[j].Question){
+                  // let formData &#x3D; new FormData();
+                  // formData.append(&#x27;image&#x27;,this.questions[j].Answer);
+                  // this.questionService.create_image(formData).subscribe((res:any) &#x3D;&gt;{
+                  //   console.log(res);
+                  // });
+                  let nAns: NewAnswer &#x3D; {
+                    QuestionID: newQ[i]._id,
+                    Answer: this.questions[j].Answer,
+                    Correct: this.questions[j].Correct,
+                    Type: &quot;Image&quot;
+                  }
+                  manyAns.push(nAns);
+                  console.log(nAns);
                 }
-                manyAns.push(nAns);
               }
             }
-          }
-          this.answerService.create_many_answers(manyAns).subscribe((res) &#x3D;&gt;{
-            alert(&quot;Quiz creation completed!&quot;);
+            this.answerService.create_many_answers(manyAns).subscribe((res) &#x3D;&gt;{
+              alert(&quot;Quiz creation completed!&quot;);
+            });
           });
-        });
+        }else{
+          this.questionService.create_many_questions(newQuestions).subscribe((res) &#x3D;&gt;{
+            let newQ: Question[] &#x3D; res;
+            let manyAns: NewAnswer[] &#x3D; [];
+            for(let i &#x3D; 0; i &lt; newQ.length; i++){
+              for(let j &#x3D; 0; j &lt; this.questions.length; j++){
+                if(newQ[i].Question &#x3D;&#x3D;&#x3D; this.questions[j].Question){
+                  let nAns: NewAnswer &#x3D; {
+                    QuestionID: newQ[i]._id,
+                    Answer: this.questions[j].Answer,
+                    Correct: this.questions[j].Correct,
+                    Type: &quot;Text&quot;
+                  }
+                  manyAns.push(nAns);
+                }
+              }
+            }
+            this.answerService.create_many_answers(manyAns).subscribe((res) &#x3D;&gt;{
+              alert(&quot;Quiz creation completed!&quot;);
+            });
+          });
+        }
       });
     }
   }
@@ -1143,7 +1344,7 @@ export class QuizCreateComponent implements OnInit {
         &lt;div class&#x3D;&quot;px-2&quot;&gt;
           &lt;!--Basic Quiz Info Editing--&gt;
           &lt;div id&#x3D;&quot;edit_quiz&quot; class&#x3D;&quot;tabcontent&quot;&gt;
-            &lt;form class&#x3D;&quot;box&quot; [formGroup]&#x3D;&quot;createQuizForm&quot; (ngSubmit)&#x3D;&quot;createQuiz()&quot;&gt;
+            &lt;form class&#x3D;&quot;box&quot; [formGroup]&#x3D;&quot;createQuizForm&quot; (ngSubmit)&#x3D;&quot;createQuiz()&quot; id&#x3D;&quot;createQuizForm&quot;&gt;
               &lt;h3 class&#x3D;&quot;is-size-4 has-text-white&quot;&gt;Create Quiz&lt;/h3&gt;
               &lt;div class&#x3D;&quot;field&quot;&gt;
                 &lt;label class&#x3D;&quot;label has-text-white&quot;&gt;Quiz Name&lt;/label&gt;
@@ -1174,6 +1375,7 @@ export class QuizCreateComponent implements OnInit {
                     &lt;select formControlName&#x3D;&quot;quizType&quot; #quiz_type&gt;
                       &lt;option&gt;Text-MCQ&lt;/option&gt;
                       &lt;option&gt;Text-Fill-In&lt;/option&gt;
+                      &lt;option&gt;Image-MCQ&lt;/option&gt;
                     &lt;/select&gt;
                   &lt;/div&gt;
                 &lt;/div&gt;
@@ -1233,7 +1435,7 @@ export class QuizCreateComponent implements OnInit {
           &lt;div id&#x3D;&quot;questions&quot; class&#x3D;&quot;tabcontent&quot;&gt;
             &lt;div class&#x3D;&quot;columns&quot;&gt;
               &lt;div class&#x3D;&quot;column&quot; *ngIf&#x3D;&quot;quiz_type.value &#x3D;&#x3D;&#x3D; &#x27;Text-MCQ&#x27;&quot;&gt;
-                &lt;form class&#x3D;&quot;box&quot; [formGroup]&#x3D;&quot;questionForm&quot; (ngSubmit)&#x3D;&quot;createQuestion()&quot;&gt;
+                &lt;form class&#x3D;&quot;box&quot; [formGroup]&#x3D;&quot;questionForm&quot; (ngSubmit)&#x3D;&quot;createQuestion()&quot; id&#x3D;&quot;question_form&quot; &gt;
                   &lt;h3 class&#x3D;&quot;is-size-4 has-text-white&quot;&gt;Add Question Data&lt;/h3&gt;
                   &lt;div class&#x3D;&quot;field&quot;&gt;
                     &lt;label class&#x3D;&quot;label has-text-white&quot;&gt;Question&lt;/label&gt;
@@ -1267,7 +1469,7 @@ export class QuizCreateComponent implements OnInit {
                 &lt;/form&gt;
               &lt;/div&gt;
               &lt;div class&#x3D;&quot;column&quot; *ngIf&#x3D;&quot;quiz_type.value &#x3D;&#x3D;&#x3D; &#x27;Text-Fill-In&#x27;&quot;&gt;
-                &lt;form class&#x3D;&quot;box&quot; [formGroup]&#x3D;&quot;questionFormText&quot; (ngSubmit)&#x3D;&quot;createQuestionText()&quot;&gt;
+                &lt;form class&#x3D;&quot;box&quot; [formGroup]&#x3D;&quot;questionFormText&quot; (ngSubmit)&#x3D;&quot;createQuestionText()&quot; id&#x3D;&quot;question_fill&quot;&gt;
                   &lt;h3 class&#x3D;&quot;is-size-4 has-text-white&quot;&gt;Add Question Data&lt;/h3&gt;
                   &lt;div class&#x3D;&quot;field&quot;&gt;
                     &lt;label class&#x3D;&quot;label has-text-white&quot;&gt;Question&lt;/label&gt;
@@ -1289,9 +1491,45 @@ export class QuizCreateComponent implements OnInit {
                   &lt;/div&gt;
                 &lt;/form&gt;
               &lt;/div&gt;
+              &lt;div class&#x3D;&quot;column&quot; *ngIf&#x3D;&quot;quiz_type.value &#x3D;&#x3D;&#x3D; &#x27;Image-MCQ&#x27;&quot;&gt;
+                &lt;form class&#x3D;&quot;box&quot; [formGroup]&#x3D;&quot;questionFormImage&quot; (ngSubmit)&#x3D;&quot;createQuestionImage()&quot; id&#x3D;&quot;question_image&quot;&gt;
+                  &lt;h3 class&#x3D;&quot;is-size-4 has-text-white&quot;&gt;Add Question Data&lt;/h3&gt;
+                  &lt;div class&#x3D;&quot;field&quot;&gt;
+                    &lt;label class&#x3D;&quot;label has-text-white&quot;&gt;Question&lt;/label&gt;
+                    &lt;div class&#x3D;&quot;control&quot;&gt;
+                      &lt;input class&#x3D;&quot;input&quot; type&#x3D;&quot;text&quot; placeholder&#x3D;&quot;Type your question here&quot; formControlName&#x3D;&quot;question&quot;&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                  &lt;div class&#x3D;&quot;field&quot;&gt;
+                    &lt;label class&#x3D;&quot;label has-text-white&quot;&gt;Answer&lt;/label&gt;
+                    &lt;div class&#x3D;&quot;control&quot;&gt;
+                      &lt;!-- &lt;input class&#x3D;&quot;input&quot; type&#x3D;&quot;file&quot; (change)&#x3D;&quot;onFileSelected($event)&quot;&gt; --&gt;
+                      &lt;input class&#x3D;&quot;input&quot; type&#x3D;&quot;text&quot; formControlName&#x3D;&quot;answer&quot; placeholder&#x3D;&quot;Insert Image URL here&quot;&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                  &lt;div class&#x3D;&quot;field&quot;&gt;
+                    &lt;label class&#x3D;&quot;label has-text-white&quot;&gt;Is Answer Correct?&lt;/label&gt;
+                    &lt;div class&#x3D;&quot;control&quot;&gt;
+                      &lt;div class&#x3D;&quot;select&quot;&gt;
+                        &lt;select formControlName&#x3D;&quot;truth&quot;&gt;
+                          &lt;option&gt;true&lt;/option&gt;
+                          &lt;option&gt;false&lt;/option&gt;
+                        &lt;/select&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                  &lt;div class&#x3D;&quot;column&quot;&gt;
+                    &lt;div class&#x3D;&quot;box submit-question&quot;&gt;
+                      &lt;h3 class&#x3D;&quot;is-size-4 has-text-white&quot;&gt;Questions Added&lt;/h3&gt;
+                      &lt;button class&#x3D;&quot;button is-success&quot;&gt;Add Question&lt;/button&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/form&gt;
+              &lt;/div&gt;
             &lt;/div&gt;
             {{this.questionForm.valid}}
             {{this.questionFormText.valid}}
+            {{this.questionFormImage.valid}}
             &lt;div class&#x3D;&quot;columns&quot;&gt;
               &lt;div class&#x3D;&quot;column has-text-white&quot;&gt;
                 &lt;article class&#x3D;&quot;panel is-primary&quot;&gt;
@@ -1514,8 +1752,8 @@ export class QuizCreateComponent implements OnInit {
                     <code>./quiz-create.component.scss</code>
                 </p>
                 <pre class="line-numbers"><code class="language-scss">.main {
-  background-image: url(&#x27;../../assets/images/school-supplies-7069762.jpg&#x27;) !important;
-  background-color: lightblue;
+  background-image: url(&#x27;../../assets/images/prism.jpg&#x27;) !important;
+  background-color: gray;
   background-blend-mode: multiply;
   background-size: cover;
   background-position: center center;
@@ -1716,8 +1954,8 @@ export class QuizCreateComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><!--Loading font awesome icons--><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" /><!-- background --><div class="main">  <div class="body">    <div class="container has-text-justified">      <div class="content">        <p class="title has-text-white">          Create a Quiz        </p>        <p class="subtitle has-text-white">          Customize your quiz below!        </p>      </div>      <div class="content">        <div class="tabs is-boxed">          <ul>            <li class="tablinks" onclick="openTab(event,\'edit_quiz\')">              <a>                <span class="icon is-small has-text-white"><i class="fas fa-pen-to-square" aria-hidden="true"></i></span>                <span class="has-text-white">Create Quiz</span>              </a>            </li>            <li class="tablinks" onclick="openTab(event,\'questions\')">              <a>                <span class="icon is-small has-text-white"><i class="fas fa-block-question" aria-hidden="true"></i></span>                <span class="has-text-white">Questions</span>              </a>            </li>            <li class="tablinks is-hidden" onclick="openTab(event,\'options\')">              <a>                <span class="icon is-small has-text-white"><i class="fas fa-filter" aria-hidden="true"></i></span>                <span class="has-text-white">Options</span>              </a>            </li>            <!--<li data-target="Create-Quiz-Styles">                    <a>                        <span class="icon is-small"><i class="fa-regular fa-text" aria-hidden="true"></i></span>                        <span>Styles</span>                    </a>                </li> -->            <li class="tablinks is-hidden" onclick="openTab(event,\'tags\')">              <a>                <span class="icon is-small has-text-white"><i class="fas fa-tag" aria-hidden="true"></i></span>                <span class="has-text-white">Tags</span>              </a>            </li>            <li class="tablinks" onclick="openTab(event,\'save_public\')">              <a>                <span class="icon is-small has-text-white"><i class="fas fa-floppy-disk" aria-hidden="true"></i></span>                <span class="has-text-white">Save & Finish</span>              </a>            </li>          </ul>        </div>        <!-- content of tabs -->        <div class="px-2">          <!--Basic Quiz Info Editing-->          <div id="edit_quiz" class="tabcontent">            <form class="box" [formGroup]="createQuizForm" (ngSubmit)="createQuiz()">              <h3 class="is-size-4 has-text-white">Create Quiz</h3>              <div class="field">                <label class="label has-text-white">Quiz Name</label>                <div class="control">                  <input class="input" type="text" formControlName="quizName" placeholder="Short Title of Quiz">                </div>              </div>              <div class="field">                <label class="label has-text-white">Description</label>                <div class="control">                  <input class="input" type="text" formControlName="quizDescription" placeholder="eg. Can you name the planets in the solar system?">                </div>              </div>              <div class="field">                <label class="label has-text-white">Category</label>                <div class="control">                  <div class="select">                    <select formControlName="quizCategory">                      <option *ngFor="let category of categories">{{category.Name}}</option>                    </select>                  </div>                </div>              </div>              <div class="field">                <label class="label has-text-white">Quiz Type</label>                <div class="control">                  <div class="select">                    <select formControlName="quizType" #quiz_type>                      <option>Text-MCQ</option>                      <option>Text-Fill-In</option>                    </select>                  </div>                </div>              </div>              <div class="field">                <label class="label has-text-white">Quiz Timer (seconds)</label>                <div class="control">                  <div class="select">                    <select formControlName="quizTimer">                      <option>---</option>                      <option>60</option>                      <option>120</option>                      <option>180</option>                      <option>240</option>                      <option>300</option>                      <option>360</option>                      <option>420</option>                      <option>480</option>                      <option>540</option>                      <option>600</option>                      <option>660</option>                      <option>720</option>                      <option>780</option>                      <option>840</option>                      <option>900</option>                      <option>960</option>                      <option>1020</option>                      <option>1080</option>                      <option>1140</option>                      <option>1200</option>                      <option>1260</option>                      <option>1320</option>                      <option>1380</option>                      <option>1440</option>                      <option>1500</option>                      <option>1560</option>                      <option>1620</option>                      <option>1680</option>                      <option>1740</option>                      <option>180</option>                    </select>                  </div>                </div>              </div>              <div class="field is-grouped is-grouped-centered">                <div class="control">                  <button class="button is-success is-medium" style="padding: 20px;">                    <span class="icon"><i class="fas fa-save"></i></span>                    <span>Save Progress</span>                  </button>                </div>              </div>            </form>          </div>          <!--Questions-->          <div id="questions" class="tabcontent">            <div class="columns">              <div class="column" *ngIf="quiz_type.value === \'Text-MCQ\'">                <form class="box" [formGroup]="questionForm" (ngSubmit)="createQuestion()">                  <h3 class="is-size-4 has-text-white">Add Question Data</h3>                  <div class="field">                    <label class="label has-text-white">Question</label>                    <div class="control">                      <input class="input" type="text" placeholder="Type your question here" formControlName="question">                    </div>                  </div>                  <div class="field">                    <label class="label has-text-white">Answer</label>                    <div class="control">                      <input class="input" type="text" placeholder="Type the answer here" formControlName="answer">                    </div>                  </div>                  <div class="field">                    <label class="label has-text-white">Is Answer Correct?</label>                    <div class="control">                      <div class="select">                        <select formControlName="truth">                          <option>true</option>                          <option>false</option>                        </select>                      </div>                    </div>                  </div>                  <div class="column">                    <div class="box submit-question">                      <h3 class="is-size-4 has-text-white">Questions Added</h3>                      <button class="button is-success">Add Question</button>                    </div>                  </div>                </form>              </div>              <div class="column" *ngIf="quiz_type.value === \'Text-Fill-In\'">                <form class="box" [formGroup]="questionFormText" (ngSubmit)="createQuestionText()">                  <h3 class="is-size-4 has-text-white">Add Question Data</h3>                  <div class="field">                    <label class="label has-text-white">Question</label>                    <div class="control">                      <input class="input" type="text" placeholder="Type your question here" formControlName="question">                    </div>                  </div>                  <div class="field">                    <label class="label has-text-white">Answer</label>                    <div class="control">                      <input class="input" type="text" placeholder="Type the answer here" formControlName="answer">                    </div>                  </div>                  <div class="column">                    <div class="box submit-question">                      <h3 class="is-size-4 has-text-white">Questions Added</h3>                      <button class="button is-success">Add Question</button>                    </div>                  </div>                </form>              </div>            </div>            {{this.questionForm.valid}}            {{this.questionFormText.valid}}            <div class="columns">              <div class="column has-text-white">                <article class="panel is-primary">                  <p class="panel-heading has-text-centered">                      Questions                  </p>                       <a class="panel-block" *ngFor="let question of questions; index as idx">                      <div class="text">                          {{question.Question}}: {{question.Answer}}                      </div>                      <button class="button is-danger" (click)="removeQuestion(question)">                          <span class="icon has-icons-right">                              <i class="fas fa-trash"></i>                          </span>                      </button>                  </a>              </article>              </div>            </div>          </div>          <!--Options-->          <div id="options" class="tabcontent">            <form class="box">              <h3 class="is-size-4">Quiz Options</h3>              <div class="field">                <label class="label">Accept last word in answers</label>                <div class="control">                  <label class="checkbox">                    <input type="checkbox">                    Yes                  </label>                </div>              </div>              <div class="field">                <label class="label">Accept single character answers</label>                <div class="control">                  <label class="checkbox">                    <input type="checkbox">                    Yes                  </label>                </div>              </div>              <div class="field">                <label class="label">Filter default words from answers (a, an, and, the, and \'&\')</label>                <div class="control">                  <label class="checkbox">                    <input type="checkbox">                    Yes                  </label>                </div>              </div>              <div class="field">                <label class="label">Wrong Answer ends the quiz</label>                <div class="control">                  <label class="checkbox">                    <input type="checkbox">                    Yes                  </label>                </div>              </div>              <div class="field">                <label class="label">Hide hint text prior to starting the quiz</label>                <div class="control">                  <label class="checkbox">                    <input type="checkbox">                    Yes                  </label>                </div>              </div>              <div class="field">                <label class="label">Do not display correct answers at the end of the quiz</label>                <div class="control">                  <label class="checkbox">                    <input type="checkbox">                    Yes                  </label>                </div>              </div>              <hr>              <div class="field">                <h4 class="title is-4">Answer Order</h4>                <label class="radio">                  <input type="radio" name="answer-order" value="random">                  Randomize question order                </label>                <label class="radio">                  <input type="radio" name="answer-order" value="sequential">                  Force answers in order                </label>              </div>              <div class="field is-grouped is-grouped-centered">                <div class="control">                  <button class="button is-success is-large" style="margin-top: 20px;">                    <span class="icon">                      <i class="fas fa-save"></i>                    </span>                    <span>Save Options</span>                  </button>                  <p class="help is-danger" style="margin-top: 10px;">                    You must click \'Save Options\' to save your changes.                  </p>                </div>              </div>            </form>          </div>          <!--Styles, leaving empty for now, as we havent confirmed if we allowing users to edit the style of their quiz                <div id="Create-Quiz-Styles" class="is-hidden">                    <form class="box">                        <h3 class="is-size-4">Styles</h3>                                            </form>                </div> -->          <!--Tags-->          <div id="tags" class="tabcontent">            <form class="box">              <h3 class="is-size-4">Tags</h3>              <div class="columns">                <div class="column is-one-third">                  <h4 class="is-size-5">Choose Tags:</h4>                  <!--the tags below will dynamically change depending on what category is selected -->                  <div class="buttons">                    <button class="button is-primary is-outlined">Tag 1</button>                    <button class="button is-primary is-outlined">Tag 2</button>                    <button class="button is-primary is-outlined">Tag 3</button>                    <button class="button is-primary is-outlined">Tag 4</button>                    <button class="button is-primary is-outlined">Tag 5</button>                    <button class="button is-primary is-outlined">Tag 6</button>                    <button class="button is-primary is-outlined">Tag 7</button>                    <button class="button is-primary is-outlined">Tag 8</button>                    <button class="button is-primary is-outlined">Tag 9</button>                    <!--Additional tags-->                  </div>                  <hr>                  <h4 class="is-size-5">Add Your Own Tag:</h4>                  <div class="field is-grouped">                    <p class="control is-expanded">                      <input class="input" type="text" placeholder="Enter Tag">                    </p>                    <p class="control">                      <button class="button is-primary">Add Tag</button>                    </p>                  </div>                </div>                <div class="column is-two-thirds">                  <h4 class="is-size-5">Selected Tags:</h4>                  <ul id="selected-tags">                    <!--Selected tags will be added dynamically here from the js file-->                  </ul>                  <div class="field is-grouped">                    <p class="control">                      <button class="button is-success" style="margin-right: 10px;">                        <span class="icon">                          <i class="fas fa-save"></i>                        </span>                        <span>Save Tags</span>                      </button>                    </p>                    <p class="control">                      <button class="button is-danger">                        <span class="icon">                          <i class="fas fa-times"></i>                        </span>                        <span>Cancel</span>                      </button>                    </p>                  </div>                  <p>You must click \'Save Changes\' to save your changes</p>                </div>              </div>            </form>          </div>          <!--Saving and Publishing-->          <div id="save_public" class="tabcontent">            <form class="box">              <div class="columns">                <div class="column">                  <h3 class="is-size-4 has-text-centered has-text-white">Ready to show your quiz to the world, and beyond?</h3>                  <p class="subtitle has-text-centered has-text-white">Once published, this quiz will be viewable on your \'Published                    Quizzes\' page, among other places. Don\'t forget to share your new quiz with your friends!</p>                  <div class="buttons is-centered">                    <a class="button is-primary" (click)="publishQuiz()">Publish Quiz</a>                  </div>                  <p class="subtitle has-text-centered has-text-white is-uppercase has-text-weight-bold is-hidden">OR</p>                  <div class="buttons is-centered is-hidden">                    <button class="button is-primary">Publish Quiz</button>                  </div>                </div>                <div class="column is-half is-hidden">                  <h4 class="has-text-weight-bold">Public</h4>                  <p>Your quiz will be searchable by other players. We may also feature and publish your quiz.</p>                  <p><strong>NOTE:</strong> If the quiz is published on the front page, you will lose the ability to                    edit this quiz. We also reserve the right to add, remove, or alter quizzes selected for featuring.                  </p>                  <br>                  <h4 class="has-text-weight-bold">Private</h4>                  <p>A link to your quiz will only show up on your private profile. You can still use the link to play                    your quiz, send to friends, and see results. Quizzes marked as private will not be published by us.                  </p>                </div>              </div>            </form>          </div>        </div>      </div>      <script src="../utilities/create-quiz.js"></script>    </div>  </div></div></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BookmarksComponent', 'selector': 'app-bookmarks'},{'name': 'EditProfileComponent', 'selector': 'app-edit-profile'},{'name': 'FriendInfoComponent', 'selector': 'app-friend-info'},{'name': 'FriendsComponent', 'selector': 'app-friends'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LeaderboardComponent', 'selector': 'app-leaderboard'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MasterAnswerComponent', 'selector': 'app-master-answer'},{'name': 'QuizAnswerComponent', 'selector': 'app-quiz-answer'},{'name': 'QuizCreateComponent', 'selector': 'app-quiz-create'},{'name': 'QuizInfoComponent', 'selector': 'app-quiz-info'},{'name': 'QuizResultComponent', 'selector': 'app-quiz-result'},{'name': 'QuizSearchComponent', 'selector': 'app-quiz-search'},{'name': 'QuizTypeinComponent', 'selector': 'app-quiz-typein'},{'name': 'RegistrationComponent', 'selector': 'app-registration'}];
+        var COMPONENT_TEMPLATE = '<div><!--Loading font awesome icons--><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" /><!-- background --><div class="main">  <div class="body">    <div class="container has-text-justified">      <div class="content">        <p class="title has-text-white">          Create a Quiz        </p>        <p class="subtitle has-text-white">          Customize your quiz below!        </p>      </div>      <div class="content">        <div class="tabs is-boxed">          <ul>            <li class="tablinks" onclick="openTab(event,\'edit_quiz\')">              <a>                <span class="icon is-small has-text-white"><i class="fas fa-pen-to-square" aria-hidden="true"></i></span>                <span class="has-text-white">Create Quiz</span>              </a>            </li>            <li class="tablinks" onclick="openTab(event,\'questions\')">              <a>                <span class="icon is-small has-text-white"><i class="fas fa-block-question" aria-hidden="true"></i></span>                <span class="has-text-white">Questions</span>              </a>            </li>            <li class="tablinks is-hidden" onclick="openTab(event,\'options\')">              <a>                <span class="icon is-small has-text-white"><i class="fas fa-filter" aria-hidden="true"></i></span>                <span class="has-text-white">Options</span>              </a>            </li>            <!--<li data-target="Create-Quiz-Styles">                    <a>                        <span class="icon is-small"><i class="fa-regular fa-text" aria-hidden="true"></i></span>                        <span>Styles</span>                    </a>                </li> -->            <li class="tablinks is-hidden" onclick="openTab(event,\'tags\')">              <a>                <span class="icon is-small has-text-white"><i class="fas fa-tag" aria-hidden="true"></i></span>                <span class="has-text-white">Tags</span>              </a>            </li>            <li class="tablinks" onclick="openTab(event,\'save_public\')">              <a>                <span class="icon is-small has-text-white"><i class="fas fa-floppy-disk" aria-hidden="true"></i></span>                <span class="has-text-white">Save & Finish</span>              </a>            </li>          </ul>        </div>        <!-- content of tabs -->        <div class="px-2">          <!--Basic Quiz Info Editing-->          <div id="edit_quiz" class="tabcontent">            <form class="box" [formGroup]="createQuizForm" (ngSubmit)="createQuiz()" id="createQuizForm">              <h3 class="is-size-4 has-text-white">Create Quiz</h3>              <div class="field">                <label class="label has-text-white">Quiz Name</label>                <div class="control">                  <input class="input" type="text" formControlName="quizName" placeholder="Short Title of Quiz">                </div>              </div>              <div class="field">                <label class="label has-text-white">Description</label>                <div class="control">                  <input class="input" type="text" formControlName="quizDescription" placeholder="eg. Can you name the planets in the solar system?">                </div>              </div>              <div class="field">                <label class="label has-text-white">Category</label>                <div class="control">                  <div class="select">                    <select formControlName="quizCategory">                      <option *ngFor="let category of categories">{{category.Name}}</option>                    </select>                  </div>                </div>              </div>              <div class="field">                <label class="label has-text-white">Quiz Type</label>                <div class="control">                  <div class="select">                    <select formControlName="quizType" #quiz_type>                      <option>Text-MCQ</option>                      <option>Text-Fill-In</option>                      <option>Image-MCQ</option>                    </select>                  </div>                </div>              </div>              <div class="field">                <label class="label has-text-white">Quiz Timer (seconds)</label>                <div class="control">                  <div class="select">                    <select formControlName="quizTimer">                      <option>---</option>                      <option>60</option>                      <option>120</option>                      <option>180</option>                      <option>240</option>                      <option>300</option>                      <option>360</option>                      <option>420</option>                      <option>480</option>                      <option>540</option>                      <option>600</option>                      <option>660</option>                      <option>720</option>                      <option>780</option>                      <option>840</option>                      <option>900</option>                      <option>960</option>                      <option>1020</option>                      <option>1080</option>                      <option>1140</option>                      <option>1200</option>                      <option>1260</option>                      <option>1320</option>                      <option>1380</option>                      <option>1440</option>                      <option>1500</option>                      <option>1560</option>                      <option>1620</option>                      <option>1680</option>                      <option>1740</option>                      <option>180</option>                    </select>                  </div>                </div>              </div>              <div class="field is-grouped is-grouped-centered">                <div class="control">                  <button class="button is-success is-medium" style="padding: 20px;">                    <span class="icon"><i class="fas fa-save"></i></span>                    <span>Save Progress</span>                  </button>                </div>              </div>            </form>          </div>          <!--Questions-->          <div id="questions" class="tabcontent">            <div class="columns">              <div class="column" *ngIf="quiz_type.value === \'Text-MCQ\'">                <form class="box" [formGroup]="questionForm" (ngSubmit)="createQuestion()" id="question_form" >                  <h3 class="is-size-4 has-text-white">Add Question Data</h3>                  <div class="field">                    <label class="label has-text-white">Question</label>                    <div class="control">                      <input class="input" type="text" placeholder="Type your question here" formControlName="question">                    </div>                  </div>                  <div class="field">                    <label class="label has-text-white">Answer</label>                    <div class="control">                      <input class="input" type="text" placeholder="Type the answer here" formControlName="answer">                    </div>                  </div>                  <div class="field">                    <label class="label has-text-white">Is Answer Correct?</label>                    <div class="control">                      <div class="select">                        <select formControlName="truth">                          <option>true</option>                          <option>false</option>                        </select>                      </div>                    </div>                  </div>                  <div class="column">                    <div class="box submit-question">                      <h3 class="is-size-4 has-text-white">Questions Added</h3>                      <button class="button is-success">Add Question</button>                    </div>                  </div>                </form>              </div>              <div class="column" *ngIf="quiz_type.value === \'Text-Fill-In\'">                <form class="box" [formGroup]="questionFormText" (ngSubmit)="createQuestionText()" id="question_fill">                  <h3 class="is-size-4 has-text-white">Add Question Data</h3>                  <div class="field">                    <label class="label has-text-white">Question</label>                    <div class="control">                      <input class="input" type="text" placeholder="Type your question here" formControlName="question">                    </div>                  </div>                  <div class="field">                    <label class="label has-text-white">Answer</label>                    <div class="control">                      <input class="input" type="text" placeholder="Type the answer here" formControlName="answer">                    </div>                  </div>                  <div class="column">                    <div class="box submit-question">                      <h3 class="is-size-4 has-text-white">Questions Added</h3>                      <button class="button is-success">Add Question</button>                    </div>                  </div>                </form>              </div>              <div class="column" *ngIf="quiz_type.value === \'Image-MCQ\'">                <form class="box" [formGroup]="questionFormImage" (ngSubmit)="createQuestionImage()" id="question_image">                  <h3 class="is-size-4 has-text-white">Add Question Data</h3>                  <div class="field">                    <label class="label has-text-white">Question</label>                    <div class="control">                      <input class="input" type="text" placeholder="Type your question here" formControlName="question">                    </div>                  </div>                  <div class="field">                    <label class="label has-text-white">Answer</label>                    <div class="control">                      <!-- <input class="input" type="file" (change)="onFileSelected($event)"> -->                      <input class="input" type="text" formControlName="answer" placeholder="Insert Image URL here">                    </div>                  </div>                  <div class="field">                    <label class="label has-text-white">Is Answer Correct?</label>                    <div class="control">                      <div class="select">                        <select formControlName="truth">                          <option>true</option>                          <option>false</option>                        </select>                      </div>                    </div>                  </div>                  <div class="column">                    <div class="box submit-question">                      <h3 class="is-size-4 has-text-white">Questions Added</h3>                      <button class="button is-success">Add Question</button>                    </div>                  </div>                </form>              </div>            </div>            {{this.questionForm.valid}}            {{this.questionFormText.valid}}            {{this.questionFormImage.valid}}            <div class="columns">              <div class="column has-text-white">                <article class="panel is-primary">                  <p class="panel-heading has-text-centered">                      Questions                  </p>                       <a class="panel-block" *ngFor="let question of questions; index as idx">                      <div class="text">                          {{question.Question}}: {{question.Answer}}                      </div>                      <button class="button is-danger" (click)="removeQuestion(question)">                          <span class="icon has-icons-right">                              <i class="fas fa-trash"></i>                          </span>                      </button>                  </a>              </article>              </div>            </div>          </div>          <!--Options-->          <div id="options" class="tabcontent">            <form class="box">              <h3 class="is-size-4">Quiz Options</h3>              <div class="field">                <label class="label">Accept last word in answers</label>                <div class="control">                  <label class="checkbox">                    <input type="checkbox">                    Yes                  </label>                </div>              </div>              <div class="field">                <label class="label">Accept single character answers</label>                <div class="control">                  <label class="checkbox">                    <input type="checkbox">                    Yes                  </label>                </div>              </div>              <div class="field">                <label class="label">Filter default words from answers (a, an, and, the, and \'&\')</label>                <div class="control">                  <label class="checkbox">                    <input type="checkbox">                    Yes                  </label>                </div>              </div>              <div class="field">                <label class="label">Wrong Answer ends the quiz</label>                <div class="control">                  <label class="checkbox">                    <input type="checkbox">                    Yes                  </label>                </div>              </div>              <div class="field">                <label class="label">Hide hint text prior to starting the quiz</label>                <div class="control">                  <label class="checkbox">                    <input type="checkbox">                    Yes                  </label>                </div>              </div>              <div class="field">                <label class="label">Do not display correct answers at the end of the quiz</label>                <div class="control">                  <label class="checkbox">                    <input type="checkbox">                    Yes                  </label>                </div>              </div>              <hr>              <div class="field">                <h4 class="title is-4">Answer Order</h4>                <label class="radio">                  <input type="radio" name="answer-order" value="random">                  Randomize question order                </label>                <label class="radio">                  <input type="radio" name="answer-order" value="sequential">                  Force answers in order                </label>              </div>              <div class="field is-grouped is-grouped-centered">                <div class="control">                  <button class="button is-success is-large" style="margin-top: 20px;">                    <span class="icon">                      <i class="fas fa-save"></i>                    </span>                    <span>Save Options</span>                  </button>                  <p class="help is-danger" style="margin-top: 10px;">                    You must click \'Save Options\' to save your changes.                  </p>                </div>              </div>            </form>          </div>          <!--Styles, leaving empty for now, as we havent confirmed if we allowing users to edit the style of their quiz                <div id="Create-Quiz-Styles" class="is-hidden">                    <form class="box">                        <h3 class="is-size-4">Styles</h3>                                            </form>                </div> -->          <!--Tags-->          <div id="tags" class="tabcontent">            <form class="box">              <h3 class="is-size-4">Tags</h3>              <div class="columns">                <div class="column is-one-third">                  <h4 class="is-size-5">Choose Tags:</h4>                  <!--the tags below will dynamically change depending on what category is selected -->                  <div class="buttons">                    <button class="button is-primary is-outlined">Tag 1</button>                    <button class="button is-primary is-outlined">Tag 2</button>                    <button class="button is-primary is-outlined">Tag 3</button>                    <button class="button is-primary is-outlined">Tag 4</button>                    <button class="button is-primary is-outlined">Tag 5</button>                    <button class="button is-primary is-outlined">Tag 6</button>                    <button class="button is-primary is-outlined">Tag 7</button>                    <button class="button is-primary is-outlined">Tag 8</button>                    <button class="button is-primary is-outlined">Tag 9</button>                    <!--Additional tags-->                  </div>                  <hr>                  <h4 class="is-size-5">Add Your Own Tag:</h4>                  <div class="field is-grouped">                    <p class="control is-expanded">                      <input class="input" type="text" placeholder="Enter Tag">                    </p>                    <p class="control">                      <button class="button is-primary">Add Tag</button>                    </p>                  </div>                </div>                <div class="column is-two-thirds">                  <h4 class="is-size-5">Selected Tags:</h4>                  <ul id="selected-tags">                    <!--Selected tags will be added dynamically here from the js file-->                  </ul>                  <div class="field is-grouped">                    <p class="control">                      <button class="button is-success" style="margin-right: 10px;">                        <span class="icon">                          <i class="fas fa-save"></i>                        </span>                        <span>Save Tags</span>                      </button>                    </p>                    <p class="control">                      <button class="button is-danger">                        <span class="icon">                          <i class="fas fa-times"></i>                        </span>                        <span>Cancel</span>                      </button>                    </p>                  </div>                  <p>You must click \'Save Changes\' to save your changes</p>                </div>              </div>            </form>          </div>          <!--Saving and Publishing-->          <div id="save_public" class="tabcontent">            <form class="box">              <div class="columns">                <div class="column">                  <h3 class="is-size-4 has-text-centered has-text-white">Ready to show your quiz to the world, and beyond?</h3>                  <p class="subtitle has-text-centered has-text-white">Once published, this quiz will be viewable on your \'Published                    Quizzes\' page, among other places. Don\'t forget to share your new quiz with your friends!</p>                  <div class="buttons is-centered">                    <a class="button is-primary" (click)="publishQuiz()">Publish Quiz</a>                  </div>                  <p class="subtitle has-text-centered has-text-white is-uppercase has-text-weight-bold is-hidden">OR</p>                  <div class="buttons is-centered is-hidden">                    <button class="button is-primary">Publish Quiz</button>                  </div>                </div>                <div class="column is-half is-hidden">                  <h4 class="has-text-weight-bold">Public</h4>                  <p>Your quiz will be searchable by other players. We may also feature and publish your quiz.</p>                  <p><strong>NOTE:</strong> If the quiz is published on the front page, you will lose the ability to                    edit this quiz. We also reserve the right to add, remove, or alter quizzes selected for featuring.                  </p>                  <br>                  <h4 class="has-text-weight-bold">Private</h4>                  <p>A link to your quiz will only show up on your private profile. You can still use the link to play                    your quiz, send to friends, and see results. Quizzes marked as private will not be published by us.                  </p>                </div>              </div>            </form>          </div>        </div>      </div>      <script src="../utilities/create-quiz.js"></script>    </div>  </div></div></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BookmarksComponent', 'selector': 'app-bookmarks'},{'name': 'ChallengeComponent', 'selector': 'app-challenge'},{'name': 'EditProfileComponent', 'selector': 'app-edit-profile'},{'name': 'FriendInfoComponent', 'selector': 'app-friend-info'},{'name': 'FriendsComponent', 'selector': 'app-friends'},{'name': 'FriendSelectComponent', 'selector': 'app-friend-select'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LeaderboardComponent', 'selector': 'app-leaderboard'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MasterAnswerComponent', 'selector': 'app-master-answer'},{'name': 'QuizAnswerComponent', 'selector': 'app-quiz-answer'},{'name': 'QuizCreateComponent', 'selector': 'app-quiz-create'},{'name': 'QuizImageComponent', 'selector': 'app-quiz-image'},{'name': 'QuizInfoComponent', 'selector': 'app-quiz-info'},{'name': 'QuizResultComponent', 'selector': 'app-quiz-result'},{'name': 'QuizSearchComponent', 'selector': 'app-quiz-search'},{'name': 'QuizTypeinComponent', 'selector': 'app-quiz-typein'},{'name': 'RegistrationComponent', 'selector': 'app-registration'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'QuizCreateComponent'};
 </script>

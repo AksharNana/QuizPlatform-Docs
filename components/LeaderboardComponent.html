@@ -186,6 +186,9 @@
 
                 <tr>
                     <td class="col-md-4">
+                            <div class="io-description"><p>The constructor of the component injects the LeaderboardService,
+which is responsible for retrieving leaderboard data.</p>
+</div>
                             <div>
                                     <b>Parameters :</b>
                                     <table class="params">
@@ -247,14 +250,16 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="26"
-                            class="link-to-prism">src/app/leaderboard/leaderboard.component.ts:26</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="36"
+                            class="link-to-prism">src/app/leaderboard/leaderboard.component.ts:36</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>The increment method is a simple function that increments the score property by 1.</p>
+</div>
 
                     <div class="io-description">
                         <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
@@ -284,14 +289,17 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="17"
-                            class="link-to-prism">src/app/leaderboard/leaderboard.component.ts:17</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="26"
+                            class="link-to-prism">src/app/leaderboard/leaderboard.component.ts:26</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>In the ngOnInit method, the component makes an API call to the getLeaderboard method of the
+leaderboardService to retrieve the leaderboard data. The returned data is assigned to the users property.</p>
+</div>
 
                     <div class="io-description">
                         <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
@@ -388,18 +396,28 @@ export class LeaderboardComponent implements OnInit {
   
   users: User[] &#x3D; [];
   score: number &#x3D; 0;
+
+  /**
+   * The constructor of the component injects the LeaderboardService, 
+   * which is responsible for retrieving leaderboard data.
+   * @param leaderboardService 
+   */
   constructor(private leaderboardService: LeaderboardService){};
   
-  
+  /**
+   * In the ngOnInit method, the component makes an API call to the getLeaderboard method of the 
+   * leaderboardService to retrieve the leaderboard data. The returned data is assigned to the users property.
+   */
   ngOnInit() {
     this.leaderboardService.getLeaderboard().subscribe((res)&#x3D;&gt;{
       this.users &#x3D; res;
-      this.increment();
     }
     )
   };
 
-
+  /**
+   * The increment method is a simple function that increments the score property by 1.
+   */
   increment(){
     this.score +&#x3D;1;
   }
@@ -408,65 +426,387 @@ export class LeaderboardComponent implements OnInit {
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;leaderboard-container&quot;&gt;
-&lt;table class&#x3D;&quot;table is-fullwidth&quot;&gt;
-    &lt;thead class&#x3D;&quot;header&quot;&gt;
+        <pre class="line-numbers"><code class="language-html">&lt;!-- &lt;div class&#x3D;&quot;leaderboard-container has-text-white&quot;&gt;
+&lt;table class&#x3D;&quot;table is-fullwidth has-text-white&quot;&gt;
+    &lt;thead class&#x3D;&quot;header is-size-5 has-text-white&quot;&gt;
       &lt;tr&gt;
         &lt;th&gt;&lt;abbr title&#x3D;&quot;Position&quot;&gt;Ranking&lt;/abbr&gt;&lt;/th&gt;
         &lt;th&gt;Username&lt;/th&gt;
         &lt;th&gt;&lt;abbr title&#x3D;&quot;Played&quot;&gt;Plays&lt;/abbr&gt;&lt;/th&gt;
-        &lt;th&gt;&lt;abbr title&#x3D;&quot;Won&quot;&gt;Rating&lt;/abbr&gt;&lt;/th&gt;
-        &lt;th&gt;&lt;abbr title&#x3D;&quot;ProfileLink&quot;&gt;Profile Link&lt;/abbr&gt;&lt;/th&gt;
       &lt;/tr&gt;
     &lt;/thead&gt;
-    &lt;tbody *ngFor&#x3D;&quot;let user of users; index as i&quot;&gt;
+    &lt;tbody class&#x3D;&quot;body&quot; *ngFor&#x3D;&quot;let user of users; index as i&quot;&gt;
         &lt;tr&gt;
         &lt;th&gt;{{i+1}}&lt;/th&gt;
         &lt;td&gt;{{user.Username}}&lt;/td&gt;
         &lt;td&gt;{{user.Plays}}&lt;/td&gt;
-        &lt;td&gt;{{user.Score}}&lt;/td&gt;
-        &lt;td&gt;
-        &lt;div class&#x3D;&quot;text&quot; [routerLink]&#x3D;&quot;[&#x27;/friend-info&#x27;,user._id]&quot;&gt;
-            {{user.Username}}
-        &lt;/div&gt;&lt;/td&gt;
       &lt;/tr&gt;
     &lt;/tbody&gt;
   &lt;/table&gt;
-&lt;/div&gt;</code></pre>
+&lt;/div&gt; --&gt;
+&lt;ul class&#x3D;&quot;background&quot;&gt;
+  &lt;li&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class&#x3D;&quot;tainer&quot;&gt;
+  &lt;div class&#x3D;&quot;title&quot;&gt;
+    &lt;div class&#x3D;&quot;title-content is-size-1 has-text-white&quot;&gt;
+      &lt;p&gt;PRIZM Leaderboard&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;subtitle has-text-white is-size-5&quot;&gt;
+      &lt;p&gt;Here are the users who have played the most quizzes!&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class&#x3D;&quot;leaderboard-container has-text-white&quot;&gt;
+    &lt;div class&#x3D;&quot;headers has-text-white is-size-4 has-text-weight-bold&quot; id&#x3D;&quot;Headers&quot;&gt;
+      &lt;p class&#x3D;&quot;rank&quot;&gt;Rank&lt;/p&gt;
+      &lt;p class&#x3D;&quot;username&quot;&gt;Username&lt;/p&gt;
+      &lt;p class&#x3D;&quot;plays&quot;&gt;Plays&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;user-list has-text-white&quot;&gt;
+      &lt;div class&#x3D;&quot;users&quot; *ngFor&#x3D;&quot;let user of users; index as i&quot;&gt;
+        &lt;div class&#x3D;&quot;user-contents&quot;&gt;
+          &lt;p class&#x3D;&quot;rank hat-text-weight-bold&quot;&gt;{{i+1}}&lt;/p&gt;
+          &lt;p class&#x3D;&quot;username&quot;&gt;{{user.Username}}&lt;/p&gt;
+          &lt;p class&#x3D;&quot;plays&quot;&gt;{{user.Plays}}&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-styleData">
                 <p class="comment">
                     <code>./leaderboard.component.scss</code>
                 </p>
-                <pre class="line-numbers"><code class="language-scss">.leaderboard-container {
+                <pre class="line-numbers"><code class="language-scss">.tainer{
+  background: rgb(4,82,137);
+  background: linear-gradient(180deg, rgba(4,82,137,1) 0%, rgba(22,0,84,1) 50%, rgba(82,1,63,1) 100%);
+  // align-items: baseline;
+  background-color: wheat;
+  align-items: center;
+  display: grid;
+  min-height: 95vh;
+  justify-content: center;
+}
+
+.title{
+  align-items: center;
+  margin: 4rem;
+  height: 5vh;
+}
+.title-content{
+  text-align: center;
+}
+
+.subtitle{
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.leaderboard-container {
     display: grid;
 
     // background: radial-gradient(circle, #3C887e 10%, transparent 11%), radial-gradient(circle at bottom left, #3C887e 5%, transparent 6%), radial-gradient(circle at bottom right, #3C887e 5%, transparent 6%), radial-gradient(circle at top left, #3C887e 5%, transparent 6%), radial-gradient(circle at top right, #3C887e 5%, transparent 6%);
     // background-size: 6em 6em;
     // background-color: #242325;
     // opacity: 1;
-    background-image: url(&quot;../../assets/images/pexels-kellie-churchman-1001682.jpg&quot;);
-    background-color: gray;
-    background-blend-mode: multiply;
+    // background-image: url(&quot;../../assets/images/pexels-kellie-churchman-1001682.jpg&quot;);
+    // background-color: gray;
+    // background-blend-mode: multiply;
+    // min-width: 50rem;
+    // max-width: fit-content;
+    width: fit-content;
+    // min-height: 100vh;
+    // background-color: white;
+    // background: rgb(4,82,137);
+    // background: linear-gradient(180deg, rgba(4,82,137,1) 0%, rgba(22,0,84,1) 50%, rgba(82,1,63,1) 100%);
 
 
     /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
+    // background-position: center;
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    // height: 100vh;
 
-    align-items: baseline;
+    // align-items: baseline;
 }
 
-.header{
-    background-color: cadetblue;
-    font-size: 110%;
+// .header{
+//     // background-color: cadetblue;
+//     background-color: #052d55;
+//     // color: white;
+//     // font-size: 110%;
+//     border-radius: 15px;
+//     text-align: left;
+// }
+
+// table{
+//   background-color: rgba(255, 255, 255, .15);
+//   border-collapse: collapse;
+//     margin: 25px 0;
+//     font-size: 0.9em;
+//     font-family: sans-serif;
+//     min-width: 400px;
+//     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+// }
+
+// .styled-table tbody tr {
+//   border-bottom: 1px solid #dddddd;
+// }
+
+// .styled-table tbody tr:nth-of-type(even) {
+//   background-color: #f3f3f3;
+// }
+
+// .styled-table tbody tr:last-of-type {
+//   border-bottom: 2px solid #009879;
+// }
+
+
+
+.headers{
+  display: flex;
+  background-color: rgba(255, 255, 255, .15);
+  padding: 20px;
+  padding-left: 50px;
+  border-radius: 20px;
+  margin-top: 0px;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-bottom: 10px;
 }
 
-table{
-    background-color: white;
+.users{
+  display: flex;
+  background-color: rgba(255, 255, 255, .15);
+  backdrop-filter: blur(15px);
+  padding: 20px;
+  padding-left: 50px;
+  border-radius: 20px;
+  margin-top: 10px;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-bottom: 10px;
+}
+
+.user-contents{
+  display: flex;
+
+
+}
+
+.rank{
+  min-width: 10rem;
+  // max-width: 15rem;
+  // text-align: center;
+  // background-color: aquamarine;
+}
+
+.username{
+  min-width: 10rem;
+  // max-width: 20rem;
+  // width: fit-content;
+}
+
+.plays{
+  text-align: center;
+  min-width: 10rem;
+  // max-width: 20rem;
+}
+
+@keyframes animate {
+  0%{
+      transform: translateY(0) rotate(0deg);
+      opacity: 1;
+      border-radius: 0;
+  }
+  100%{
+      transform: translateY(-1000px) rotate(720deg);
+      opacity: 0;
+      border-radius: 50%;
+  }
+}
+
+.background {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.background li {
+  position: absolute;
+  display: block;
+  list-style: none;
+  width: 20px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  animation: animate 16s linear infinite;
+}
+
+.background li:nth-child(0) {
+  left: 68%;
+  width: 128px;
+  height: 128px;
+  bottom: -128px;
+  animation-delay: 1s;
+}
+.background li:nth-child(1) {
+  left: 84%;
+  width: 106px;
+  height: 106px;
+  bottom: -106px;
+  animation-delay: 4s;
+}
+.background li:nth-child(2) {
+  left: 27%;
+  width: 120px;
+  height: 120px;
+  bottom: -120px;
+  animation-delay: 10s;
+}
+.background li:nth-child(3) {
+  left: 14%;
+  width: 167px;
+  height: 167px;
+  bottom: -167px;
+  animation-delay: 13s;
+}
+.background li:nth-child(4) {
+  left: 43%;
+  width: 194px;
+  height: 194px;
+  bottom: -194px;
+  animation-delay: 3s;
+}
+.background li:nth-child(5) {
+  left: 42%;
+  width: 153px;
+  height: 153px;
+  bottom: -153px;
+  animation-delay: 7s;
+}
+.background li:nth-child(6) {
+  left: 56%;
+  width: 101px;
+  height: 101px;
+  bottom: -101px;
+  animation-delay: 30s;
+}
+.background li:nth-child(7) {
+  left: 18%;
+  width: 149px;
+  height: 149px;
+  bottom: -149px;
+  animation-delay: 1s;
+}
+.background li:nth-child(8) {
+  left: 88%;
+  width: 143px;
+  height: 143px;
+  bottom: -143px;
+  animation-delay: 35s;
+}
+.background li:nth-child(9) {
+  left: 63%;
+  width: 114px;
+  height: 114px;
+  bottom: -114px;
+  animation-delay: 18s;
+}
+.background li:nth-child(10) {
+  left: 34%;
+  width: 188px;
+  height: 188px;
+  bottom: -188px;
+  animation-delay: 15s;
+}
+.background li:nth-child(11) {
+  left: 73%;
+  width: 151px;
+  height: 151px;
+  bottom: -151px;
+  animation-delay: 7s;
+}
+.background li:nth-child(12) {
+  left: 35%;
+  width: 128px;
+  height: 128px;
+  bottom: -128px;
+  animation-delay: 59s;
+}
+.background li:nth-child(13) {
+  left: 24%;
+  width: 101px;
+  height: 101px;
+  bottom: -101px;
+  animation-delay: 34s;
+}
+.background li:nth-child(14) {
+  left: 9%;
+  width: 182px;
+  height: 182px;
+  bottom: -182px;
+  animation-delay: 14s;
+}
+.background li:nth-child(15) {
+  left: 73%;
+  width: 191px;
+  height: 191px;
+  bottom: -191px;
+  animation-delay: 10s;
+}
+.background li:nth-child(16) {
+  left: 25%;
+  width: 174px;
+  height: 174px;
+  bottom: -174px;
+  animation-delay: 28s;
+}
+.background li:nth-child(17) {
+  left: 31%;
+  width: 107px;
+  height: 107px;
+  bottom: -107px;
+  animation-delay: 66s;
+}
+.background li:nth-child(18) {
+  left: 16%;
+  width: 123px;
+  height: 123px;
+  bottom: -123px;
+  animation-delay: 43s;
+}
+.background li:nth-child(19) {
+  left: 61%;
+  width: 122px;
+  height: 122px;
+  bottom: -122px;
+  animation-delay: 9s;
 }
 </code></pre>
     </div>
@@ -496,8 +836,8 @@ table{
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="leaderboard-container"><table class="table is-fullwidth">    <thead class="header">      <tr>        <th><abbr title="Position">Ranking</abbr></th>        <th>Username</th>        <th><abbr title="Played">Plays</abbr></th>        <th><abbr title="Won">Rating</abbr></th>        <th><abbr title="ProfileLink">Profile Link</abbr></th>      </tr>    </thead>    <tbody *ngFor="let user of users; index as i">        <tr>        <th>{{i+1}}</th>        <td>{{user.Username}}</td>        <td>{{user.Plays}}</td>        <td>{{user.Score}}</td>        <td>        <div class="text" [routerLink]="[\'/friend-info\',user._id]">            {{user.Username}}        </div></td>      </tr>    </tbody>  </table></div></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BookmarksComponent', 'selector': 'app-bookmarks'},{'name': 'EditProfileComponent', 'selector': 'app-edit-profile'},{'name': 'FriendInfoComponent', 'selector': 'app-friend-info'},{'name': 'FriendsComponent', 'selector': 'app-friends'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LeaderboardComponent', 'selector': 'app-leaderboard'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MasterAnswerComponent', 'selector': 'app-master-answer'},{'name': 'QuizAnswerComponent', 'selector': 'app-quiz-answer'},{'name': 'QuizCreateComponent', 'selector': 'app-quiz-create'},{'name': 'QuizInfoComponent', 'selector': 'app-quiz-info'},{'name': 'QuizResultComponent', 'selector': 'app-quiz-result'},{'name': 'QuizSearchComponent', 'selector': 'app-quiz-search'},{'name': 'QuizTypeinComponent', 'selector': 'app-quiz-typein'},{'name': 'RegistrationComponent', 'selector': 'app-registration'}];
+        var COMPONENT_TEMPLATE = '<div><!-- <div class="leaderboard-container has-text-white"><table class="table is-fullwidth has-text-white">    <thead class="header is-size-5 has-text-white">      <tr>        <th><abbr title="Position">Ranking</abbr></th>        <th>Username</th>        <th><abbr title="Played">Plays</abbr></th>      </tr>    </thead>    <tbody class="body" *ngFor="let user of users; index as i">        <tr>        <th>{{i+1}}</th>        <td>{{user.Username}}</td>        <td>{{user.Plays}}</td>      </tr>    </tbody>  </table></div> --><ul class="background">  <li></li>  <li></li>  <li></li>  <li></li>  <li></li>  <li></li>  <li></li>  <li></li>  <li></li>  <li></li>  <li></li>  <li></li>  <li></li>  <li></li>  <li></li>  <li></li>  <li></li>  <li></li>  <li></li>  <li></li></ul><div class="tainer">  <div class="title">    <div class="title-content is-size-1 has-text-white">      <p>PRIZM Leaderboard</p>    </div>    <div class="subtitle has-text-white is-size-5">      <p>Here are the users who have played the most quizzes!</p>    </div>  </div>  <div class="leaderboard-container has-text-white">    <div class="headers has-text-white is-size-4 has-text-weight-bold" id="Headers">      <p class="rank">Rank</p>      <p class="username">Username</p>      <p class="plays">Plays</p>    </div>    <div class="user-list has-text-white">      <div class="users" *ngFor="let user of users; index as i">        <div class="user-contents">          <p class="rank hat-text-weight-bold">{{i+1}}</p>          <p class="username">{{user.Username}}</p>          <p class="plays">{{user.Plays}}</p>        </div>      </div>    </div>  </div></div></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BookmarksComponent', 'selector': 'app-bookmarks'},{'name': 'ChallengeComponent', 'selector': 'app-challenge'},{'name': 'EditProfileComponent', 'selector': 'app-edit-profile'},{'name': 'FriendInfoComponent', 'selector': 'app-friend-info'},{'name': 'FriendsComponent', 'selector': 'app-friends'},{'name': 'FriendSelectComponent', 'selector': 'app-friend-select'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LeaderboardComponent', 'selector': 'app-leaderboard'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MasterAnswerComponent', 'selector': 'app-master-answer'},{'name': 'QuizAnswerComponent', 'selector': 'app-quiz-answer'},{'name': 'QuizCreateComponent', 'selector': 'app-quiz-create'},{'name': 'QuizImageComponent', 'selector': 'app-quiz-image'},{'name': 'QuizInfoComponent', 'selector': 'app-quiz-info'},{'name': 'QuizResultComponent', 'selector': 'app-quiz-result'},{'name': 'QuizSearchComponent', 'selector': 'app-quiz-search'},{'name': 'QuizTypeinComponent', 'selector': 'app-quiz-typein'},{'name': 'RegistrationComponent', 'selector': 'app-registration'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'LeaderboardComponent'};
 </script>

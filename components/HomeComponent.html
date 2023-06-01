@@ -204,6 +204,8 @@
 
                 <tr>
                     <td class="col-md-4">
+                            <div class="io-description"><p>The constructor of the component injects several services: QuizService, BookmarkService, Router, and UserService.</p>
+</div>
                             <div>
                                     <b>Parameters :</b>
                                     <table class="params">
@@ -301,14 +303,19 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="43"
-                            class="link-to-prism">src/app/home/home.component.ts:43</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="62"
+                            class="link-to-prism">src/app/home/home.component.ts:62</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>The createBookmark method creates a bookmark for the specified quiz and user if the user is logged in.
+It checks if the user is logged in by verifying the user variable.
+If the user is logged in, it creates a bookmark object and calls the add_bookmark method of the bookmarkService to add the bookmark.
+An alert is displayed based on the success or failure of the bookmark creation.</p>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -370,14 +377,17 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="79"
-                            class="link-to-prism">src/app/home/home.component.ts:79</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="115"
+                            class="link-to-prism">src/app/home/home.component.ts:115</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>The NavigateQuiz method navigates to the quiz information page for the
+specified quiz using the Router service. The URL is constructed based on the selected quiz&#39;s ID.</p>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -439,14 +449,18 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="27"
-                            class="link-to-prism">src/app/home/home.component.ts:27</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="40"
+                            class="link-to-prism">src/app/home/home.component.ts:40</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>In the ngOnInit method, the component makes API calls to retrieve the quiz categories and all quizzes.
+The quiz categories are assigned to the categories property, and the quizzes are assigned to the quizzes property.
+Additionally, for each quiz, the component retrieves the username of the quiz creator using the userService, and assigns it to the CreatorID property of the quiz.</p>
+</div>
 
                     <div class="io-description">
                         <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
@@ -476,14 +490,18 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="73"
-                            class="link-to-prism">src/app/home/home.component.ts:73</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="103"
+                            class="link-to-prism">src/app/home/home.component.ts:103</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>The PlayRandomQuiz method selects a random quiz from the quizzes array and
+navigates to the quiz answer page using the Router service.
+The URL is constructed based on the selected quiz&#39;s ID.</p>
+</div>
 
                     <div class="io-description">
                         <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
@@ -513,14 +531,18 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="63"
-                            class="link-to-prism">src/app/home/home.component.ts:63</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="88"
+                            class="link-to-prism">src/app/home/home.component.ts:88</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>The updateValue method updates the selectedCategory and selectedCatID properties based on the provided value.
+If the value is &quot;Categories&quot;, the selectedCategory is set to an empty string, otherwise, it
+finds the corresponding category object and assigns its ID to the selectedCatID.</p>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -592,7 +614,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/app/home/home.component.ts:23</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/app/home/home.component.ts:30</a></div>
                         </td>
                     </tr>
 
@@ -623,7 +645,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/app/home/home.component.ts:24</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">src/app/home/home.component.ts:31</a></div>
                         </td>
                     </tr>
 
@@ -654,7 +676,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/home/home.component.ts:25</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">src/app/home/home.component.ts:32</a></div>
                         </td>
                     </tr>
 
@@ -685,7 +707,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/app/home/home.component.ts:26</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">src/app/home/home.component.ts:33</a></div>
                         </td>
                     </tr>
 
@@ -710,7 +732,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="21" class="link-to-prism">src/app/home/home.component.ts:21</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/app/home/home.component.ts:28</a></div>
                         </td>
                     </tr>
 
@@ -723,7 +745,7 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { ChangeDetectorRef, Component, OnInit } from &#x27;@angular/core&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {  Component, OnInit } from &#x27;@angular/core&#x27;;
 import { QuizService } from &#x27;../services/quiz.service&#x27;;
 import { Category } from &#x27;../models/categories&#x27;;
 import { Quiz } from &#x27;../models/quiz&#x27;;
@@ -741,6 +763,13 @@ import { UserService } from &#x27;../services/user.service&#x27;;
 //This component represents the home page of the quiz application.
 export class HomeComponent implements OnInit{
 
+  /**
+   * The constructor of the component injects several services: QuizService, BookmarkService, Router, and UserService.
+   * @param quizService 
+   * @param bookmarkService 
+   * @param router 
+   * @param userService 
+   */
   constructor(private quizService: QuizService, private bookmarkService: BookmarkService, private router:Router, private userService:UserService){}
   
   user &#x3D; sessionStorage.getItem(&quot;User&quot;);
@@ -749,6 +778,12 @@ export class HomeComponent implements OnInit{
   quizzes: Quiz[] &#x3D; [];
   selectedCategory: string &#x3D; &quot;&quot;;
   selectedCatID: string &#x3D;  &quot;&quot;;
+
+  /**
+   * In the ngOnInit method, the component makes API calls to retrieve the quiz categories and all quizzes. 
+   * The quiz categories are assigned to the categories property, and the quizzes are assigned to the quizzes property. 
+   * Additionally, for each quiz, the component retrieves the username of the quiz creator using the userService, and assigns it to the CreatorID property of the quiz.
+   */
   ngOnInit(){
     this.quizService.get_quiz_categories().subscribe((res) &#x3D;&gt;{
       this.catagories &#x3D; res;
@@ -764,7 +799,13 @@ export class HomeComponent implements OnInit{
     });
     
   }
- // This creates a bookmark for the specified quiz and user if thy&#x27;re logged in
+ /**
+  * The createBookmark method creates a bookmark for the specified quiz and user if the user is logged in. 
+  * It checks if the user is logged in by verifying the user variable. 
+  * If the user is logged in, it creates a bookmark object and calls the add_bookmark method of the bookmarkService to add the bookmark. 
+  * An alert is displayed based on the success or failure of the bookmark creation.
+  * @param quiz 
+  */
   createBookmark(quiz: Quiz){
     let userOBJ : User;
     if(this.user !&#x3D; null){
@@ -784,10 +825,16 @@ export class HomeComponent implements OnInit{
       alert(&quot;You need to be logged in to do that!&quot;);
     }
   }
-//Updates the selectedCategory and selectedCatID properties based on the provided value.
+
+  /**
+   * The updateValue method updates the selectedCategory and selectedCatID properties based on the provided value. 
+   * If the value is &quot;Categories&quot;, the selectedCategory is set to an empty string, otherwise, it 
+   * finds the corresponding category object and assigns its ID to the selectedCatID.
+   * @param value 
+   */
   updateValue(value: string){
     this.selectedCategory &#x3D; value;
-    if(value &#x3D;&#x3D;&#x3D; &quot;Catergories&quot;){
+    if(value &#x3D;&#x3D;&#x3D; &quot;Categories&quot;){
       this.selectedCatID &#x3D; &quot;&quot;;
     }else{
       let res &#x3D; this.catagories.find(val&#x3D;&gt; val.Name &#x3D;&#x3D;&#x3D; value);
@@ -795,12 +842,23 @@ export class HomeComponent implements OnInit{
     }
   }
 
+  /**
+   * The PlayRandomQuiz method selects a random quiz from the quizzes array and 
+   * navigates to the quiz answer page using the Router service. 
+   * The URL is constructed based on the selected quiz&#x27;s ID.
+   */
   PlayRandomQuiz(){
     let quiz &#x3D; this.quizzes[Math.floor(Math.random()*this.quizzes.length)]
     console.log(JSON.stringify(quiz))
     let url&#x3D;&#x27;/quiz-answer/&#x27;+quiz._id.toString()
     this.router.navigateByUrl(url)
   }
+
+  /**
+   * The NavigateQuiz method navigates to the quiz information page for the 
+   * specified quiz using the Router service. The URL is constructed based on the selected quiz&#x27;s ID.
+   * @param quiz 
+   */
   NavigateQuiz(quiz: Quiz){
     this.router.navigate([&#x27;/quiz-info&#x27;,quiz._id]);
   }
@@ -809,62 +867,82 @@ export class HomeComponent implements OnInit{
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;div&gt;
-  &lt;section class&#x3D;&quot;hero is-primary has-text-centered&quot;&gt;
-    &lt;div class&#x3D;&quot;hero-body&quot;&gt;
-      &lt;p class&#x3D;&quot;title&quot;&gt;
-        Home Page
-      &lt;/p&gt;
-      &lt;p class&#x3D;&quot;subtitle&quot;&gt;
-        Quizzes
-      &lt;/p&gt;
-    &lt;/div&gt;
-  &lt;/section&gt;
-  &lt;section class&#x3D;&quot;my-5 mx-5&quot;&gt;
-    &lt;div class&#x3D;&quot;field&quot;&gt;
-      &lt;div class&#x3D;&quot;control&quot;&gt;
-        &lt;div class&#x3D;&quot;select form-select&quot;&gt;
-          &lt;select #categories (change)&#x3D;&quot;updateValue(categories.value)&quot;&gt;
-            &lt;option&gt;Catergories&lt;/option&gt;
-            &lt;option *ngFor&#x3D;&quot;let catagory of catagories&quot;&gt;{{catagory.Name}}&lt;/option&gt;
-          &lt;/select&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/section&gt;
-  &lt;section class&#x3D;&quot;my-5 mx-5&quot;&gt;
-    &lt;div class&#x3D;&quot;buttons&quot;&gt;
-      &lt;div class&#x3D;&quot;button is-primary&quot;(click)&#x3D;&quot;PlayRandomQuiz()&quot;&gt;
-        Random Quiz
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/section&gt;
-
-  &lt;div class&#x3D;&quot;cards columns my-10&quot;&gt;
-    &lt;div class&#x3D;&quot;column with-margin &quot;&gt;
-      &lt;div class&#x3D;&quot;card has-text-white&quot; *ngFor&#x3D;&quot;let quiz of quizzes | filter: selectedCatID &quot;&gt;
-        &lt;div class&#x3D;&quot;card-content&quot;&gt;
-          &lt;div class&#x3D;&quot;media&quot;&gt;
-            &lt;div class&#x3D;&quot;media-left&quot;&gt;
-              &lt;figure class&#x3D;&quot;image is-48x48&quot;&gt;
-                &lt;img src&#x3D;&quot;{{quiz.Thumbnail}}&quot; alt&#x3D;&quot;Placeholder image&quot;&gt;
-              &lt;/figure&gt;
-            &lt;/div&gt;
-            &lt;div class&#x3D;&quot;media-content&quot;&gt;
-              &lt;p class&#x3D;&quot;title is-4&quot;&gt;{{quiz.Name}}&lt;/p&gt;
-              &lt;p class&#x3D;&quot;subtitle is-6 has-text-white&quot;&gt;{{quiz.CreatorID}}&lt;/p&gt;
-            &lt;/div&gt;
-          &lt;/div&gt;
-
-          &lt;div class&#x3D;&quot;content&quot;&gt;{{quiz.Description}}&lt;/div&gt;
-          &lt;footer class&#x3D;&quot;card-footer is-primary&quot;&gt;
-            &lt;a class&#x3D;&quot;card-footer-item button is-primary&quot; (click)&#x3D;&quot;createBookmark(quiz)&quot;&gt;Bookmark&lt;/a&gt;
-            &lt;a class&#x3D;&quot;card-footer-item button is-primary&quot; (click)&#x3D;&quot;NavigateQuiz(quiz)&quot; &gt;See More&lt;/a&gt;
-          &lt;/footer&gt;
-        &lt;/div&gt;
+        <pre class="line-numbers"><code class="language-html">&lt;ul class&#x3D;&quot;background&quot;&gt;
+  &lt;li&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;section class&#x3D;&quot;hero is-primary has-text-centered&quot;&gt;
+  &lt;div class&#x3D;&quot;hero-body&quot;&gt;
+    &lt;p class&#x3D;&quot;title&quot;&gt;
+      Home Page
+    &lt;/p&gt;
+    &lt;p class&#x3D;&quot;subtitle&quot;&gt;
+      Quizzes
+    &lt;/p&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+&lt;section class&#x3D;&quot;my-5 mx-5&quot;&gt;
+  &lt;div class&#x3D;&quot;field&quot;&gt;
+    &lt;div class&#x3D;&quot;control&quot;&gt;
+      &lt;div class&#x3D;&quot;select form-select&quot;&gt;
+        &lt;select #categories (change)&#x3D;&quot;updateValue(categories.value)&quot;&gt;
+          &lt;option&gt;Categories&lt;/option&gt;
+          &lt;option *ngFor&#x3D;&quot;let catagory of catagories&quot;&gt;{{catagory.Name}}&lt;/option&gt;
+        &lt;/select&gt;
       &lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
+&lt;/section&gt;
+&lt;section class&#x3D;&quot;my-5 mx-5&quot;&gt;
+  &lt;div class&#x3D;&quot;buttons&quot;&gt;
+    &lt;div class&#x3D;&quot;button is-secondary&quot; (click)&#x3D;&quot;PlayRandomQuiz()&quot;&gt;
+      Random Quiz
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+
+&lt;div class&#x3D;&quot;main&quot;&gt;
+
+  &lt;div class&#x3D;&quot;card-grid is-secondary&quot;&gt;
+    &lt;div class&#x3D;&quot;card has-text-white&quot; *ngFor&#x3D;&quot;let quiz of quizzes | filter: selectedCatID &quot;&gt;
+    &lt;div class&#x3D;&quot;card-content&quot;&gt;
+      &lt;div class&#x3D;&quot;media&quot;&gt;
+        &lt;div class&#x3D;&quot;media-left&quot;&gt;
+          &lt;figure class&#x3D;&quot;image is-48x48&quot;&gt;
+            &lt;img class&#x3D;&quot;max-size-image&quot; src&#x3D;&quot;{{quiz.Thumbnail}}&quot; alt&#x3D;&quot;Placeholder image&quot;&gt;
+          &lt;/figure&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;media-content&quot;&gt;
+          &lt;p class&#x3D;&quot;title is-4 has-text-white&quot;&gt;{{quiz.Name}}&lt;/p&gt;
+          &lt;p class&#x3D;&quot;subtitle is-6 has-text-white&quot;&gt;{{quiz.CreatorID}}&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;content&quot;&gt;{{quiz.Description}}&lt;/div&gt;
+      &lt;footer class&#x3D;&quot;card-footer is-primary&quot;&gt;
+        &lt;a class&#x3D;&quot;card-footer-item button&quot; (click)&#x3D;&quot;createBookmark(quiz)&quot;&gt;Bookmark&lt;/a&gt;
+        &lt;a class&#x3D;&quot;card-footer-item button&quot; (click)&#x3D;&quot;NavigateQuiz(quiz)&quot;&gt;See More&lt;/a&gt;
+      &lt;/footer&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;</code></pre>
     </div>
 
@@ -872,24 +950,220 @@ export class HomeComponent implements OnInit{
                 <p class="comment">
                     <code>./home.component.scss</code>
                 </p>
-                <pre class="line-numbers"><code class="language-scss">.cards {
-    margin-left: 10%;
-    margin-right: 10%;
+                <pre class="line-numbers"><code class="language-scss">.main{
+    min-height: 100vh;
+    background: rgb(4,82,137);
+    background: linear-gradient(180deg, rgba(4,82,137,1) 0%, rgba(22,0,84,1) 50%, rgba(82,1,63,1) 100%);
+}
+.cards {
+    margin-left: 20%;
+    margin-right: 20%;
 }
 
 .card{
+    max-width: 450px;
     background-color: rgba(255, 255, 255, .15);
     backdrop-filter: blur(5px);
-    margin-top: 2%;
+    // margin-top: 2%;
     display: flex;
-    justify-content: center;
+    justify-content: start;
     border-radius: 15px;
+    margin-bottom: 1.5rem;
+}
+
+.card-grid{
+    padding-left: 10%;
+    padding-right: 10%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    grid-gap: 50px;
+}
+
+.max-size-image {
+    width: 55px; /* Set your desired maximum width */
+    height: 50px; /* Set your desired maximum height */
+    // width: auto;
+    // height: auto;
 }
 
 .image{
     margin-top: 10px;
     width: 50px;
     height: 50px;
+}
+
+@keyframes animate {
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+    100%{
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+}
+
+.background {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+.background li {
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    animation: animate 16s linear infinite;
+}
+
+.background li:nth-child(0) {
+    left: 68%;
+    width: 128px;
+    height: 128px;
+    bottom: -128px;
+    animation-delay: 1s;
+}
+.background li:nth-child(1) {
+    left: 84%;
+    width: 106px;
+    height: 106px;
+    bottom: -106px;
+    animation-delay: 4s;
+}
+.background li:nth-child(2) {
+    left: 27%;
+    width: 120px;
+    height: 120px;
+    bottom: -120px;
+    animation-delay: 10s;
+}
+.background li:nth-child(3) {
+    left: 14%;
+    width: 167px;
+    height: 167px;
+    bottom: -167px;
+    animation-delay: 13s;
+}
+.background li:nth-child(4) {
+    left: 43%;
+    width: 194px;
+    height: 194px;
+    bottom: -194px;
+    animation-delay: 3s;
+}
+.background li:nth-child(5) {
+    left: 42%;
+    width: 153px;
+    height: 153px;
+    bottom: -153px;
+    animation-delay: 7s;
+}
+.background li:nth-child(6) {
+    left: 56%;
+    width: 101px;
+    height: 101px;
+    bottom: -101px;
+    animation-delay: 30s;
+}
+.background li:nth-child(7) {
+    left: 18%;
+    width: 149px;
+    height: 149px;
+    bottom: -149px;
+    animation-delay: 1s;
+}
+.background li:nth-child(8) {
+    left: 88%;
+    width: 143px;
+    height: 143px;
+    bottom: -143px;
+    animation-delay: 35s;
+}
+.background li:nth-child(9) {
+    left: 63%;
+    width: 114px;
+    height: 114px;
+    bottom: -114px;
+    animation-delay: 18s;
+}
+.background li:nth-child(10) {
+    left: 34%;
+    width: 188px;
+    height: 188px;
+    bottom: -188px;
+    animation-delay: 15s;
+}
+.background li:nth-child(11) {
+    left: 73%;
+    width: 151px;
+    height: 151px;
+    bottom: -151px;
+    animation-delay: 7s;
+}
+.background li:nth-child(12) {
+    left: 35%;
+    width: 128px;
+    height: 128px;
+    bottom: -128px;
+    animation-delay: 59s;
+}
+.background li:nth-child(13) {
+    left: 24%;
+    width: 101px;
+    height: 101px;
+    bottom: -101px;
+    animation-delay: 34s;
+}
+.background li:nth-child(14) {
+    left: 9%;
+    width: 182px;
+    height: 182px;
+    bottom: -182px;
+    animation-delay: 14s;
+}
+.background li:nth-child(15) {
+    left: 73%;
+    width: 191px;
+    height: 191px;
+    bottom: -191px;
+    animation-delay: 10s;
+}
+.background li:nth-child(16) {
+    left: 25%;
+    width: 174px;
+    height: 174px;
+    bottom: -174px;
+    animation-delay: 28s;
+}
+.background li:nth-child(17) {
+    left: 31%;
+    width: 107px;
+    height: 107px;
+    bottom: -107px;
+    animation-delay: 66s;
+}
+.background li:nth-child(18) {
+    left: 16%;
+    width: 123px;
+    height: 123px;
+    bottom: -123px;
+    animation-delay: 43s;
+}
+.background li:nth-child(19) {
+    left: 61%;
+    width: 122px;
+    height: 122px;
+    bottom: -122px;
+    animation-delay: 9s;
 }
 </code></pre>
     </div>
@@ -919,8 +1193,8 @@ export class HomeComponent implements OnInit{
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div>  <section class="hero is-primary has-text-centered">    <div class="hero-body">      <p class="title">        Home Page      </p>      <p class="subtitle">        Quizzes      </p>    </div>  </section>  <section class="my-5 mx-5">    <div class="field">      <div class="control">        <div class="select form-select">          <select #categories (change)="updateValue(categories.value)">            <option>Catergories</option>            <option *ngFor="let catagory of catagories">{{catagory.Name}}</option>          </select>        </div>      </div>    </div>  </section>  <section class="my-5 mx-5">    <div class="buttons">      <div class="button is-primary"(click)="PlayRandomQuiz()">        Random Quiz      </div>    </div>  </section>  <div class="cards columns my-10">    <div class="column with-margin ">      <div class="card has-text-white" *ngFor="let quiz of quizzes | filter: selectedCatID ">        <div class="card-content">          <div class="media">            <div class="media-left">              <figure class="image is-48x48">                <img src="{{quiz.Thumbnail}}" alt="Placeholder image">              </figure>            </div>            <div class="media-content">              <p class="title is-4">{{quiz.Name}}</p>              <p class="subtitle is-6 has-text-white">{{quiz.CreatorID}}</p>            </div>          </div>          <div class="content">{{quiz.Description}}</div>          <footer class="card-footer is-primary">            <a class="card-footer-item button is-primary" (click)="createBookmark(quiz)">Bookmark</a>            <a class="card-footer-item button is-primary" (click)="NavigateQuiz(quiz)" >See More</a>          </footer>        </div>      </div>    </div>  </div></div></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BookmarksComponent', 'selector': 'app-bookmarks'},{'name': 'EditProfileComponent', 'selector': 'app-edit-profile'},{'name': 'FriendInfoComponent', 'selector': 'app-friend-info'},{'name': 'FriendsComponent', 'selector': 'app-friends'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LeaderboardComponent', 'selector': 'app-leaderboard'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MasterAnswerComponent', 'selector': 'app-master-answer'},{'name': 'QuizAnswerComponent', 'selector': 'app-quiz-answer'},{'name': 'QuizCreateComponent', 'selector': 'app-quiz-create'},{'name': 'QuizInfoComponent', 'selector': 'app-quiz-info'},{'name': 'QuizResultComponent', 'selector': 'app-quiz-result'},{'name': 'QuizSearchComponent', 'selector': 'app-quiz-search'},{'name': 'QuizTypeinComponent', 'selector': 'app-quiz-typein'},{'name': 'RegistrationComponent', 'selector': 'app-registration'}];
+        var COMPONENT_TEMPLATE = '<div><ul class="background">  <li></li>  <li></li>  <li></li>  <li></li>  <li></li>  <li></li>  <li></li>  <li></li>  <li></li>  <li></li>  <li></li>  <li></li>  <li></li>  <li></li>  <li></li>  <li></li>  <li></li>  <li></li>  <li></li>  <li></li></ul><section class="hero is-primary has-text-centered">  <div class="hero-body">    <p class="title">      Home Page    </p>    <p class="subtitle">      Quizzes    </p>  </div></section><section class="my-5 mx-5">  <div class="field">    <div class="control">      <div class="select form-select">        <select #categories (change)="updateValue(categories.value)">          <option>Categories</option>          <option *ngFor="let catagory of catagories">{{catagory.Name}}</option>        </select>      </div>    </div>  </div></section><section class="my-5 mx-5">  <div class="buttons">    <div class="button is-secondary" (click)="PlayRandomQuiz()">      Random Quiz    </div>  </div></section><div class="main">  <div class="card-grid is-secondary">    <div class="card has-text-white" *ngFor="let quiz of quizzes | filter: selectedCatID ">    <div class="card-content">      <div class="media">        <div class="media-left">          <figure class="image is-48x48">            <img class="max-size-image" src="{{quiz.Thumbnail}}" alt="Placeholder image">          </figure>        </div>        <div class="media-content">          <p class="title is-4 has-text-white">{{quiz.Name}}</p>          <p class="subtitle is-6 has-text-white">{{quiz.CreatorID}}</p>        </div>      </div>      <div class="content">{{quiz.Description}}</div>      <footer class="card-footer is-primary">        <a class="card-footer-item button" (click)="createBookmark(quiz)">Bookmark</a>        <a class="card-footer-item button" (click)="NavigateQuiz(quiz)">See More</a>      </footer>    </div>  </div></div></div></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BookmarksComponent', 'selector': 'app-bookmarks'},{'name': 'ChallengeComponent', 'selector': 'app-challenge'},{'name': 'EditProfileComponent', 'selector': 'app-edit-profile'},{'name': 'FriendInfoComponent', 'selector': 'app-friend-info'},{'name': 'FriendsComponent', 'selector': 'app-friends'},{'name': 'FriendSelectComponent', 'selector': 'app-friend-select'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LeaderboardComponent', 'selector': 'app-leaderboard'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MasterAnswerComponent', 'selector': 'app-master-answer'},{'name': 'QuizAnswerComponent', 'selector': 'app-quiz-answer'},{'name': 'QuizCreateComponent', 'selector': 'app-quiz-create'},{'name': 'QuizImageComponent', 'selector': 'app-quiz-image'},{'name': 'QuizInfoComponent', 'selector': 'app-quiz-info'},{'name': 'QuizResultComponent', 'selector': 'app-quiz-result'},{'name': 'QuizSearchComponent', 'selector': 'app-quiz-search'},{'name': 'QuizTypeinComponent', 'selector': 'app-quiz-typein'},{'name': 'RegistrationComponent', 'selector': 'app-registration'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'HomeComponent'};
 </script>

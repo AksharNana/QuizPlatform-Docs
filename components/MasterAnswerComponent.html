@@ -183,12 +183,15 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/master-answer/master-answer.component.ts:15</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/app/master-answer/master-answer.component.ts:12</a></div>
                             </td>
                         </tr>
 
                 <tr>
                     <td class="col-md-4">
+                            <div class="io-description"><p>The component constructor injects the QuizService and ActivatedRoute.
+The QuizService is responsible for retrieving quiz data, and the ActivatedRoute provides access to the route parameters.</p>
+</div>
                             <div>
                                     <b>Parameters :</b>
                                     <table class="params">
@@ -262,14 +265,16 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="21"
-                            class="link-to-prism">src/app/master-answer/master-answer.component.ts:21</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="29"
+                            class="link-to-prism">src/app/master-answer/master-answer.component.ts:29</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>In the ngOnInit method, the component subscribes to the route parameters and retrieves the quizID from the parameters.</p>
+</div>
 
                     <div class="io-description">
                         <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
@@ -309,7 +314,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/master-answer/master-answer.component.ts:18</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/app/master-answer/master-answer.component.ts:22</a></div>
                         </td>
                     </tr>
 
@@ -340,7 +345,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/master-answer/master-answer.component.ts:17</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="21" class="link-to-prism">src/app/master-answer/master-answer.component.ts:21</a></div>
                         </td>
                     </tr>
 
@@ -371,7 +376,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/app/master-answer/master-answer.component.ts:20</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/app/master-answer/master-answer.component.ts:24</a></div>
                         </td>
                     </tr>
 
@@ -402,7 +407,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/app/master-answer/master-answer.component.ts:19</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/app/master-answer/master-answer.component.ts:23</a></div>
                         </td>
                     </tr>
 
@@ -425,16 +430,24 @@ import { Quiz } from &#x27;../models/quiz&#x27;;
   templateUrl: &#x27;./master-answer.component.html&#x27;,
   styleUrls: [&#x27;./master-answer.component.scss&#x27;]
 })
-
- // This component represents the page for answering a quiz.
- // Displays the quiz and its questions to the user.
  
 export class MasterAnswerComponent implements OnInit{
+
+  /**
+   * The component constructor injects the QuizService and ActivatedRoute.
+   * The QuizService is responsible for retrieving quiz data, and the ActivatedRoute provides access to the route parameters.
+   * @param quizService 
+   * @param route 
+   */
   constructor(private quizService: QuizService, private route: ActivatedRoute){}
   quizID: string &#x3D; &quot;&quot;
   quiz: Quiz &#x3D; new Quiz;
   quizType &#x3D; &quot;Text&quot;;
   quizTime &#x3D; 10;
+
+  /**
+   * In the ngOnInit method, the component subscribes to the route parameters and retrieves the quizID from the parameters.
+   */
   ngOnInit(){
     this.route.params.subscribe(params &#x3D;&gt;{
       this.quizID &#x3D; params[&#x27;id&#x27;];
@@ -489,7 +502,7 @@ export class MasterAnswerComponent implements OnInit{
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
         var COMPONENT_TEMPLATE = '<div><app-quiz-answer [timeLeft]="quizTime"></app-quiz-answer></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BookmarksComponent', 'selector': 'app-bookmarks'},{'name': 'EditProfileComponent', 'selector': 'app-edit-profile'},{'name': 'FriendInfoComponent', 'selector': 'app-friend-info'},{'name': 'FriendsComponent', 'selector': 'app-friends'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LeaderboardComponent', 'selector': 'app-leaderboard'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MasterAnswerComponent', 'selector': 'app-master-answer'},{'name': 'QuizAnswerComponent', 'selector': 'app-quiz-answer'},{'name': 'QuizCreateComponent', 'selector': 'app-quiz-create'},{'name': 'QuizInfoComponent', 'selector': 'app-quiz-info'},{'name': 'QuizResultComponent', 'selector': 'app-quiz-result'},{'name': 'QuizSearchComponent', 'selector': 'app-quiz-search'},{'name': 'QuizTypeinComponent', 'selector': 'app-quiz-typein'},{'name': 'RegistrationComponent', 'selector': 'app-registration'}];
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BookmarksComponent', 'selector': 'app-bookmarks'},{'name': 'ChallengeComponent', 'selector': 'app-challenge'},{'name': 'EditProfileComponent', 'selector': 'app-edit-profile'},{'name': 'FriendInfoComponent', 'selector': 'app-friend-info'},{'name': 'FriendsComponent', 'selector': 'app-friends'},{'name': 'FriendSelectComponent', 'selector': 'app-friend-select'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LeaderboardComponent', 'selector': 'app-leaderboard'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MasterAnswerComponent', 'selector': 'app-master-answer'},{'name': 'QuizAnswerComponent', 'selector': 'app-quiz-answer'},{'name': 'QuizCreateComponent', 'selector': 'app-quiz-create'},{'name': 'QuizImageComponent', 'selector': 'app-quiz-image'},{'name': 'QuizInfoComponent', 'selector': 'app-quiz-info'},{'name': 'QuizResultComponent', 'selector': 'app-quiz-result'},{'name': 'QuizSearchComponent', 'selector': 'app-quiz-search'},{'name': 'QuizTypeinComponent', 'selector': 'app-quiz-typein'},{'name': 'RegistrationComponent', 'selector': 'app-registration'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'MasterAnswerComponent'};
 </script>

@@ -105,14 +105,18 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="14"
-                            class="link-to-prism">src/app/pipes/filter.pipe.ts:14</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="22"
+                            class="link-to-prism">src/app/pipes/filter.pipe.ts:22</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Filters the quizzes array based on the given category.
+If the category is &quot;Categories&quot; or an empty string, returns the original quizzes array.
+If the category is not empty or &quot;Categories&quot;, filters the array based on the quiz category.</p>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -123,6 +127,7 @@
                                     <td>Name</td>
                                     <td>Type</td>
                                     <td>Optional</td>
+                                    <td>Description</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -137,6 +142,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>The array of Quiz objects to filter.</p>
+
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>cat</td>
@@ -149,6 +158,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>The category to filter by.</p>
+
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -160,7 +173,8 @@
 
                     </div>
                     <div class="io-description">
-                        
+                        <p>The filtered array of Quiz objects.</p>
+
                     </div>
                 </td>
             </tr>
@@ -179,6 +193,15 @@ import { Quiz } from &#x27;../models/quiz&#x27;;
   name: &#x27;filter&#x27;
 })
 export class FilterPipe implements PipeTransform {
+
+  /**
+   * Filters the quizzes array based on the given category.
+   * If the category is &quot;Categories&quot; or an empty string, returns the original quizzes array.
+   * If the category is not empty or &quot;Categories&quot;, filters the array based on the quiz category.
+   * @param quizzes The array of Quiz objects to filter.
+   * @param cat The category to filter by.
+   * @returns The filtered array of Quiz objects.
+   */
 
   transform(quizzes: Quiz[], cat: string): any[]{
     if(cat &#x3D;&#x3D;&#x3D; &quot;Catergories&quot; || cat &#x3D;&#x3D;&#x3D; &#x27;&#x27;){

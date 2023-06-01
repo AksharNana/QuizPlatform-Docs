@@ -257,14 +257,17 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="48"
-                            class="link-to-prism">src/app/app.component.ts:48</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="55"
+                            class="link-to-prism">src/app/app.component.ts:55</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Search function, when the search bar is used, this function is called
+to take the search value and pass it as a parameter to the quiz-search component</p>
+</div>
 
                     <div class="io-description">
                         <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
@@ -294,8 +297,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="37"
-                            class="link-to-prism">src/app/app.component.ts:37</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="40"
+                            class="link-to-prism">src/app/app.component.ts:40</a></div>
                 </td>
             </tr>
 
@@ -347,7 +350,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/app.component.ts:25</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/app/app.component.ts:28</a></div>
                         </td>
                     </tr>
 
@@ -388,7 +391,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/app/app.component.ts:27</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/app/app.component.ts:30</a></div>
                         </td>
                     </tr>
 
@@ -450,7 +453,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">src/app/app.component.ts:32</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="35" class="link-to-prism">src/app/app.component.ts:35</a></div>
                         </td>
                     </tr>
 
@@ -481,7 +484,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/app/app.component.ts:20</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/app/app.component.ts:23</a></div>
                         </td>
                     </tr>
 
@@ -513,6 +516,9 @@ export class AppComponent {
 
   constructor(private router: Router){}
 
+  /*
+  * Get user from session storage, if there is no user, user will equal null
+  */ 
   user &#x3D; sessionStorage.getItem(&quot;User&quot;);
 
   /**
@@ -541,6 +547,10 @@ export class AppComponent {
     console.log(&quot;toggled navbar!&quot;);
   }
 
+  /**
+   * Search function, when the search bar is used, this function is called
+   * to take the search value and pass it as a parameter to the quiz-search component
+   */
   search(){
     let id &#x3D; this.search_bar?.nativeElement.value;
     console.log(&#x60;Searched for ${id}!&#x60;);
@@ -551,10 +561,10 @@ export class AppComponent {
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;nav class&#x3D;&quot;navbar is-transparent&quot; role&#x3D;&quot;navigation&quot; aria-label&#x3D;&quot;main navigation&quot;&gt;
+        <pre class="line-numbers"><code class="language-html">&lt;nav class&#x3D;&quot;navbar has-text-white&quot; role&#x3D;&quot;navigation&quot; aria-label&#x3D;&quot;main navigation&quot;&gt;
   &lt;div class&#x3D;&quot;navbar-brand&quot;&gt;
-    &lt;a class&#x3D;&quot;navbar-item&quot; href&#x3D;&quot;https://bulma.io&quot;&gt;
-      &lt;img src&#x3D;&quot;https://bulma.io/images/bulma-logo.png&quot; width&#x3D;&quot;112&quot; height&#x3D;&quot;28&quot;&gt;
+    &lt;a class&#x3D;&quot;navbar-item&quot;&gt;
+      &lt;img src&#x3D;&quot;../assets/images/logo.png&quot; width&#x3D;&quot;40&quot; height&#x3D;&quot;40&quot;&gt;
     &lt;/a&gt;
 
     &lt;a #burger (click)&#x3D;&quot;toggle()&quot; role&#x3D;&quot;button&quot; class&#x3D;&quot;navbar-burger&quot; aria-label&#x3D;&quot;menu&quot; aria-expanded&#x3D;&quot;false&quot;
@@ -567,32 +577,43 @@ export class AppComponent {
 
   &lt;div id&#x3D;&quot;navbarBasicExample&quot; class&#x3D;&quot;navbar-menu&quot; #navbar_menu&gt;
     &lt;div class&#x3D;&quot;navbar-start&quot;&gt;
-      &lt;a class&#x3D;&quot;navbar-item has-text-black&quot; routerLink&#x3D;&quot;home&quot;&gt;
+      &lt;a class&#x3D;&quot;navbar-item has-text-white&quot; routerLink&#x3D;&quot;home&quot;&gt;
         Home
       &lt;/a&gt;
 
-      &lt;a class&#x3D;&quot;navbar-item has-text-black&quot;&gt;
-        My Account
+      &lt;a class&#x3D;&quot;navbar-item has-text-white&quot; routerLink&#x3D;&quot;/leaderboard&quot;&gt;
+        Leaderboard
       &lt;/a&gt;
 
       &lt;div class&#x3D;&quot;navbar-item has-dropdown is-hoverable&quot;&gt;
-        &lt;a class&#x3D;&quot;navbar-link has-text-black&quot;&gt;
-          More
+        &lt;a class&#x3D;&quot;navbar-link has-text-white&quot;&gt;
+          My Profile
         &lt;/a&gt;
-
         &lt;div class&#x3D;&quot;navbar-dropdown has&quot;&gt;
-          &lt;a class&#x3D;&quot;navbar-item has-text-black&quot;&gt;
-            About
+          &lt;a class&#x3D;&quot;navbar-item is-primary has-icons-left&quot; routerLink&#x3D;&quot;/quiz-create&quot;&gt;
+            &lt;span class&#x3D;&quot;icon is-left&quot;&gt;
+              &lt;i class&#x3D;&quot;fas fa-plus&quot;&gt;&lt;/i&gt;
+            &lt;/span&gt;
+            &lt;strong&gt;Create Quiz&lt;/strong&gt;
           &lt;/a&gt;
-          &lt;a class&#x3D;&quot;navbar-item has-text-black&quot;&gt;
-            Jobs
+          &lt;a class&#x3D;&quot;navbar-item is-primary has-icons-left&quot; routerLink&#x3D;&quot;/bookmarks&quot;&gt;
+            &lt;span class&#x3D;&quot;icon is-left&quot;&gt;
+              &lt;i class&#x3D;&quot;fas fa-bookmark&quot;&gt;&lt;/i&gt; 
+            &lt;/span&gt;
+            &lt;strong&gt;Bookmarks&lt;/strong&gt;
           &lt;/a&gt;
-          &lt;a class&#x3D;&quot;navbar-item has-text-black&quot;&gt;
-            Contact
+          &lt;a class&#x3D;&quot;navbar-item is-primary has-icons-left&quot; routerLink&#x3D;&quot;/friends&quot;&gt;
+            &lt;span class&#x3D;&quot;icon is-left&quot;&gt;
+              &lt;i class&#x3D;&quot;fas fa-users&quot;&gt;&lt;/i&gt;
+              &lt;i class&#x3D;&quot;fa-solid fa-user-group&quot;&gt;&lt;/i&gt;
+            &lt;/span&gt;
+            &lt;strong&gt;Friends&lt;/strong&gt;
           &lt;/a&gt;
-          &lt;hr class&#x3D;&quot;navbar-divider&quot;&gt;
-          &lt;a class&#x3D;&quot;navbar-item has-text-black&quot;&gt;
-            Report an issue
+          &lt;a class&#x3D;&quot;navbar-item is-primary has-icons-left&quot; routerLink&#x3D;&quot;/edit-profile&quot;&gt;
+            &lt;span class&#x3D;&quot;icon is-left&quot;&gt;
+              &lt;i class&#x3D;&quot;fas fa-user&quot;&gt;&lt;/i&gt;
+            &lt;/span&gt;
+            &lt;strong&gt;Edit Profile&lt;/strong&gt;
           &lt;/a&gt;
         &lt;/div&gt;
       &lt;/div&gt;
@@ -600,44 +621,22 @@ export class AppComponent {
     &lt;div class&#x3D;&quot;navbar-end&quot;&gt;
       &lt;div class&#x3D;&quot;navbar-item&quot;&gt;
         &lt;div class&#x3D;&quot;buttons&quot;&gt;
-           &lt;div class&#x3D;&quot;field&quot;&gt;
+           &lt;a class&#x3D;&quot;field&quot;&gt;
             &lt;p class&#x3D;&quot;control has-icons-left&quot;&gt;
               &lt;input #search_bar (keyup.enter)&#x3D;&quot;search()&quot; class&#x3D;&quot;input is-rounded is-primary&quot; type&#x3D;&quot;text&quot; placeholder&#x3D;&quot;Search&quot;&gt;
               &lt;span class&#x3D;&quot;icon is-small is-left&quot;&gt;
                 &lt;i class&#x3D;&quot;fas fa-search&quot;&gt;&lt;/i&gt;
               &lt;/span&gt;
             &lt;/p&gt;
+          &lt;/a&gt;
+          &lt;div class&#x3D;&quot;hide&quot; *ngIf&#x3D;&quot;this.user &#x3D;&#x3D; null&quot;&gt;
+            &lt;a class&#x3D;&quot;button is-primary&quot; routerLink&#x3D;&quot;/register&quot;&gt;
+              &lt;strong&gt;Sign up&lt;/strong&gt;
+            &lt;/a&gt;
+            &lt;a class&#x3D;&quot;button is-light&quot; routerLink&#x3D;&quot;/login&quot;&gt;
+              Log in
+            &lt;/a&gt;
           &lt;/div&gt;
-          &lt;a class&#x3D;&quot;button is-primary has-icons-left&quot; routerLink&#x3D;&quot;/quiz-create&quot;&gt;
-            &lt;span class&#x3D;&quot;icon is-left&quot;&gt;
-              &lt;i class&#x3D;&quot;fas fa-bookmark&quot;&gt;&lt;/i&gt; 
-            &lt;/span&gt;
-            &lt;strong&gt;Create Quiz&lt;/strong&gt;
-          &lt;/a&gt;
-          &lt;a class&#x3D;&quot;button is-primary has-icons-left&quot; routerLink&#x3D;&quot;/bookmarks&quot;&gt;
-            &lt;span class&#x3D;&quot;icon is-left&quot;&gt;
-              &lt;i class&#x3D;&quot;fas fa-bookmark&quot;&gt;&lt;/i&gt; 
-            &lt;/span&gt;
-            &lt;strong&gt;Bookmark&lt;/strong&gt;
-          &lt;/a&gt;
-          &lt;a class&#x3D;&quot;button is-primary has-icons-left&quot; routerLink&#x3D;&quot;/leaderboard&quot;&gt;
-            &lt;span class&#x3D;&quot;icon is-left&quot;&gt;
-              &lt;i class&#x3D;&quot;fas fa-chart-bar&quot;&gt;&lt;/i&gt;
-            &lt;/span&gt;
-            &lt;strong&gt;Leaderboard&lt;/strong&gt;
-          &lt;/a&gt;
-          &lt;a class&#x3D;&quot;button is-primary has-icons-left&quot; routerLink&#x3D;&quot;/friends&quot;&gt;
-            &lt;span class&#x3D;&quot;icon is-left&quot;&gt;
-              &lt;i class&#x3D;&quot;fas fa-user&quot;&gt;&lt;/i&gt;
-            &lt;/span&gt;
-            &lt;strong&gt;Friends&lt;/strong&gt;
-          &lt;/a&gt;
-          &lt;a class&#x3D;&quot;button is-primary&quot; routerLink&#x3D;&quot;/register&quot;&gt;
-            &lt;strong&gt;Sign up&lt;/strong&gt;
-          &lt;/a&gt;
-          &lt;a class&#x3D;&quot;button is-light&quot; routerLink&#x3D;&quot;/login&quot;&gt;
-            Log in
-          &lt;/a&gt;
         &lt;/div&gt;
       &lt;/div&gt;
     &lt;/div&gt;
@@ -658,7 +657,10 @@ export class AppComponent {
 .buttons{
   justify-content: center;
 }
-</code></pre>
+
+.navbar{
+  background-color: #012e58;
+}</code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-tree">
@@ -686,8 +688,8 @@ export class AppComponent {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><nav class="navbar is-transparent" role="navigation" aria-label="main navigation">  <div class="navbar-brand">    <a class="navbar-item" href="https://bulma.io">      <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">    </a>    <a #burger (click)="toggle()" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"      data-target="navbarBasicExample">      <span aria-hidden="true"></span>      <span aria-hidden="true"></span>      <span aria-hidden="true"></span>    </a>  </div>  <div id="navbarBasicExample" class="navbar-menu" #navbar_menu>    <div class="navbar-start">      <a class="navbar-item has-text-black" routerLink="home">        Home      </a>      <a class="navbar-item has-text-black">        My Account      </a>      <div class="navbar-item has-dropdown is-hoverable">        <a class="navbar-link has-text-black">          More        </a>        <div class="navbar-dropdown has">          <a class="navbar-item has-text-black">            About          </a>          <a class="navbar-item has-text-black">            Jobs          </a>          <a class="navbar-item has-text-black">            Contact          </a>          <hr class="navbar-divider">          <a class="navbar-item has-text-black">            Report an issue          </a>        </div>      </div>    </div>    <div class="navbar-end">      <div class="navbar-item">        <div class="buttons">           <div class="field">            <p class="control has-icons-left">              <input #search_bar (keyup.enter)="search()" class="input is-rounded is-primary" type="text" placeholder="Search">              <span class="icon is-small is-left">                <i class="fas fa-search"></i>              </span>            </p>          </div>          <a class="button is-primary has-icons-left" routerLink="/quiz-create">            <span class="icon is-left">              <i class="fas fa-bookmark"></i>             </span>            <strong>Create Quiz</strong>          </a>          <a class="button is-primary has-icons-left" routerLink="/bookmarks">            <span class="icon is-left">              <i class="fas fa-bookmark"></i>             </span>            <strong>Bookmark</strong>          </a>          <a class="button is-primary has-icons-left" routerLink="/leaderboard">            <span class="icon is-left">              <i class="fas fa-chart-bar"></i>            </span>            <strong>Leaderboard</strong>          </a>          <a class="button is-primary has-icons-left" routerLink="/friends">            <span class="icon is-left">              <i class="fas fa-user"></i>            </span>            <strong>Friends</strong>          </a>          <a class="button is-primary" routerLink="/register">            <strong>Sign up</strong>          </a>          <a class="button is-light" routerLink="/login">            Log in          </a>        </div>      </div>    </div>  </div></nav><router-outlet></router-outlet></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BookmarksComponent', 'selector': 'app-bookmarks'},{'name': 'EditProfileComponent', 'selector': 'app-edit-profile'},{'name': 'FriendInfoComponent', 'selector': 'app-friend-info'},{'name': 'FriendsComponent', 'selector': 'app-friends'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LeaderboardComponent', 'selector': 'app-leaderboard'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MasterAnswerComponent', 'selector': 'app-master-answer'},{'name': 'QuizAnswerComponent', 'selector': 'app-quiz-answer'},{'name': 'QuizCreateComponent', 'selector': 'app-quiz-create'},{'name': 'QuizInfoComponent', 'selector': 'app-quiz-info'},{'name': 'QuizResultComponent', 'selector': 'app-quiz-result'},{'name': 'QuizSearchComponent', 'selector': 'app-quiz-search'},{'name': 'QuizTypeinComponent', 'selector': 'app-quiz-typein'},{'name': 'RegistrationComponent', 'selector': 'app-registration'}];
+        var COMPONENT_TEMPLATE = '<div><nav class="navbar has-text-white" role="navigation" aria-label="main navigation">  <div class="navbar-brand">    <a class="navbar-item">      <img src="../assets/images/logo.png" width="40" height="40">    </a>    <a #burger (click)="toggle()" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"      data-target="navbarBasicExample">      <span aria-hidden="true"></span>      <span aria-hidden="true"></span>      <span aria-hidden="true"></span>    </a>  </div>  <div id="navbarBasicExample" class="navbar-menu" #navbar_menu>    <div class="navbar-start">      <a class="navbar-item has-text-white" routerLink="home">        Home      </a>      <a class="navbar-item has-text-white" routerLink="/leaderboard">        Leaderboard      </a>      <div class="navbar-item has-dropdown is-hoverable">        <a class="navbar-link has-text-white">          My Profile        </a>        <div class="navbar-dropdown has">          <a class="navbar-item is-primary has-icons-left" routerLink="/quiz-create">            <span class="icon is-left">              <i class="fas fa-plus"></i>            </span>            <strong>Create Quiz</strong>          </a>          <a class="navbar-item is-primary has-icons-left" routerLink="/bookmarks">            <span class="icon is-left">              <i class="fas fa-bookmark"></i>             </span>            <strong>Bookmarks</strong>          </a>          <a class="navbar-item is-primary has-icons-left" routerLink="/friends">            <span class="icon is-left">              <i class="fas fa-users"></i>              <i class="fa-solid fa-user-group"></i>            </span>            <strong>Friends</strong>          </a>          <a class="navbar-item is-primary has-icons-left" routerLink="/edit-profile">            <span class="icon is-left">              <i class="fas fa-user"></i>            </span>            <strong>Edit Profile</strong>          </a>        </div>      </div>    </div>    <div class="navbar-end">      <div class="navbar-item">        <div class="buttons">           <a class="field">            <p class="control has-icons-left">              <input #search_bar (keyup.enter)="search()" class="input is-rounded is-primary" type="text" placeholder="Search">              <span class="icon is-small is-left">                <i class="fas fa-search"></i>              </span>            </p>          </a>          <div class="hide" *ngIf="this.user == null">            <a class="button is-primary" routerLink="/register">              <strong>Sign up</strong>            </a>            <a class="button is-light" routerLink="/login">              Log in            </a>          </div>        </div>      </div>    </div>  </div></nav><router-outlet></router-outlet></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BookmarksComponent', 'selector': 'app-bookmarks'},{'name': 'ChallengeComponent', 'selector': 'app-challenge'},{'name': 'EditProfileComponent', 'selector': 'app-edit-profile'},{'name': 'FriendInfoComponent', 'selector': 'app-friend-info'},{'name': 'FriendsComponent', 'selector': 'app-friends'},{'name': 'FriendSelectComponent', 'selector': 'app-friend-select'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LeaderboardComponent', 'selector': 'app-leaderboard'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MasterAnswerComponent', 'selector': 'app-master-answer'},{'name': 'QuizAnswerComponent', 'selector': 'app-quiz-answer'},{'name': 'QuizCreateComponent', 'selector': 'app-quiz-create'},{'name': 'QuizImageComponent', 'selector': 'app-quiz-image'},{'name': 'QuizInfoComponent', 'selector': 'app-quiz-info'},{'name': 'QuizResultComponent', 'selector': 'app-quiz-result'},{'name': 'QuizSearchComponent', 'selector': 'app-quiz-search'},{'name': 'QuizTypeinComponent', 'selector': 'app-quiz-typein'},{'name': 'RegistrationComponent', 'selector': 'app-registration'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'AppComponent'};
 </script>

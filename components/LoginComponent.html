@@ -199,7 +199,8 @@
 
                 <tr>
                     <td class="col-md-4">
-                            <div class="io-description"><p>Constructor to inject user Service and router</p>
+                            <div class="io-description"><p>The LoginComponent class contains a constructor that injects the UserService and Router.
+The UserService is responsible for handling user-related operations, and the Router is used for navigating to different routes.</p>
 </div>
                             <div>
                                     <b>Parameters :</b>
@@ -276,15 +277,16 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="39"
-                            class="link-to-prism">src/app/login/login.component.ts:39</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="46"
+                            class="link-to-prism">src/app/login/login.component.ts:46</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-description"><p>Function that will login user</p>
+                    <div class="io-description"><p>The login method is called when the login form is submitted. It retrieves the values of the
+email and password form controls and creates a LoginUser object with the provided values.</p>
 </div>
 
                     <div class="io-description">
@@ -328,13 +330,16 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/login/login.component.ts:25</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">src/app/login/login.component.ts:31</a></div>
                         </td>
                     </tr>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-description"><p>Create a FormGroup and setup form controls for each field along with Validators</p>
+                    <div class="io-description"><p>The component declares and initializes a login_form property of type FormGroup.
+This FormGroup represents the login form and contains two form controls: email and password.
+The form controls are set up with validators to enforce required fields, valid email format,
+and a minimum password length of 8 characters.</p>
 </div>
                 </td>
             </tr>
@@ -363,7 +368,7 @@
                 </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="61" class="link-to-prism">src/app/login/login.component.ts:61</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="68" class="link-to-prism">src/app/login/login.component.ts:68</a></div>
                                 </td>
                             </tr>
                     <tr>
@@ -392,7 +397,7 @@
                 </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="67" class="link-to-prism">src/app/login/login.component.ts:67</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="74" class="link-to-prism">src/app/login/login.component.ts:74</a></div>
                                 </td>
                             </tr>
                     <tr>
@@ -426,14 +431,20 @@ import { UserService } from &#x27;../services/user.service&#x27;;
 })
 export class LoginComponent {
 
-  /**
-   * Constructor to inject user Service and router
-   */
+/**
+ * The LoginComponent class contains a constructor that injects the UserService and Router. 
+ * The UserService is responsible for handling user-related operations, and the Router is used for navigating to different routes.
+ * @param userService 
+ * @param router 
+ */
   constructor(private userService: UserService, private router: Router){}
 
-  /**
-     * Create a FormGroup and setup form controls for each field along with Validators
-    */
+/**
+ * The component declares and initializes a login_form property of type FormGroup. 
+ * This FormGroup represents the login form and contains two form controls: email and password.
+ * The form controls are set up with validators to enforce required fields, valid email format, 
+ * and a minimum password length of 8 characters.
+ */
   login_form &#x3D; new FormGroup({
     email: new FormControl(&#x27;&#x27;, [
       Validators.required,
@@ -446,8 +457,9 @@ export class LoginComponent {
   });
 
   /**
-   * Function that will login user
-  */
+   * The login method is called when the login form is submitted. It retrieves the values of the 
+   * email and password form controls and creates a LoginUser object with the provided values.
+   */
   public login() {
     let email : string &#x3D; this.login_form.get(&quot;email&quot;)?.value!;
     let pass : string &#x3D; this.login_form.get(&quot;password&quot;)?.value!;
@@ -498,7 +510,7 @@ export class LoginComponent {
                             &lt;i class&#x3D;&quot;fas fa-check&quot;&gt;&lt;/i&gt;
                         &lt;/span&gt;
                     &lt;/p&gt;
-                    &lt;div *ngIf&#x3D;&quot;email?.invalid &amp;&amp; (email?.dirty || email?.touched) &quot;&gt;
+                    &lt;div class&#x3D;&quot;has-text-white&quot; *ngIf&#x3D;&quot;email?.invalid &amp;&amp; (email?.dirty || email?.touched) &quot;&gt;
                         &lt;div *ngIf&#x3D;&quot;email?.errors?.[&#x27;required&#x27;]&quot;&gt;
                             Email is required.
                         &lt;/div&gt;
@@ -514,7 +526,7 @@ export class LoginComponent {
                             &lt;i class&#x3D;&quot;fas fa-lock&quot;&gt;&lt;/i&gt;
                         &lt;/span&gt;
                     &lt;/p&gt;
-                    &lt;div *ngIf&#x3D;&quot;password?.invalid &amp;&amp; (password?.dirty || password?.touched) &quot;&gt;
+                    &lt;div class&#x3D;&quot;has-text-white&quot; *ngIf&#x3D;&quot;password?.invalid &amp;&amp; (password?.dirty || password?.touched) &quot;&gt;
                         &lt;div *ngIf&#x3D;&quot;password?.errors?.[&#x27;required&#x27;]&quot;&gt;
                             Password is required.
                         &lt;/div&gt;
@@ -553,10 +565,10 @@ export class LoginComponent {
     // background-size: 6em 6em;
     // background-color: #242325;
     // opacity: 1;
-    background-image: url(&quot;../../assets/images/pexels-kellie-churchman-1001682.jpg&quot;);
+    // background-image: url(&quot;../../assets/images/pexels-kellie-churchman-1001682.jpg&quot;);
+    background-image: url(&quot;../../assets/images/minimalistRoom.jpeg&quot;);
     background-color: gray;
     background-blend-mode: multiply;
-
 
     /* Center and scale the image nicely */
     background-position: center;
@@ -629,8 +641,8 @@ select {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="class">    <form [formGroup]="login_form" (ngSubmit)="login()" id="login_form">        <div class="update">            <div class="columns is-flex is-flex-direction-column box">                <div class="field">                    <p class="control has-icons-left has-icons-right">                        <input class="input" type="email" placeholder="Email" formControlName="email" required>                        <span class="icon is-small is-left">                            <i class="fas fa-envelope"></i>                        </span>                        <span class="icon is-small is-right">                            <i class="fas fa-check"></i>                        </span>                    </p>                    <div *ngIf="email?.invalid && (email?.dirty || email?.touched) ">                        <div *ngIf="email?.errors?.[\'required\']">                            Email is required.                        </div>                        <div *ngIf="email?.errors?.[\'email\']">                            Invalid Email                        </div>                    </div>                </div>                <div class="field">                    <p class="control has-icons-left">                        <input class="input" type="password" placeholder="Password" formControlName="password" required>                        <span class="icon is-small is-left">                            <i class="fas fa-lock"></i>                        </span>                    </p>                    <div *ngIf="password?.invalid && (password?.dirty || password?.touched) ">                        <div *ngIf="password?.errors?.[\'required\']">                            Password is required.                        </div>                        <div *ngIf="password?.errors?.[\'minlength\']">                            Password too short.                        </div>                    </div>                </div>                <div class="field">                    <p class="control">                        <button class="button is-success is-fullwidth" [disabled]="!login_form.valid">                            Login                        </button>                    </p>                </div>                <div class="field has-text-centered has-text-white">                    <p class="control">                      Don\'t have an account?                       <a routerLink="/register" class="has-text-white">Register</a>                    </p>                  </div>            </div>        </div>    </form></div></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BookmarksComponent', 'selector': 'app-bookmarks'},{'name': 'EditProfileComponent', 'selector': 'app-edit-profile'},{'name': 'FriendInfoComponent', 'selector': 'app-friend-info'},{'name': 'FriendsComponent', 'selector': 'app-friends'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LeaderboardComponent', 'selector': 'app-leaderboard'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MasterAnswerComponent', 'selector': 'app-master-answer'},{'name': 'QuizAnswerComponent', 'selector': 'app-quiz-answer'},{'name': 'QuizCreateComponent', 'selector': 'app-quiz-create'},{'name': 'QuizInfoComponent', 'selector': 'app-quiz-info'},{'name': 'QuizResultComponent', 'selector': 'app-quiz-result'},{'name': 'QuizSearchComponent', 'selector': 'app-quiz-search'},{'name': 'QuizTypeinComponent', 'selector': 'app-quiz-typein'},{'name': 'RegistrationComponent', 'selector': 'app-registration'}];
+        var COMPONENT_TEMPLATE = '<div><div class="class">    <form [formGroup]="login_form" (ngSubmit)="login()" id="login_form">        <div class="update">            <div class="columns is-flex is-flex-direction-column box">                <div class="field">                    <p class="control has-icons-left has-icons-right">                        <input class="input" type="email" placeholder="Email" formControlName="email" required>                        <span class="icon is-small is-left">                            <i class="fas fa-envelope"></i>                        </span>                        <span class="icon is-small is-right">                            <i class="fas fa-check"></i>                        </span>                    </p>                    <div class="has-text-white" *ngIf="email?.invalid && (email?.dirty || email?.touched) ">                        <div *ngIf="email?.errors?.[\'required\']">                            Email is required.                        </div>                        <div *ngIf="email?.errors?.[\'email\']">                            Invalid Email                        </div>                    </div>                </div>                <div class="field">                    <p class="control has-icons-left">                        <input class="input" type="password" placeholder="Password" formControlName="password" required>                        <span class="icon is-small is-left">                            <i class="fas fa-lock"></i>                        </span>                    </p>                    <div class="has-text-white" *ngIf="password?.invalid && (password?.dirty || password?.touched) ">                        <div *ngIf="password?.errors?.[\'required\']">                            Password is required.                        </div>                        <div *ngIf="password?.errors?.[\'minlength\']">                            Password too short.                        </div>                    </div>                </div>                <div class="field">                    <p class="control">                        <button class="button is-success is-fullwidth" [disabled]="!login_form.valid">                            Login                        </button>                    </p>                </div>                <div class="field has-text-centered has-text-white">                    <p class="control">                      Don\'t have an account?                       <a routerLink="/register" class="has-text-white">Register</a>                    </p>                  </div>            </div>        </div>    </form></div></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BookmarksComponent', 'selector': 'app-bookmarks'},{'name': 'ChallengeComponent', 'selector': 'app-challenge'},{'name': 'EditProfileComponent', 'selector': 'app-edit-profile'},{'name': 'FriendInfoComponent', 'selector': 'app-friend-info'},{'name': 'FriendsComponent', 'selector': 'app-friends'},{'name': 'FriendSelectComponent', 'selector': 'app-friend-select'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LeaderboardComponent', 'selector': 'app-leaderboard'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MasterAnswerComponent', 'selector': 'app-master-answer'},{'name': 'QuizAnswerComponent', 'selector': 'app-quiz-answer'},{'name': 'QuizCreateComponent', 'selector': 'app-quiz-create'},{'name': 'QuizImageComponent', 'selector': 'app-quiz-image'},{'name': 'QuizInfoComponent', 'selector': 'app-quiz-info'},{'name': 'QuizResultComponent', 'selector': 'app-quiz-result'},{'name': 'QuizSearchComponent', 'selector': 'app-quiz-search'},{'name': 'QuizTypeinComponent', 'selector': 'app-quiz-typein'},{'name': 'RegistrationComponent', 'selector': 'app-registration'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'LoginComponent'};
 </script>

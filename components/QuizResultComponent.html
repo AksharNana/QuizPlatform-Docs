@@ -189,6 +189,8 @@
 
                 <tr>
                     <td class="col-md-4">
+                            <div class="io-description"><p>Constructor: The constructor is used for dependency injection, where an instance of the ActivatedRoute is injected into the component.</p>
+</div>
                             <div>
                                     <b>Parameters :</b>
                                     <table class="params">
@@ -250,14 +252,19 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="16"
-                            class="link-to-prism">src/app/quiz-result/quiz-result.component.ts:16</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="27"
+                            class="link-to-prism">src/app/quiz-result/quiz-result.component.ts:27</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>ngOnInit: The ngOnInit lifecycle hook is called when the component is initialized.
+It subscribes to the route parameters to get the userid, quizid, and result from the URL.
+These parameters are typically passed as part of the route configuration.
+The component then assigns the retrieved parameter values to its corresponding properties for further use.</p>
+</div>
 
                     <div class="io-description">
                         <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
@@ -396,8 +403,19 @@ export class QuizResultComponent implements OnInit{
   userid: any;
   result: any;
   quizid: any; 
+
+  /**
+   * Constructor: The constructor is used for dependency injection, where an instance of the ActivatedRoute is injected into the component.
+   * @param route 
+   */
   constructor(private route: ActivatedRoute){}
 
+  /**
+   * ngOnInit: The ngOnInit lifecycle hook is called when the component is initialized. 
+   * It subscribes to the route parameters to get the userid, quizid, and result from the URL. 
+   * These parameters are typically passed as part of the route configuration. 
+   * The component then assigns the retrieved parameter values to its corresponding properties for further use.
+   */
   ngOnInit(): void {
     this.sub &#x3D; this.route.params.subscribe(params &#x3D;&gt;{
       this.userid &#x3D; params[&#x27;user&#x27;];
@@ -451,7 +469,7 @@ export class QuizResultComponent implements OnInit{
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
         var COMPONENT_TEMPLATE = '<div><div class="class has-text-black">    {{userid}}    {{quizid}}    {{result}}</div></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BookmarksComponent', 'selector': 'app-bookmarks'},{'name': 'EditProfileComponent', 'selector': 'app-edit-profile'},{'name': 'FriendInfoComponent', 'selector': 'app-friend-info'},{'name': 'FriendsComponent', 'selector': 'app-friends'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LeaderboardComponent', 'selector': 'app-leaderboard'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MasterAnswerComponent', 'selector': 'app-master-answer'},{'name': 'QuizAnswerComponent', 'selector': 'app-quiz-answer'},{'name': 'QuizCreateComponent', 'selector': 'app-quiz-create'},{'name': 'QuizInfoComponent', 'selector': 'app-quiz-info'},{'name': 'QuizResultComponent', 'selector': 'app-quiz-result'},{'name': 'QuizSearchComponent', 'selector': 'app-quiz-search'},{'name': 'QuizTypeinComponent', 'selector': 'app-quiz-typein'},{'name': 'RegistrationComponent', 'selector': 'app-registration'}];
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BookmarksComponent', 'selector': 'app-bookmarks'},{'name': 'ChallengeComponent', 'selector': 'app-challenge'},{'name': 'EditProfileComponent', 'selector': 'app-edit-profile'},{'name': 'FriendInfoComponent', 'selector': 'app-friend-info'},{'name': 'FriendsComponent', 'selector': 'app-friends'},{'name': 'FriendSelectComponent', 'selector': 'app-friend-select'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LeaderboardComponent', 'selector': 'app-leaderboard'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MasterAnswerComponent', 'selector': 'app-master-answer'},{'name': 'QuizAnswerComponent', 'selector': 'app-quiz-answer'},{'name': 'QuizCreateComponent', 'selector': 'app-quiz-create'},{'name': 'QuizImageComponent', 'selector': 'app-quiz-image'},{'name': 'QuizInfoComponent', 'selector': 'app-quiz-info'},{'name': 'QuizResultComponent', 'selector': 'app-quiz-result'},{'name': 'QuizSearchComponent', 'selector': 'app-quiz-search'},{'name': 'QuizTypeinComponent', 'selector': 'app-quiz-typein'},{'name': 'RegistrationComponent', 'selector': 'app-registration'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'QuizResultComponent'};
 </script>

@@ -66,6 +66,13 @@
         </p>
 
 
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>Represents the history of a user&#39;s performance on a specific quiz.</p>
+
+            </p>
 
 
 
@@ -134,7 +141,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="2" class="link-to-prism">src/app/models/history.ts:2</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="5" class="link-to-prism">src/app/models/history.ts:5</a></div>
                         </td>
                     </tr>
 
@@ -165,7 +172,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="4" class="link-to-prism">src/app/models/history.ts:4</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="7" class="link-to-prism">src/app/models/history.ts:7</a></div>
                         </td>
                     </tr>
 
@@ -196,7 +203,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="3" class="link-to-prism">src/app/models/history.ts:3</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="6" class="link-to-prism">src/app/models/history.ts:6</a></div>
                         </td>
                     </tr>
 
@@ -220,11 +227,15 @@
     UserID: string &#x3D; &quot;&quot;;
     Score: Number &#x3D; 0;
 }
-
+/**
+ * Represents an array of quiz history entries.
+ */
 export class HistoryArr{
     QuizID: string &#x3D; &quot;&quot;;
     UserID: string &#x3D; &quot;&quot;;
-    Score: Number &#x3D; 0;
+    QuizName: string &#x3D; &quot;&quot;;
+    Thumbnail: string &#x3D; &quot;&quot;;
+    Score: number &#x3D; 0;
     Date: string &#x3D; &quot;&quot;;   
     __v: Number &#x3D; 0;
     _id: string &#x3D; &quot;&quot;;

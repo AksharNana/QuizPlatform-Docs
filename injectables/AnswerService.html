@@ -66,7 +66,7 @@
                 <h3>Description</h3>
             </p>
             <p class="comment">
-                <p>Angular Directive</p>
+                <p>Angular Directive for managing answers</p>
 
             </p>
 
@@ -205,15 +205,15 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="29"
-                            class="link-to-prism">src/app/services/answer.service.ts:29</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="31"
+                            class="link-to-prism">src/app/services/answer.service.ts:31</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-description"><p>Create Answer request</p>
+                    <div class="io-description"><p>Creates a new answer</p>
 </div>
 
                     <div class="io-description">
@@ -225,6 +225,7 @@
                                     <td>Name</td>
                                     <td>Type</td>
                                     <td>Optional</td>
+                                    <td>Description</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -239,6 +240,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>The new answer object to create</p>
+
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -250,7 +255,8 @@
 
                     </div>
                     <div class="io-description">
-                        
+                        <p>An observable of the created answer</p>
+
                     </div>
                 </td>
             </tr>
@@ -276,15 +282,15 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="45"
-                            class="link-to-prism">src/app/services/answer.service.ts:45</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="47"
+                            class="link-to-prism">src/app/services/answer.service.ts:47</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-description"><p>Creates many answers</p>
+                    <div class="io-description"><p>Creates multiple answers</p>
 </div>
 
                     <div class="io-description">
@@ -296,6 +302,7 @@
                                     <td>Name</td>
                                     <td>Type</td>
                                     <td>Optional</td>
+                                    <td>Description</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -310,6 +317,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>The array of new answer objects to create</p>
+
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -321,7 +332,7 @@
 
                     </div>
                     <div class="io-description">
-                        <p>Answer[]</p>
+                        <p>An observable of an array of created answers</p>
 
                     </div>
                 </td>
@@ -348,15 +359,15 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="97"
-                            class="link-to-prism">src/app/services/answer.service.ts:97</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="99"
+                            class="link-to-prism">src/app/services/answer.service.ts:99</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-description"><p>Delete the answer from database</p>
+                    <div class="io-description"><p>Deletes an answer from the database</p>
 </div>
 
                     <div class="io-description">
@@ -368,6 +379,7 @@
                                     <td>Name</td>
                                     <td>Type</td>
                                     <td>Optional</td>
+                                    <td>Description</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -382,6 +394,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>The ID of the answer to delete</p>
+
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -393,7 +409,7 @@
 
                     </div>
                     <div class="io-description">
-                        <p>any</p>
+                        <p>An observable of the deletion result</p>
 
                     </div>
                 </td>
@@ -420,15 +436,15 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="71"
-                            class="link-to-prism">src/app/services/answer.service.ts:71</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="73"
+                            class="link-to-prism">src/app/services/answer.service.ts:73</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-description"><p>Get answers to a specific question</p>
+                    <div class="io-description"><p>Retrieves answers for a specific question</p>
 </div>
 
                     <div class="io-description">
@@ -440,6 +456,7 @@
                                     <td>Name</td>
                                     <td>Type</td>
                                     <td>Optional</td>
+                                    <td>Description</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -454,6 +471,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>The ID of the question</p>
+
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -465,7 +486,7 @@
 
                     </div>
                     <div class="io-description">
-                        <p>Answer[]</p>
+                        <p>An observable of an array of answers</p>
 
                     </div>
                 </td>
@@ -492,15 +513,15 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="60"
-                            class="link-to-prism">src/app/services/answer.service.ts:60</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="62"
+                            class="link-to-prism">src/app/services/answer.service.ts:62</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-description"><p>Get all answers for all quizzes</p>
+                    <div class="io-description"><p>Retrieves all answers for all quizzes</p>
 </div>
 
                     <div>
@@ -510,7 +531,7 @@
 
                     </div>
                     <div class="io-description">
-                        <p>Answer[]</p>
+                        <p>An observable of an array of answers</p>
 
                     </div>
                 </td>
@@ -537,8 +558,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="83"
-                            class="link-to-prism">src/app/services/answer.service.ts:83</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="85"
+                            class="link-to-prism">src/app/services/answer.service.ts:85</a></div>
                 </td>
             </tr>
 
@@ -557,6 +578,7 @@
                                     <td>Name</td>
                                     <td>Type</td>
                                     <td>Optional</td>
+                                    <td>Description</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -571,6 +593,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>The ID of the answer to update</p>
+
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>answer</td>
@@ -583,6 +609,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>The updated answer object</p>
+
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -594,7 +624,7 @@
 
                     </div>
                     <div class="io-description">
-                        <p>Answer</p>
+                        <p>An observable of the updated answer</p>
 
                     </div>
                 </td>
@@ -637,7 +667,7 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-description"><p>Base url for answer calls</p>
+                    <div class="io-description"><p>Base url for answer API calls</p>
 </div>
                 </td>
             </tr>
@@ -657,7 +687,7 @@ import { Answer, NewAnswer, UpdateAnswer } from &#x27;../models/answer&#x27;;
 import { handleError } from &#x27;../utilities/errorhandler&#x27;;
 
 /**
- * Angular Directive
+ * Angular Directive for managing answers
  */
 @Injectable({
   providedIn: &#x27;root&#x27;
@@ -671,12 +701,14 @@ export class AnswerService {
   constructor(private http: HttpClient) { }
 
   /**
-   * Base url for answer calls
+   * Base url for answer API calls
    */
   base_url &#x3D; &quot;https://clumsy-apron-ray.cyclic.app/api/answer&quot;;
 
     /**
-   * Create Answer request
+   * Creates a new answer
+   * @param answer The new answer object to create
+   * @returns An observable of the created answer
    */
   create_answer(answer: NewAnswer): Observable&lt;any&gt; {
     let nans &#x3D; JSON.stringify(answer);
@@ -690,9 +722,9 @@ export class AnswerService {
   }
 
   /**
-   * Creates many answers
-   * @param answerArr 
-   * @returns Answer[]
+   * Creates multiple answers
+   * @param answerArr The array of new answer objects to create
+   * @returns An observable of an array of created answers
    */
   create_many_answers(answerArr: NewAnswer[]) : Observable&lt;any[]&gt;{
     let nans &#x3D; JSON.stringify(answerArr);
@@ -706,8 +738,8 @@ export class AnswerService {
   }
   
   /**
-   * Get all answers for all quizzes
-   * @returns Answer[]
+   * Retrieves all answers for all quizzes
+   * @returns An observable of an array of answers
    */
   getAllAnswers() : Observable&lt;any[]&gt;{
     return this.http.get&lt;Answer[]&gt;(this.base_url+&quot;/getAllAnswers&quot;).pipe(
@@ -716,9 +748,9 @@ export class AnswerService {
   }
 
   /**
-   * Get answers to a specific question
-   * @param QuestionID 
-   * @returns Answer[]
+   * Retrieves answers for a specific question
+   * @param QuestionID The ID of the question
+   * @returns An observable of an array of answers
    */
   get_question_answer(QuestionID: String) : Observable&lt;any[]&gt;{
     return this.http.get&lt;Answer[]&gt;(this.base_url+&quot;/getAnswers/&quot;+QuestionID).pipe(
@@ -728,9 +760,9 @@ export class AnswerService {
 
   /**
    * Updates an answer
-   * @param id 
-   * @param answer 
-   * @returns Answer
+   * @param id The ID of the answer to update
+   * @param answer The updated answer object
+   * @returns An observable of the updated answer
    */
   update_answer(id:String, answer:UpdateAnswer) : Observable&lt;any&gt;{
     let nans &#x3D; JSON.stringify(answer);
@@ -742,9 +774,9 @@ export class AnswerService {
   }
   
   /**
-   * Delete the answer from database
-   * @param id 
-   * @returns any
+   * Deletes an answer from the database
+   * @param id The ID of the answer to delete
+   * @returns An observable of the deletion result
    */
   delete_answer(id: string) : Observable&lt;any&gt;{
     return this.http.delete(this.base_url+&quot;/deleteAnswer/&quot;+id).pipe(

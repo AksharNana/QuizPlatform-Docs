@@ -94,6 +94,9 @@
                         <i>Default value : </i><code>(control: AbstractControl): ValidationErrors | null &#x3D;&gt; {
     const ctrl &#x3D; control.get(&quot;password&quot;);
     const match_ctrl &#x3D; control.get(&quot;confirm_password&quot;);
+    /*
+    * Returns true when passowrd and confirm password have matching values. Reruns the ValidationError if they don&#x27;t match
+    */
     return ctrl &amp;&amp; match_ctrl &amp;&amp; ctrl.value !&#x3D;&#x3D; match_ctrl.value ? { confirmPassword: false } : null;
 }</code>
                     </td>

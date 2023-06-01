@@ -91,6 +91,9 @@ import { QuizResultComponent } from &#x27;./quiz-result/quiz-result.component&#x
 import { FriendInfoComponent } from &#x27;./friend-info/friend-info.component&#x27;;
 import { LeaderboardComponent } from &#x27;./leaderboard/leaderboard.component&#x27;;
 import { QuizTypeinComponent } from &#x27;./quiz-typein/quiz-typein.component&#x27;;
+import { QuizImageComponent } from &#x27;./quiz-image/quiz-image.component&#x27;;
+import { FriendSelectComponent } from &#x27;./friend-select/friend-select.component&#x27;;
+import { ChallengeComponent } from &#x27;./challenge/challenge.component&#x27;;
 
 
 /**
@@ -112,6 +115,9 @@ const routes: Routes &#x3D; [
   {path: &quot;friends&quot;, component: FriendsComponent, canActivate: [EditProfileGuard]},
   {path: &quot;friend-info/:id&quot;, component: FriendInfoComponent, canActivate: [EditProfileGuard]},
   {path: &quot;leaderboard&quot;, component: LeaderboardComponent},
+  {path: &quot;quiz-image/:id&quot;,component: QuizImageComponent},
+  {path: &quot;friend-select/:id&quot;,component: FriendSelectComponent},
+  {path: &quot;challenge/:id&quot;, component: ChallengeComponent},
   {path: &#x27;**&#x27;, redirectTo: &#x27;home&#x27;, pathMatch: &#x27;full&#x27;}
 ];
 

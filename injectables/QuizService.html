@@ -118,6 +118,9 @@
                                 <a href="#get_quiz_categories" >get_quiz_categories</a>
                             </li>
                             <li>
+                                <a href="#get_quizname_by_ID" >get_quizname_by_ID</a>
+                            </li>
+                            <li>
                                 <a href="#getAllQuiz" >getAllQuiz</a>
                             </li>
                             <li>
@@ -627,6 +630,75 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
+                    <a name="get_quizname_by_ID"></a>
+                    <span class="name">
+                        <span ><b>get_quizname_by_ID</b></span>
+                        <a href="#get_quizname_by_ID"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>get_quizname_by_ID(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="140"
+                            class="link-to-prism">src/app/services/quiz.service.ts:140</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>id</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;any&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
                     <a name="getAllQuiz"></a>
                     <span class="name">
                         <span ><b>getAllQuiz</b></span>
@@ -1012,6 +1084,11 @@ export class QuizService {
     });
   }
 
+  get_quizname_by_ID(id: string) : Observable&lt;any&gt;{
+    return this.http.get&lt;Quiz&gt;(this.base_url+&quot;/getQuizName/&quot;+id).pipe(
+      catchError(handleError)
+    );
+  }
 
   
 }</code></pre>

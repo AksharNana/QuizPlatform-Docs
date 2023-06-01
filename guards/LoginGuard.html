@@ -122,14 +122,16 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="9"
-                            class="link-to-prism">src/app/guards/login.guard.ts:9</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="15"
+                            class="link-to-prism">src/app/guards/login.guard.ts:15</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Determine if a page can be activated based on login status of the user.</p>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -177,7 +179,8 @@
 
                     </div>
                     <div class="io-description">
-                        
+                        <p>True if the user is not logged in, false if they are already logged in</p>
+
                     </div>
                 </td>
             </tr>
@@ -196,6 +199,12 @@ import { Observable } from &#x27;rxjs&#x27;;
   providedIn: &#x27;root&#x27;
 })
 export class LoginGuard implements CanActivate {
+  /**
+   * Determine if a page can be activated based on login status of the user.
+   * @param route 
+   * @param state 
+   * @returns True if the user is not logged in, false if they are already logged in
+   */
   canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable&lt;boolean | UrlTree&gt; | Promise&lt;boolean | UrlTree&gt; | boolean | UrlTree {

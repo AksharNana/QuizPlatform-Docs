@@ -99,6 +99,9 @@
                                 <a href="#get_history" >get_history</a>
                             </li>
                             <li>
+                                <a href="#get_history_by_id" >get_history_by_id</a>
+                            </li>
+                            <li>
                                 <a href="#update_user_plays" >update_user_plays</a>
                             </li>
                         </ul>
@@ -309,6 +312,75 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
+                    <a name="get_history_by_id"></a>
+                    <span class="name">
+                        <span ><b>get_history_by_id</b></span>
+                        <a href="#get_history_by_id"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>get_history_by_id(historyID: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="32"
+                            class="link-to-prism">src/app/services/history.service.ts:32</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>historyID</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;any&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
                     <a name="update_user_plays"></a>
                     <span class="name">
                         <span ><b>update_user_plays</b></span>
@@ -325,8 +397,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="32"
-                            class="link-to-prism">src/app/services/history.service.ts:32</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="36"
+                            class="link-to-prism">src/app/services/history.service.ts:36</a></div>
                 </td>
             </tr>
 
@@ -464,6 +536,10 @@ export class HistoryService {
 
   get_history(userID: string): Observable&lt;any&gt;{
     return this.http.get(this.base_url+&quot;/getUserHistory/&quot;+userID);
+  }
+
+  get_history_by_id(historyID: string): Observable&lt;any&gt;{
+    return this.http.get(this.base_url+&quot;/getHistory/&quot;+historyID);
   }
 
   update_user_plays(currPlays: number, userID: String) : Observable&lt;any&gt;{

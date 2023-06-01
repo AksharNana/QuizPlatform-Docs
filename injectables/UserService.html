@@ -965,8 +965,8 @@ export class UserService {
    */
   create_friends(friendID: string, userID : string) {
     let body &#x3D; JSON.stringify({
-      &quot;UserID&quot;: userID,
-      &quot;FriendID&quot;: friendID
+      &quot;Username&quot;: userID,
+      &quot;Friend&quot;: friendID
     });
     return this.http.post&lt;any&gt;(&quot;https://clumsy-apron-ray.cyclic.app/api/friend/createFriend&quot;,body,{
       headers: new HttpHeaders({

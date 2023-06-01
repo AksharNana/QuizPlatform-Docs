@@ -100,6 +100,9 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
+                                <a href="#create_image" >create_image</a>
+                            </li>
+                            <li>
                                 <a href="#create_many_questions" >create_many_questions</a>
                             </li>
                             <li>
@@ -185,6 +188,75 @@
     <h3 id="methods">
         Methods
     </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="create_image"></a>
+                    <span class="name">
+                        <span ><b>create_image</b></span>
+                        <a href="#create_image"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>create_image(file: FormData)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="106"
+                            class="link-to-prism">src/app/services/question.service.ts:106</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>file</td>
+                                    <td>
+                                            <code>FormData</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;any&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
     <table class="table table-sm table-bordered">
         <tbody>
             <tr>
@@ -753,6 +825,10 @@ export class QuestionService {
     return this.http.delete(this.base_url+&quot;/deleteQuestion/&quot;+question._id).pipe(
       catchError(handleError)
     );
+  }
+
+  create_image(file: FormData): Observable&lt;any&gt;{
+    return this.http.post(&quot;https://clumsy-apron-ray.cyclic.app/api/image/upload&quot;,file);
   }
 }
 </code></pre>

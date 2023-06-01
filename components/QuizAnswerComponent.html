@@ -163,6 +163,9 @@
                                 <a href="#done" >done</a>
                             </li>
                             <li>
+                                <a href="#history" >history</a>
+                            </li>
+                            <li>
                                 <a href="#link" >link</a>
                             </li>
                             <li>
@@ -173,6 +176,9 @@
                             </li>
                             <li>
                                 <a href="#quizName" >quizName</a>
+                            </li>
+                            <li>
+                                <a href="#rated" >rated</a>
                             </li>
                             <li>
                                 <a href="#rating_form" >rating_form</a>
@@ -257,12 +263,14 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="50" class="link-to-prism">src/app/quiz-answer/quiz-answer.component.ts:50</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="53" class="link-to-prism">src/app/quiz-answer/quiz-answer.component.ts:53</a></div>
                             </td>
                         </tr>
 
                 <tr>
                     <td class="col-md-4">
+                            <div class="io-description"><p>The component constructor injects several services, including QuestionService, AnswerService, ActivatedRoute, QuizService, HistoryService, and Clipboard.</p>
+</div>
                             <div>
                                     <b>Parameters :</b>
                                     <table class="params">
@@ -412,14 +420,17 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="167"
-                            class="link-to-prism">src/app/quiz-answer/quiz-answer.component.ts:167</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="203"
+                            class="link-to-prism">src/app/quiz-answer/quiz-answer.component.ts:203</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>The addRating method is used to add a rating for the quiz. It retrieves the user&#39;s rating from
+the rating_form and makes an API call to the quizService to add the rating. If successful, it sets the rated flag to true.</p>
+</div>
 
                     <div class="io-description">
                         <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
@@ -449,15 +460,18 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="123"
-                            class="link-to-prism">src/app/quiz-answer/quiz-answer.component.ts:123</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="150"
+                            class="link-to-prism">src/app/quiz-answer/quiz-answer.component.ts:150</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-description"><p>Function to check answers</p>
+                    <div class="io-description"><p>The checkAnswers method is responsible for checking the user&#39;s answers and calculating the score.
+It stops the timer, initializes numCorrect to 0, and iterates over the questions and corresponding user answers.
+If an answer is correct, it increments numCorrect. Then, it sets the timeLeftDisplay and scoreDisplay properties to display the time left and the user&#39;s score.
+If a user is logged in, it sets the done flag to true, adds the user&#39;s rating for the quiz if provided, creates a history record for the user&#39;s performance, and updates the user&#39;s play count.</p>
 </div>
 
                     <div class="io-description">
@@ -488,14 +502,16 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="181"
-                            class="link-to-prism">src/app/quiz-answer/quiz-answer.component.ts:181</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="223"
+                            class="link-to-prism">src/app/quiz-answer/quiz-answer.component.ts:223</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>The CopyResults method copies the result link to the user&#39;s clipboard using the Clipboard service and updates the button display accordingly.</p>
+</div>
 
                     <div class="io-description">
                         <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
@@ -525,14 +541,16 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="108"
-                            class="link-to-prism">src/app/quiz-answer/quiz-answer.component.ts:108</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="133"
+                            class="link-to-prism">src/app/quiz-answer/quiz-answer.component.ts:133</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>The ngOnDestroy method is implemented to stop the timer when the component is destroyed, preventing memory leaks.</p>
+</div>
 
                     <div class="io-description">
                         <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
@@ -562,15 +580,19 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="69"
-                            class="link-to-prism">src/app/quiz-answer/quiz-answer.component.ts:69</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="89"
+                            class="link-to-prism">src/app/quiz-answer/quiz-answer.component.ts:89</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-description"><p>Run these functions when the component is initialised</p>
+                    <div class="io-description"><p>In the ngOnInit method, the component subscribes to the route parameters to retrieve the quiz_id.
+It then fetches the quiz data using the quizService, and updates the quizName property with the retrieved quiz name.
+Next, it fetches the questions associated with the quiz using the questionService, and initializes the answer_form with form controls for each question.
+The countdown timer is also set up to decrease the timeLeft property every second, and if the time reaches 0, it stops the timer,
+sets the boolTimesUp flag to true, alerts the user about the time being up, and calls the checkAnswers method.</p>
 </div>
 
                     <div class="io-description">
@@ -601,15 +623,15 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="115"
-                            class="link-to-prism">src/app/quiz-answer/quiz-answer.component.ts:115</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="140"
+                            class="link-to-prism">src/app/quiz-answer/quiz-answer.component.ts:140</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-description"><p>Function to stop timer</p>
+                    <div class="io-description"><p>The stopTimer method clears the interval of the countdown timer.</p>
 </div>
 
                     <div class="io-description">
@@ -645,7 +667,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="50" class="link-to-prism">src/app/quiz-answer/quiz-answer.component.ts:50</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="53" class="link-to-prism">src/app/quiz-answer/quiz-answer.component.ts:53</a></div>
                         </td>
                     </tr>
 
@@ -671,7 +693,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/app/quiz-answer/quiz-answer.component.ts:29</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/app/quiz-answer/quiz-answer.component.ts:30</a></div>
                         </td>
                     </tr>
 
@@ -702,7 +724,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="56" class="link-to-prism">src/app/quiz-answer/quiz-answer.component.ts:56</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="70" class="link-to-prism">src/app/quiz-answer/quiz-answer.component.ts:70</a></div>
                         </td>
                     </tr>
 
@@ -733,7 +755,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="48" class="link-to-prism">src/app/quiz-answer/quiz-answer.component.ts:48</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="51" class="link-to-prism">src/app/quiz-answer/quiz-answer.component.ts:51</a></div>
                         </td>
                     </tr>
 
@@ -764,7 +786,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="46" class="link-to-prism">src/app/quiz-answer/quiz-answer.component.ts:46</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="48" class="link-to-prism">src/app/quiz-answer/quiz-answer.component.ts:48</a></div>
                         </td>
                     </tr>
 
@@ -790,7 +812,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="36" class="link-to-prism">src/app/quiz-answer/quiz-answer.component.ts:36</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="38" class="link-to-prism">src/app/quiz-answer/quiz-answer.component.ts:38</a></div>
                         </td>
                     </tr>
 
@@ -827,7 +849,33 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/app/quiz-answer/quiz-answer.component.ts:30</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">src/app/quiz-answer/quiz-answer.component.ts:31</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="history"></a>
+                    <span class="name">
+                        <span ><b>history</b></span>
+                        <a href="#history"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../classes/HistoryArr.html" target="_self" >HistoryArr</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="66" class="link-to-prism">src/app/quiz-answer/quiz-answer.component.ts:66</a></div>
                         </td>
                     </tr>
 
@@ -853,7 +901,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">src/app/quiz-answer/quiz-answer.component.ts:32</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="34" class="link-to-prism">src/app/quiz-answer/quiz-answer.component.ts:34</a></div>
                         </td>
                     </tr>
 
@@ -884,7 +932,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="54" class="link-to-prism">src/app/quiz-answer/quiz-answer.component.ts:54</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="68" class="link-to-prism">src/app/quiz-answer/quiz-answer.component.ts:68</a></div>
                         </td>
                     </tr>
 
@@ -910,7 +958,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/app/quiz-answer/quiz-answer.component.ts:28</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/app/quiz-answer/quiz-answer.component.ts:29</a></div>
                         </td>
                     </tr>
 
@@ -941,7 +989,38 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="64" class="link-to-prism">src/app/quiz-answer/quiz-answer.component.ts:64</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="80" class="link-to-prism">src/app/quiz-answer/quiz-answer.component.ts:80</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="rated"></a>
+                    <span class="name">
+                        <span ><b>rated</b></span>
+                        <a href="#rated"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">src/app/quiz-answer/quiz-answer.component.ts:32</a></div>
                         </td>
                     </tr>
 
@@ -968,7 +1047,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="60" class="link-to-prism">src/app/quiz-answer/quiz-answer.component.ts:60</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="76" class="link-to-prism">src/app/quiz-answer/quiz-answer.component.ts:76</a></div>
                         </td>
                     </tr>
 
@@ -994,7 +1073,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="44" class="link-to-prism">src/app/quiz-answer/quiz-answer.component.ts:44</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="46" class="link-to-prism">src/app/quiz-answer/quiz-answer.component.ts:46</a></div>
                         </td>
                     </tr>
 
@@ -1027,7 +1106,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">src/app/quiz-answer/quiz-answer.component.ts:31</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">src/app/quiz-answer/quiz-answer.component.ts:33</a></div>
                         </td>
                     </tr>
 
@@ -1053,7 +1132,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="40" class="link-to-prism">src/app/quiz-answer/quiz-answer.component.ts:40</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="42" class="link-to-prism">src/app/quiz-answer/quiz-answer.component.ts:42</a></div>
                         </td>
                     </tr>
 
@@ -1084,7 +1163,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="58" class="link-to-prism">src/app/quiz-answer/quiz-answer.component.ts:58</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="74" class="link-to-prism">src/app/quiz-answer/quiz-answer.component.ts:74</a></div>
                         </td>
                     </tr>
 
@@ -1098,7 +1177,7 @@
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, Input, OnDestroy, OnInit } from &#x27;@angular/core&#x27;;
-import { FormBuilder, FormControl, FormGroup, Validators } from &#x27;@angular/forms&#x27;;
+import {  FormControl, FormGroup } from &#x27;@angular/forms&#x27;;
 import { QuestionService } from &#x27;../services/question.service&#x27;;
 import { AnswerService } from &#x27;../services/answer.service&#x27;;
 import { Question } from &#x27;../models/question&#x27;;
@@ -1106,7 +1185,7 @@ import { Answer } from &#x27;../models/answer&#x27;;
 import { ActivatedRoute } from &#x27;@angular/router&#x27;;
 import { QuizService } from &#x27;../services/quiz.service&#x27;;
 import { User } from &#x27;../models/user&#x27;;
-import { History } from &#x27;../models/history&#x27;;
+import { History, HistoryArr } from &#x27;../models/history&#x27;;
 import { HistoryService } from &#x27;../services/history.service&#x27;;
 import { Clipboard } from &#x27;@angular/cdk/clipboard&#x27;;
 import { Quiz } from &#x27;../models/quiz&#x27;;
@@ -1124,9 +1203,11 @@ import { Quiz } from &#x27;../models/quiz&#x27;;
 export class QuizAnswerComponent implements OnInit ,OnDestroy{
   @Input() timeLeft &#x3D; 30;
 
+  //Initialize variables
   quiz_id: any;
   answer_id: any;
   done: boolean &#x3D; false;
+  rated: boolean &#x3D; false;
   private sub: any;
   link: any;
   /**
@@ -1144,16 +1225,30 @@ export class QuizAnswerComponent implements OnInit ,OnDestroy{
 
   buttonDispl &#x3D; &quot;Share Results&quot;
 
+  //Set the variable for when time is up to false at start
   boolTimesUp: boolean &#x3D; false;
 
   answer_form!: FormGroup;
 
+  /**
+   * The component constructor injects several services, including QuestionService, AnswerService, ActivatedRoute, QuizService, HistoryService, and Clipboard.
+   * @param questionService 
+   * @param answerService 
+   * @param route 
+   * @param quizService 
+   * @param historyService 
+   * @param clipBoard 
+   */
   constructor(private questionService: QuestionService, private answerService: AnswerService, private route: ActivatedRoute, private quizService: QuizService, private historyService: HistoryService, private clipBoard: Clipboard) { }
+
+  history!: HistoryArr;
 
   questions: Question[] &#x3D; [];
 
   answers: Answer[] &#x3D; [];
 
+
+  //Get Current User
   user &#x3D; sessionStorage.getItem(&quot;User&quot;);
 
   rating_form &#x3D; new FormGroup({
@@ -1163,11 +1258,16 @@ export class QuizAnswerComponent implements OnInit ,OnDestroy{
   quizName: string &#x3D; &quot;&quot;;
 
   /**
-   * Run these functions when the component is initialised
-  */
+   * In the ngOnInit method, the component subscribes to the route parameters to retrieve the quiz_id. 
+   * It then fetches the quiz data using the quizService, and updates the quizName property with the retrieved quiz name. 
+   * Next, it fetches the questions associated with the quiz using the questionService, and initializes the answer_form with form controls for each question. 
+   * The countdown timer is also set up to decrease the timeLeft property every second, and if the time reaches 0, it stops the timer, 
+   * sets the boolTimesUp flag to true, alerts the user about the time being up, and calls the checkAnswers method.
+   */
   ngOnInit() {
 
     this.sub &#x3D; this.route.params.subscribe(params &#x3D;&gt; {
+      //Get quiz id sent by the parameter and set the variables that will display the quiz questions and values
       this.quiz_id &#x3D; params[&#x27;id&#x27;];
       this.quizService.get_quiz_byID(this.quiz_id).subscribe((res: Quiz) &#x3D;&gt;{
         this.quizName &#x3D; res.Name;
@@ -1176,7 +1276,8 @@ export class QuizAnswerComponent implements OnInit ,OnDestroy{
         this.questions &#x3D; value;
 
         let answer: any &#x3D; {}
-
+        
+        //Get user&#x27;s answers to the quiz&#x27;s questions
         this.questions.forEach(element &#x3D;&gt; {
           answer[element._id] &#x3D; new FormControl(&#x27;&#x27;)
           this.answerService.get_question_answer(element._id).subscribe((result: Answer[]) &#x3D;&gt; {
@@ -1204,30 +1305,37 @@ export class QuizAnswerComponent implements OnInit ,OnDestroy{
 
   }
 
+  /**
+   * The ngOnDestroy method is implemented to stop the timer when the component is destroyed, preventing memory leaks.
+   */
   ngOnDestroy(){
     this.stopTimer();
   }
 
-  /**
-   * Function to stop timer
-   */
+/**
+ * The stopTimer method clears the interval of the countdown timer.
+ */
   stopTimer() {
     clearInterval(this.countdownTimer);
   }
 
-
   /**
-   * Function to check answers
+   * The checkAnswers method is responsible for checking the user&#x27;s answers and calculating the score. 
+   * It stops the timer, initializes numCorrect to 0, and iterates over the questions and corresponding user answers. 
+   * If an answer is correct, it increments numCorrect. Then, it sets the timeLeftDisplay and scoreDisplay properties to display the time left and the user&#x27;s score. 
+   * If a user is logged in, it sets the done flag to true, adds the user&#x27;s rating for the quiz if provided, creates a history record for the user&#x27;s performance, and updates the user&#x27;s play count.
    */
   checkAnswers() {
     this.stopTimer();
 
     var numCorrect &#x3D; 0;
 
+    //Check if answers are correct
     this.questions.forEach(element &#x3D;&gt; {
       let answer &#x3D; this.answer_form.get(element._id)?.value;
       this.answers.forEach(element &#x3D;&gt; {
         if (element._id &#x3D;&#x3D;&#x3D; answer &amp;&amp; element.Correct) {
+          //Increase the value for all correct answers
           numCorrect++;
         }
 
@@ -1235,6 +1343,7 @@ export class QuizAnswerComponent implements OnInit ,OnDestroy{
 
     });
 
+    //Display time and the score the user got
     this.timeLeftDisplay &#x3D; &quot;Time Left: &quot; + this.timeLeft + &quot;s&quot;;
     this.scoreDisplay &#x3D; &quot;You scored &quot; + numCorrect + &quot; out of &quot; + this.questions.length;
     if(this.user !&#x3D; null){
@@ -1252,9 +1361,11 @@ export class QuizAnswerComponent implements OnInit ,OnDestroy{
         UserID: USer._id,
         Score: numCorrect
       }
-      this.historyService.create_history(history).subscribe((res)&#x3D;&gt;{
+      this.historyService.create_history(history).subscribe((res: HistoryArr)&#x3D;&gt;{
+        this.history &#x3D; res;
         console.log(res);
       });
+      //Update user&#x27;s plays
       this.historyService.update_user_plays(USer.Plays,USer._id).subscribe((res) &#x3D;&gt;{
         console.log(res);
         USer.Plays &#x3D; USer.Plays + 1;
@@ -1262,7 +1373,11 @@ export class QuizAnswerComponent implements OnInit ,OnDestroy{
       });
     }
   }
-
+  
+  /**
+   * The addRating method is used to add a rating for the quiz. It retrieves the user&#x27;s rating from 
+   * the rating_form and makes an API call to the quizService to add the rating. If successful, it sets the rated flag to true.
+   */
   addRating(){
     let ans &#x3D; this.rating_form.get(&quot;rating&quot;)?.value;
     let USer: User;
@@ -1272,16 +1387,21 @@ export class QuizAnswerComponent implements OnInit ,OnDestroy{
         ans &#x3D; &quot;0&quot;
       }
       this.quizService.addRating(parseInt(ans),this.quiz_id,USer._id).subscribe((res) &#x3D;&gt;{
+        alert(&quot;Successfully rated the quiz!&quot;);
         console.log(res);
+        this.rated &#x3D; true;
       });
     }
   }
 
+
+  /**
+   * The CopyResults method copies the result link to the user&#x27;s clipboard using the Clipboard service and updates the button display accordingly.
+   */
   CopyResults(){
     this.clipBoard.copy(this.link);
     this.buttonDispl &#x3D; &quot;Copied Results&quot;;
   }
-
 }
 </code></pre>
     </div>
@@ -1290,13 +1410,13 @@ export class QuizAnswerComponent implements OnInit ,OnDestroy{
         <pre class="line-numbers"><code class="language-html">&lt;div&gt;
     &lt;title&gt;Quiz Page&lt;/title&gt;
     &lt;div class&#x3D;&quot;quiz-container has-text-white&quot;&gt;
-        &lt;h2&gt;{{quizName}}&lt;/h2&gt;
+        &lt;h2 class&#x3D;&quot;is-size-1 mt-5 has-text-weight-bold&quot;&gt;{{quizName}}&lt;/h2&gt;
         &lt;span&gt; {{timeLeft}} &lt;/span&gt;
         &lt;div class&#x3D;&quot;has-text-white&quot;&gt;
             &lt;form *ngIf&#x3D;&quot;answer_form&quot; [formGroup]&#x3D;&quot;answer_form&quot; (ngSubmit)&#x3D;&quot;checkAnswers()&quot; id&#x3D;&quot;answer_form&quot;&gt;
                 &lt;div class&#x3D;&quot;card has-text-white&quot; *ngFor&#x3D;&quot;let question of questions;index as idx&quot;&gt;
-                    &lt;h3 class&#x3D;&quot;quest&quot;&gt;Question {{idx+1}}:&lt;/h3&gt;
-                    &lt;p class&#x3D;&quot;quest&quot;&gt;{{question.Question}}&lt;/p&gt;
+                    &lt;h3 class&#x3D;&quot;is-size-3 has-text-weight-bold&quot;&gt;Question {{idx+1}}:&lt;/h3&gt;
+                    &lt;p class&#x3D;&quot;is-size-4&quot;&gt;{{question.Question}}&lt;/p&gt;
                     &lt;div class&#x3D;&quot;field&quot;&gt;
                         &lt;div class&#x3D;&quot;control&quot; *ngFor&#x3D;&quot;let answer of answers&quot;&gt;
                             &lt;div class&#x3D;&quot;fl&quot; *ngIf&#x3D;&quot;answer.QuestionID &#x3D;&#x3D;&#x3D; question._id&quot;&gt;
@@ -1308,14 +1428,14 @@ export class QuizAnswerComponent implements OnInit ,OnDestroy{
                         &lt;/div&gt;
                     &lt;/div&gt;
                 &lt;/div&gt;
-                &lt;button class&#x3D;&quot;button is-primary is-rounded&quot; *ngIf&#x3D;&quot;!boolTimesUp&quot;&gt;Submit&lt;/button&gt;
+                &lt;button class&#x3D;&quot;button is-primary is-rounded mt-5 mb-5 is-size-4&quot; *ngIf&#x3D;&quot;!boolTimesUp&quot;&gt;Submit&lt;/button&gt;
             &lt;/form&gt;
-            &lt;p id&#x3D;&quot;time-left&quot;&gt;{{timeLeftDisplay}}&lt;/p&gt;
-            &lt;p id&#x3D;&quot;score&quot;&gt;{{scoreDisplay}}&lt;/p&gt;
+            &lt;p class&#x3D;&quot;is-size-5&quot; id&#x3D;&quot;time-left&quot;&gt;{{timeLeftDisplay}}&lt;/p&gt;
+            &lt;p class&#x3D;&quot;is-size-5 has-text-weight-bold&quot; id&#x3D;&quot;score&quot;&gt;{{scoreDisplay}}&lt;/p&gt;
         &lt;/div&gt;
         &lt;div class&#x3D;&quot;card has-text-white&quot; *ngIf&#x3D;&quot;done&#x3D;&#x3D;true &amp;&amp; user!&#x3D;null&quot;&gt;
-            &lt;form [formGroup]&#x3D;&quot;rating_form&quot; (ngSubmit)&#x3D;&quot;addRating()&quot;&gt;
-                &lt;div class&#x3D;&quot;field&quot;&gt;
+            &lt;form [formGroup]&#x3D;&quot;rating_form&quot; (ngSubmit)&#x3D;&quot;addRating()&quot; *ngIf&#x3D;&quot;rated !&#x3D; true&quot;&gt;
+                &lt;div class&#x3D;&quot;field is-size-5&quot;&gt;
                     &lt;div class&#x3D;&quot;control&quot;&gt;
                         &lt;label class&#x3D;&quot;radio&quot;&gt;
                             &lt;input type&#x3D;&quot;radio&quot; value&#x3D;&quot;1&quot; formControlName&#x3D;&quot;rating&quot;&gt;
@@ -1339,13 +1459,16 @@ export class QuizAnswerComponent implements OnInit ,OnDestroy{
                         &lt;/label&gt;
                     &lt;/div&gt;
                 &lt;/div&gt;
-                &lt;button class&#x3D;&quot;button is-primary is-rounded&quot;&gt;Submit rating&lt;/button&gt;
+                &lt;button class&#x3D;&quot;button is-primary is-rounded is-size-5&quot;&gt;Submit rating&lt;/button&gt;
             &lt;/form&gt;
 
-            &lt;div class&#x3D;&quot;result has-text-white&quot;&gt;
-                {{scoreDisplay}}
+            &lt;div class&#x3D;&quot;result has-text-white is-size-5&quot;&gt;
                 &lt;!-- &lt;a href&#x3D;&quot;{{link}}&quot;&gt;{{link}}&lt;/a&gt; --&gt;
                 &lt;button class&#x3D;&quot;button is-success&quot; (click)&#x3D;&quot;CopyResults()&quot;&gt;{{buttonDispl}}&lt;/button&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;result has-text-white is-size-5&quot;&gt;
+                &lt;!-- &lt;a href&#x3D;&quot;{{link}}&quot;&gt;{{link}}&lt;/a&gt; --&gt;
+                &lt;button class&#x3D;&quot;button is-success&quot; [routerLink]&#x3D;&quot;[&#x27;/friend-select&#x27;,this.history._id]&quot;&gt;Challenge&lt;/button&gt;
             &lt;/div&gt;
         &lt;/div&gt;
     &lt;/div&gt;
@@ -1357,13 +1480,12 @@ export class QuizAnswerComponent implements OnInit ,OnDestroy{
                     <code>./quiz-answer.component.scss</code>
                 </p>
                 <pre class="line-numbers"><code class="language-scss">.quiz-container {
-    background-image: url(&quot;../../assets/images/pexels-kellie-churchman-1001682.jpg&quot;);
-    background-color: gray;
-    background-blend-mode: multiply;
-    background-size: cover;
+    background: rgb(4, 82, 137);
+    background: linear-gradient(180deg, rgba(4, 82, 137, 1) 0%, rgba(22, 0, 84, 1) 50%, rgba(82, 1, 63, 1) 100%);
     margin: 0 auto;
     text-align: center;
-    height: fit-content;
+    min-height: 100vh;
+    max-height: fit-content;
 }
 
 h2 {
@@ -1376,9 +1498,6 @@ p {
     margin-bottom: 10px;
 }
 
-input[type&#x3D;&quot;text&quot;] {
-    margin-bottom: 10px;
-}
 
 #countdown {
     font-size: 24px;
@@ -1395,7 +1514,7 @@ input[type&#x3D;&quot;text&quot;] {
     cursor: pointer;
 }
 
-.result{
+.result {
     margin-top: 15px;
     display: flex;
     flex-direction: column;
@@ -1403,23 +1522,26 @@ input[type&#x3D;&quot;text&quot;] {
     align-items: center;
 }
 
-.card{
+.card {
     margin-left: 20%;
     margin-right: 20%;
     margin-top: 15px;
     margin-bottom: 5px;
     background-color: rgba(255, 255, 255, .15);
     backdrop-filter: blur(5px);
+    padding: 15px;
+    border-radius: 35px;
 }
 
-.quest{
+.quest {
     font-size: x-large;
     font-weight: bold;
 }
 
-.radio{
-    font-size: medium;
-}</code></pre>
+.button{
+    width: 300px;
+}
+</code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-tree">
@@ -1447,8 +1569,8 @@ input[type&#x3D;&quot;text&quot;] {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div>    <title>Quiz Page</title>    <div class="quiz-container has-text-white">        <h2>{{quizName}}</h2>        <span> {{timeLeft}} </span>        <div class="has-text-white">            <form *ngIf="answer_form" [formGroup]="answer_form" (ngSubmit)="checkAnswers()" id="answer_form">                <div class="card has-text-white" *ngFor="let question of questions;index as idx">                    <h3 class="quest">Question {{idx+1}}:</h3>                    <p class="quest">{{question.Question}}</p>                    <div class="field">                        <div class="control" *ngFor="let answer of answers">                            <div class="fl" *ngIf="answer.QuestionID === question._id">                                <label class="radio">                                    <input type="radio" value="{{answer._id}}" formControlName="{{question._id}}">                                    {{answer.Answer}}                                </label>                            </div>                        </div>                    </div>                </div>                <button class="button is-primary is-rounded" *ngIf="!boolTimesUp">Submit</button>            </form>            <p id="time-left">{{timeLeftDisplay}}</p>            <p id="score">{{scoreDisplay}}</p>        </div>        <div class="card has-text-white" *ngIf="done==true && user!=null">            <form [formGroup]="rating_form" (ngSubmit)="addRating()">                <div class="field">                    <div class="control">                        <label class="radio">                            <input type="radio" value="1" formControlName="rating">                            1                        </label>                        <label class="radio">                            <input type="radio" value="2" formControlName="rating">                            2                        </label>                        <label class="radio">                            <input type="radio" value="3" formControlName="rating">                            3                        </label>                        <label class="radio">                            <input type="radio" value="4" formControlName="rating">                            4                        </label>                        <label class="radio">                            <input type="radio" value="5" formControlName="rating">                            5                        </label>                    </div>                </div>                <button class="button is-primary is-rounded">Submit rating</button>            </form>            <div class="result has-text-white">                {{scoreDisplay}}                <!-- <a href="{{link}}">{{link}}</a> -->                <button class="button is-success" (click)="CopyResults()">{{buttonDispl}}</button>            </div>        </div>    </div></div></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BookmarksComponent', 'selector': 'app-bookmarks'},{'name': 'EditProfileComponent', 'selector': 'app-edit-profile'},{'name': 'FriendInfoComponent', 'selector': 'app-friend-info'},{'name': 'FriendsComponent', 'selector': 'app-friends'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LeaderboardComponent', 'selector': 'app-leaderboard'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MasterAnswerComponent', 'selector': 'app-master-answer'},{'name': 'QuizAnswerComponent', 'selector': 'app-quiz-answer'},{'name': 'QuizCreateComponent', 'selector': 'app-quiz-create'},{'name': 'QuizInfoComponent', 'selector': 'app-quiz-info'},{'name': 'QuizResultComponent', 'selector': 'app-quiz-result'},{'name': 'QuizSearchComponent', 'selector': 'app-quiz-search'},{'name': 'QuizTypeinComponent', 'selector': 'app-quiz-typein'},{'name': 'RegistrationComponent', 'selector': 'app-registration'}];
+        var COMPONENT_TEMPLATE = '<div><div>    <title>Quiz Page</title>    <div class="quiz-container has-text-white">        <h2 class="is-size-1 mt-5 has-text-weight-bold">{{quizName}}</h2>        <span> {{timeLeft}} </span>        <div class="has-text-white">            <form *ngIf="answer_form" [formGroup]="answer_form" (ngSubmit)="checkAnswers()" id="answer_form">                <div class="card has-text-white" *ngFor="let question of questions;index as idx">                    <h3 class="is-size-3 has-text-weight-bold">Question {{idx+1}}:</h3>                    <p class="is-size-4">{{question.Question}}</p>                    <div class="field">                        <div class="control" *ngFor="let answer of answers">                            <div class="fl" *ngIf="answer.QuestionID === question._id">                                <label class="radio">                                    <input type="radio" value="{{answer._id}}" formControlName="{{question._id}}">                                    {{answer.Answer}}                                </label>                            </div>                        </div>                    </div>                </div>                <button class="button is-primary is-rounded mt-5 mb-5 is-size-4" *ngIf="!boolTimesUp">Submit</button>            </form>            <p class="is-size-5" id="time-left">{{timeLeftDisplay}}</p>            <p class="is-size-5 has-text-weight-bold" id="score">{{scoreDisplay}}</p>        </div>        <div class="card has-text-white" *ngIf="done==true && user!=null">            <form [formGroup]="rating_form" (ngSubmit)="addRating()" *ngIf="rated != true">                <div class="field is-size-5">                    <div class="control">                        <label class="radio">                            <input type="radio" value="1" formControlName="rating">                            1                        </label>                        <label class="radio">                            <input type="radio" value="2" formControlName="rating">                            2                        </label>                        <label class="radio">                            <input type="radio" value="3" formControlName="rating">                            3                        </label>                        <label class="radio">                            <input type="radio" value="4" formControlName="rating">                            4                        </label>                        <label class="radio">                            <input type="radio" value="5" formControlName="rating">                            5                        </label>                    </div>                </div>                <button class="button is-primary is-rounded is-size-5">Submit rating</button>            </form>            <div class="result has-text-white is-size-5">                <!-- <a href="{{link}}">{{link}}</a> -->                <button class="button is-success" (click)="CopyResults()">{{buttonDispl}}</button>            </div>            <div class="result has-text-white is-size-5">                <!-- <a href="{{link}}">{{link}}</a> -->                <button class="button is-success" [routerLink]="[\'/friend-select\',this.history._id]">Challenge</button>            </div>        </div>    </div></div></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BookmarksComponent', 'selector': 'app-bookmarks'},{'name': 'ChallengeComponent', 'selector': 'app-challenge'},{'name': 'EditProfileComponent', 'selector': 'app-edit-profile'},{'name': 'FriendInfoComponent', 'selector': 'app-friend-info'},{'name': 'FriendsComponent', 'selector': 'app-friends'},{'name': 'FriendSelectComponent', 'selector': 'app-friend-select'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LeaderboardComponent', 'selector': 'app-leaderboard'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MasterAnswerComponent', 'selector': 'app-master-answer'},{'name': 'QuizAnswerComponent', 'selector': 'app-quiz-answer'},{'name': 'QuizCreateComponent', 'selector': 'app-quiz-create'},{'name': 'QuizImageComponent', 'selector': 'app-quiz-image'},{'name': 'QuizInfoComponent', 'selector': 'app-quiz-info'},{'name': 'QuizResultComponent', 'selector': 'app-quiz-result'},{'name': 'QuizSearchComponent', 'selector': 'app-quiz-search'},{'name': 'QuizTypeinComponent', 'selector': 'app-quiz-typein'},{'name': 'RegistrationComponent', 'selector': 'app-registration'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'QuizAnswerComponent'};
 </script>

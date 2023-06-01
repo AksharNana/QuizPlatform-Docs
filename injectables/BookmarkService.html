@@ -66,7 +66,7 @@
                 <h3>Description</h3>
             </p>
             <p class="comment">
-                <p>Angular Directive</p>
+                <p>Angular Directive for managing bookmarks</p>
 
             </p>
 
@@ -204,7 +204,7 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-description"><p>Creates a bookmark for user</p>
+                    <div class="io-description"><p>Creates a new bookmark for a user</p>
 </div>
 
                     <div class="io-description">
@@ -216,6 +216,7 @@
                                     <td>Name</td>
                                     <td>Type</td>
                                     <td>Optional</td>
+                                    <td>Description</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -230,6 +231,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>The bookmark object to create</p>
+
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -241,7 +246,7 @@
 
                     </div>
                     <div class="io-description">
-                        <p>Bookmark</p>
+                        <p>An observable of the created bookmark</p>
 
                     </div>
                 </td>
@@ -276,7 +281,7 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-description"><p>Remove bookmark from database</p>
+                    <div class="io-description"><p>Removes a bookmark from the database</p>
 </div>
 
                     <div class="io-description">
@@ -288,6 +293,7 @@
                                     <td>Name</td>
                                     <td>Type</td>
                                     <td>Optional</td>
+                                    <td>Description</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -302,6 +308,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>The bookmark object to delete</p>
+
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -313,7 +323,7 @@
 
                     </div>
                     <div class="io-description">
-                        <p>any</p>
+                        <p>An observable of the deletion result</p>
 
                     </div>
                 </td>
@@ -348,7 +358,7 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-description"><p>Return all bookmarks belonging to user</p>
+                    <div class="io-description"><p>Retrieves all bookmarks belonging to a user</p>
 </div>
 
                     <div class="io-description">
@@ -360,6 +370,7 @@
                                     <td>Name</td>
                                     <td>Type</td>
                                     <td>Optional</td>
+                                    <td>Description</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -374,6 +385,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>The ID of the user</p>
+
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -385,7 +400,7 @@
 
                     </div>
                     <div class="io-description">
-                        <p>Bookmark[]</p>
+                        <p>An observable of an array of bookmarks</p>
 
                     </div>
                 </td>
@@ -428,7 +443,7 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-description"><p>Base url for bookmark calls</p>
+                    <div class="io-description"><p>Base url for bookmark API calls</p>
 </div>
                 </td>
             </tr>
@@ -448,7 +463,7 @@ import { AddBookmark, Bookmark } from &#x27;../models/bookmarks&#x27;;
 import { handleError } from &#x27;../utilities/errorhandler&#x27;;
 
 /**
- * Angular Directive
+ * Angular Directive for managing bookmarks
  */
 @Injectable({
   providedIn: &#x27;root&#x27;
@@ -462,14 +477,14 @@ export class BookmarkService {
   constructor(private http: HttpClient) { }
 
   /**
-   * Base url for bookmark calls
+   * Base url for bookmark API calls
    */
   base_url &#x3D; &quot;https://clumsy-apron-ray.cyclic.app/api/bookmark&quot;;
 
   /**
-   * Return all bookmarks belonging to user
-   * @param UserID 
-   * @returns Bookmark[]
+   * Retrieves all bookmarks belonging to a user
+   * @param UserID The ID of the user
+   * @returns An observable of an array of bookmarks
    */
   get_bookmarks(UserID: String) : Observable&lt;any[]&gt;{
     return this.http.get&lt;Bookmark[]&gt;(this.base_url+&quot;/getBookmarks/&quot;+UserID).pipe(
@@ -478,9 +493,9 @@ export class BookmarkService {
   }
 
   /**
-   * Creates a bookmark for user
-   * @param bookMark 
-   * @returns Bookmark
+   * Creates a new bookmark for a user
+   * @param bookMark The bookmark object to create
+   * @returns An observable of the created bookmark
    */
   add_bookmark(bookMark : AddBookmark) : Observable&lt;any&gt;{
     let nbookmark &#x3D; JSON.stringify(bookMark);
@@ -494,9 +509,9 @@ export class BookmarkService {
   }
 
   /**
-   * Remove bookmark from database
-   * @param bookMark 
-   * @returns any
+   * Removes a bookmark from the database
+   * @param bookMark The bookmark object to delete
+   * @returns An observable of the deletion result
    */
   delete_bookmark(bookMark: Bookmark) : Observable&lt;any&gt;{
     return this.http.delete(this.base_url+&quot;/deleteBookmark/&quot;+bookMark._id).pipe(

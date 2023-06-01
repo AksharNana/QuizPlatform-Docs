@@ -266,7 +266,7 @@ export class LeaderboardService {
     base_url &#x3D; &quot;https://clumsy-apron-ray.cyclic.app/api/leaderboard&quot;;
     
     getLeaderboard(): Observable&lt;User[]&gt;{
-      return this.http.get&lt;User[]&gt;(this.base_url+&quot;/highestScores&quot;).pipe(
+      return this.http.get&lt;User[]&gt;(this.base_url+&quot;/userHighestPlays&quot;).pipe(
         catchError(handleError)
       );
     }
